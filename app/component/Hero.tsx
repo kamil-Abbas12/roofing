@@ -10,7 +10,7 @@ const Hero = () => {
 
         {/* Heading Lines */}
         <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-7xl text-gray-900 font-bold mb-3 leading-tight">
-Every Shingle Holds A Promise — Build         </h1>
+Every Shingle Holds A Promise Build         </h1>
 
         <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-7xl font-bold mb-3 leading-tight">
           <span className="text-gray-900"> A Legacy  </span>

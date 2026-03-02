@@ -5,25 +5,23 @@ import { FaEnvelope } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <section className="bg-blue-100 py-20 sm:py-24 md:py-28 lg:pt-60 pb-20 xl:pt-55 pb-20">
-      <div className="container flex flex-col mx-auto px-4 lg:px-10 sm:px-6 text-center">
+    <section className="bg-blue-100 py-35 sm:py-40 md:py-28 lg:pt-60  pb-20 xl:pt-55 pb-20">
+      <div className="container flex flex-col justify-center mx-auto px-4 lg:px-10 mx-0 xl:mx-20 sm:px-6 text-center">
 
         {/* Heading Lines */}
-        <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-7xl text-gray-900 font-bold mb-3 leading-tight">
-Every Shingle Holds A Promise Build         </h1>
+        <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-6xl  text-gray-900 font-bold mb-3 leading-tight mx-0 xl:mx-20">
+Every Shingle Holds A Promise Build  A Legacy   Homeowners Rely    </h1>
 
-        <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-7xl font-bold mb-3 leading-tight">
-          <span className="text-gray-900"> A Legacy  </span>
+        <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-6xl  font-bold mb-3 leading-tight">
+          <span className="text-gray-900">   </span>
           <span className="ml-2 text-orange-600 block sm:inline">
-             Homeowners Rely 
+              On When They Seek  Total
           </span>
         </h1>
 
-        <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-7xl text-gray-900 font-bold mb-3 leading-tight">
-          <span className="text-orange-600 block sm:inline">On When </span>
-          <span className="ml-0 sm:ml-4 text-gray-900 block sm:inline">
-           They Seek Total Protection From A Quality Roofer.
-          </span>
+        <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-6xl  font-bold mb-3 leading-tight">
+           Protection From A Quality Roofer.
+          
         
 
         </h1>
@@ -31,8 +29,8 @@ Every Shingle Holds A Promise Build         </h1>
         
 
         {/* Paragraph */}
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-700 mb-10 leading-relaxed max-w-5xl mx-auto px-2">
-          Scale your storm restoration sales, insurance payouts, and seasonal roofing contracts with Cibirix—America’s premier digital growth partner for professional roofers seeking market dominance. 
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl  text-gray-700 mb-10 leading-relaxed max-w-5xl mx-auto px-2">
+          Scale your storm restoration sales, insurance payouts, and seasonal roofing contracts with Cibirix America’s premier digital growth partner for professional roofers seeking market dominance. 
 
  
         </p>

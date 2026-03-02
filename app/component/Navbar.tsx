@@ -4,10 +4,12 @@ import { Menu, Phone, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaEnvelope } from "react-icons/fa";
+import ContactModal from "@/app/component/ContactModal";
 
 const sections = ["Services", "Results", "Contact"];
 
 const Navbar = () => {
+  const [contactOpen, setContactOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -46,53 +48,61 @@ const Navbar = () => {
           />
         </div>
 
-        {/* ⭐ TABLET CENTER BUTTONS ONLY */}
+        {/* TABLET CENTER BUTTONS */}
         <div className="absolute left-1/2 -translate-x-1/2 hidden sm:flex lg:hidden items-center gap-3">
-          <Link
-            href="/appointment"
+          <a
+            href=""
             className="flex items-center gap-1 text-sm border border-orange-600 text-orange-600 px-3 py-1.5 rounded-md hover:bg-orange-600 hover:text-white transition"
           >
             <Phone size={16} />
             Call
-          </Link>
+          </a>
 
-          <Link
-            href="/appointment"
+          <button
+            onClick={() => setContactOpen(true)}
             className="flex items-center gap-1 text-sm bg-orange-600 text-white px-3 py-1.5 rounded-md hover:bg-orange-700 transition"
           >
             <FaEnvelope size={14} />
             Contact
-          </Link>
+          </button>
         </div>
 
         {/* DESKTOP MENU */}
         <div className="hidden lg:flex text-slate-900 font-medium text-base lg:text-lg xl:text-xl space-x-6 xl:space-x-10">
-          {sections.map((sec) => (
-            <Link key={sec} href={`#${sec}`} className="cursor-pointer">
-              {sec}
-            </Link>
-          ))}
+    {sections.map((sec) => (
+  <button
+    key={sec}
+    onClick={() => {
+      const el = document.getElementById(sec);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+      setMenuOpen(false); // close mobile menu
+    }}
+    className={`block text-base sm:text-lg font-medium text-gray-700 hover:text-orange-600 transition ${
+      activeSection === sec ? "text-orange-600 font-semibold" : ""
+    }`}
+  >
+    {sec}
+  </button>
+))}
         </div>
 
         {/* DESKTOP RIGHT BUTTONS */}
-        <div className="hidden lg:block">
-          <div className="flex gap-5">
-            <Link
-              href="/appointment"
-              className="text-orange-600 border border-orange-600 px-5 py-2 rounded-md font-medium flex items-center hover:bg-orange-600 hover:text-white transition"
-            >
-              <Phone size={18} className="mr-2" />
-              Call Now
-            </Link>
+        <div className="hidden lg:flex gap-5">
+          <a
+            href=""
+            className="text-orange-600 border border-orange-600 px-5 py-2 rounded-md font-medium flex items-center hover:bg-orange-600 hover:text-white transition"
+          >
+            <Phone size={18} className="mr-2" />
+            Call Now
+          </a>
 
-            <Link
-              href="/appointment"
-              className="text-white bg-orange-600 px-5 py-2 rounded-md font-medium flex items-center hover:bg-orange-700 transition"
-            >
-              <FaEnvelope size={18} className="mr-2" />
-              Contact Us
-            </Link>
-          </div>
+          <button
+            onClick={() => setContactOpen(true)}
+            className="text-white bg-orange-600 px-5 py-2 rounded-md font-medium flex items-center hover:bg-orange-700 transition"
+          >
+            <FaEnvelope size={18} className="mr-2" />
+            Contact Us
+          </button>
         </div>
 
         {/* MOBILE MENU ICON */}
@@ -113,17 +123,43 @@ const Navbar = () => {
       >
         <div className="flex flex-col space-y-4 px-6">
           {sections.map((sec) => (
-            <Link
-              key={sec}
-              href={`#${sec}`}
-              onClick={() => setMenuOpen(false)}
-              className="block text-base sm:text-lg font-medium text-gray-700 hover:text-orange-600"
-            >
-              {sec}
-            </Link>
-          ))}
+  <button
+    key={sec}
+    onClick={() => {
+      const el = document.getElementById(sec);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+      setMenuOpen(false); // close mobile menu
+    }}
+    className={`block text-base sm:text-lg font-medium text-gray-700 hover:text-orange-600 transition ${
+      activeSection === sec ? "text-orange-600 font-semibold" : ""
+    }`}
+  >
+    {sec}
+  </button>
+))}
+          {/* Mobile Contact & Call buttons */}
+          <button
+            onClick={() => {
+              setContactOpen(true);
+              setMenuOpen(false);
+            }}
+            className="w-full text-white bg-orange-600 px-5 py-2 rounded-md font-medium flex items-center justify-center hover:bg-orange-700 transition"
+          >
+            <FaEnvelope size={16} className="mr-2" />
+            Contact Us
+          </button>
+          <a
+            href=""
+            className="w-full text-orange-600 border border-orange-600 px-5 py-2 rounded-md font-medium flex items-center justify-center hover:bg-orange-600 hover:text-white transition"
+          >
+            <Phone size={16} className="mr-2" />
+            Call Now
+          </a>
         </div>
       </div>
+
+      {/* Contact Modal */}
+      <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
     </nav>
   );
 };

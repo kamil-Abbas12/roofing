@@ -34,15 +34,15 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="w-full bg-white shadow z-50 fixed top-0 py-3 lg:py-4">
+    <nav className="w-full bg-white shadow z-50 fixed top-0 py-3 lg:py-2">
       <div className="relative w-full mx-auto px-4 md:px-6 lg:px-10 xl:px-40 flex items-center justify-between">
 
         {/* LOGO */}
         <div className="flex items-center">
           <Image
-            src="/logo.svg"
-            width={150}
-            height={90}
+            src="/logo1.png"
+            width={120}
+            height={70}
             alt="logo"
             className="cursor-pointer object-contain"
           />
@@ -52,7 +52,8 @@ const Navbar = () => {
         <div className="absolute left-1/2 -translate-x-1/2 hidden sm:flex lg:hidden items-center gap-3">
           <a
             href=""
-            className="flex items-center gap-1 text-sm border border-orange-600 text-orange-600 px-3 py-1.5 rounded-md hover:bg-orange-600 hover:text-white transition"
+            className="flex items-center gap-1 text-sm border border-[#213150] text-[#213150] px-3 py-1.5 rounded-md
+             hover:bg-blue-950 hover:text-white transition"
           >
             <Phone size={16} />
             Call
@@ -60,7 +61,8 @@ const Navbar = () => {
 
           <button
             onClick={() => setContactOpen(true)}
-            className="flex items-center gap-1 text-sm bg-orange-600 text-white px-3 py-1.5 rounded-md hover:bg-orange-700 transition"
+            className="flex items-center gap-1 text-sm bg-[#213150] text-white px-3 py-1.5 rounded-md
+             hover:bg-blue-950 transition"
           >
             <FaEnvelope size={14} />
             Contact
@@ -77,8 +79,8 @@ const Navbar = () => {
       if (el) el.scrollIntoView({ behavior: "smooth" });
       setMenuOpen(false); // close mobile menu
     }}
-    className={`block text-base sm:text-lg font-medium text-gray-700 hover:text-orange-600 transition ${
-      activeSection === sec ? "text-orange-600 font-semibold" : ""
+    className={`block text-base sm:text-lg font-medium text-gray-700 hover:text-blue-600 transition ${
+      activeSection === sec ? "text-blue-700 font-semibold" : ""
     }`}
   >
     {sec}
@@ -90,7 +92,8 @@ const Navbar = () => {
         <div className="hidden lg:flex gap-5">
           <a
             href=""
-            className="text-orange-600 border border-orange-600 px-5 py-2 rounded-md font-medium flex items-center hover:bg-orange-600 hover:text-white transition"
+            className="text-[#213150] border border-blue-950 px-5 py-2 rounded-md font-medium flex items-center
+             hover:bg-[#213150] hover:text-white transition"
           >
             <Phone size={18} className="mr-2" />
             Call Now
@@ -98,7 +101,7 @@ const Navbar = () => {
 
           <button
             onClick={() => setContactOpen(true)}
-            className="text-white bg-orange-600 px-5 py-2 rounded-md font-medium flex items-center hover:bg-orange-700 transition"
+            className="text-white bg-[#213150] px-5 py-2 rounded-md font-medium flex items-center hover:bg-blue-950 transition"
           >
             <FaEnvelope size={18} className="mr-2" />
             Contact Us
@@ -107,10 +110,14 @@ const Navbar = () => {
 
         {/* MOBILE MENU ICON */}
         <div className="lg:hidden">
-          <button onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
-        </div>
+  <button onClick={() => setMenuOpen(!menuOpen)}>
+    {menuOpen ? (
+      <X size={28} className="text-gray-900 dark:text-white" />
+    ) : (
+      <Menu size={28} className="text-gray-900 dark:text-white" />
+    )}
+  </button>
+</div>
       </div>
 
       {/* MOBILE DROPDOWN MENU */}
@@ -130,8 +137,8 @@ const Navbar = () => {
       if (el) el.scrollIntoView({ behavior: "smooth" });
       setMenuOpen(false); // close mobile menu
     }}
-    className={`block text-base sm:text-lg font-medium text-gray-700 hover:text-orange-600 transition ${
-      activeSection === sec ? "text-orange-600 font-semibold" : ""
+    className={`block text-base sm:text-lg font-medium text-gray-700 hover:text-blue-950 transition ${
+      activeSection === sec ? "text-blue-950 font-semibold" : ""
     }`}
   >
     {sec}
@@ -143,14 +150,15 @@ const Navbar = () => {
               setContactOpen(true);
               setMenuOpen(false);
             }}
-            className="w-full text-white bg-orange-600 px-5 py-2 rounded-md font-medium flex items-center justify-center hover:bg-orange-700 transition"
+            className="w-full text-white bg-[#213150] px-5 py-2 rounded-md font-medium flex items-center justify-center
+             hover:bg-blue-950 transition"
           >
             <FaEnvelope size={16} className="mr-2" />
             Contact Us
           </button>
           <a
             href=""
-            className="w-full text-orange-600 border border-orange-600 px-5 py-2 rounded-md font-medium flex items-center justify-center hover:bg-orange-600 hover:text-white transition"
+            className="w-full text-blue-950 border border-blue-950 px-5 py-2 rounded-md font-medium flex items-center justify-center hover:bg-[#213150] hover:text-white transition"
           >
             <Phone size={16} className="mr-2" />
             Call Now

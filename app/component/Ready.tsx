@@ -1,18 +1,16 @@
-
 "use client";
 import { useState } from "react";
-import { Clock, MapPin, PhoneCall } from 'lucide-react';
-import React from 'react'
-import { FaEnvelope } from 'react-icons/fa';
+import { Clock, MapPin, PhoneCall } from "lucide-react";
+import { FaEnvelope } from "react-icons/fa";
+import React from "react";
+
 const marketing = [
-  // { value: "", label: "Select Your Business Type" },
   { value: "Residential Roofing", label: "Residential Roofing" },
   { value: "Commercial Roofing", label: "Commercial Roofing" },
   { value: "Storm Damage Repair & Insurance", label: "Storm Damage Repair & Insurance" },
   { value: "Roof Repair & Maintenance", label: "Roof Repair & Maintenance" },
   { value: "New Construction Roofing", label: "New Construction Roofing" },
-    { value: "Full Service Roofing Company", label: "Full Service Roofing Company" },
-
+  { value: "Full Service Roofing Company", label: "Full Service Roofing Company" },
 ];
 
 const services = [
@@ -33,286 +31,251 @@ const budget = [
 
 const Ready = () => {
   const [form, setForm] = useState({
-  name: "",
-  email: "",
-  phone: "",
-  service: "",
-  businessType: "",
-  budget: "",
-  message: "",
-});
-
-const [loading, setLoading] = useState(false);
-const handleChange = (
-  e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
-) => {
-  setForm({ ...form, [e.target.name]: e.target.value });
-};
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setLoading(true);
-
-  const res = await fetch("/api/contact", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(form),
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    businessType: "",
+    budget: "",
+    message: "",
+    tcpaConsent: false,
   });
 
-  const data = await res.json();
+  const [loading, setLoading] = useState(false);
 
-  if (data.success) {
-    alert("Inquiry Sent Successfully!");
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    const target = e.target as HTMLInputElement;
+
     setForm({
-      name: "",
-      email: "",
-      phone: "",
-      service: "",
-      businessType: "",
-      budget: "",
-      message: "",
+      ...form,
+      [target.name]: target.type === "checkbox" ? target.checked : target.value,
     });
-  } else {
-    alert("Something went wrong");
-  }
+  };
 
-  setLoading(false);
-};
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const formEl = e.currentTarget as HTMLFormElement;
+    if (!formEl.checkValidity()) {
+      formEl.reportValidity();
+      return;
+    }
+    if (!form.tcpaConsent) {
+      alert("Please agree to the TCPA consent before submitting.");
+      return;
+    }
+    setLoading(true);
+    // Submit logic here...
+  };
+
   return (
-<section id='Contact' className='bg-white py-6 md:py-10 lg:py-16 xl:py-20 md:px-10 xl:px-40 w-full h-full'>
-      <div className="text-center max-w-6xl mx-auto">
-          <span className="text-xl md:text-3xl lg:text-5xl font-bold text-blue-900 leading-tight">
-Prepared to Scale Your  <span className='text-xl md:text-3xl mx-2 lg:text-5xl font-bold text-blue-900 leading-tight'>
+    <section
+      id="Contact"
+      className="bg-gradient-to-r from-blue-50 to-blue-100 py-10 md:py-16 xl:py-20 px-6 md:px-10 xl:px-40 w-full"
+    >
+      {/* Heading */}
+      <div className="text-center max-w-6xl mx-auto animate-fadeIn">
+        <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-blue-900 leading-tight">
+          Why Roof Integrity is the{" "}
+          <span className="text-blue-800">Ultimate Asset Protection</span> in 2026?
+        </h2>
+        <p className="mt-6 text-gray-700 md:text-lg lg:text-xl max-w-3xl mx-auto">
+          In 2026, you don't just "fix" a roof. You fortify your future. Total roof integrity
+          ensures that your most valuable asset remains safe, efficient, and fully insurable for
+          decades to come.
+        </p>
+      </div>
 
-American Roofing</span>
-<span>
-Company?
-</span>
-          </span>
+      {/* Content */}
+      <div className="w-full flex flex-col lg:flex-row justify-between items-start gap-8 mt-10 lg:mt-20">
+        {/* Form */}
+        <div className="w-full lg:w-1/2 bg-white shadow-xl rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 animate-slideUp">
+          <h3 className="text-xl md:text-2xl font-bold text-blue-900 mb-4">
+            Fill out this simple contact form or call us at
+          </h3>
+          <p className="text-blue-800 font-semibold mb-6">+1 (336) 515-7898</p>
 
-          <p className="mt-6 text-gray-600 text-md md:text-xl lg:max-w-4xl text-center mx-auto">
-Initiate the path towards being the top roofing provider in your market. Claim your complimentary marketing analysis and bespoke lead acquisition plan now.
-
-          </p>
-        </div>
-        <div className='w-full justify-between items-center gap-5 flex flex-col lg:flex-row mt-10 lg:mt-20'>
-          <div className='left w-[90%] lg:w-1/2 border border-gray-200 shadow-lg rounded-xl mx-2 md:mx-0 h-full lg:h-[720px] p-6'>
-          <span className=" text-lg lg:text-xl font-bold text-blue-900 mb-4">Fill out this simple contact form or call us at
-             </span>
-           <span className=" text-lg md:text-xl ml-2 font-bold text-blue-900 mb-4">
-             +1 (336) 515-7898</span>   
-<form 
-onSubmit={handleSubmit}
-className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5 lg:my-10 space-y-2 lg:space-y-5">
-
-  <div className="flex flex-col">
-  <label htmlFor="name" className="text-sm font-bold text-gray-700 mb-2">
-    Full Name <span className="text-blue-900">*</span>
-  </label>
-
-  <input
-    id="name"
-    type="text"
-    name="name"
-    value={form.name}
-  onChange={handleChange}
-    placeholder="Enter your full name"
-className="input-style"
-   required
-  />
-</div>
- <div className="flex flex-col">
-  <label htmlFor="email" className="text-sm font-bold text-gray-700 mb-2">
-    Email Address <span className="text-blue-900">*</span>
-  </label>
-
-  <input
-    id="email"
-    type="text"
-    value={form.email}
-  onChange={handleChange}
-    name="email"
-    placeholder="Enter your email address"
-className='input-style' 
- required
-  />
-</div>
- <div className="flex flex-col ">
-  <label htmlFor="name" className="text-sm font-bold text-gray-700 mb-2">
-    Phone Number <span className="text-blue-900">*</span>
-  </label>
-
-  <input
-    id="phone"
-    type="text"
-    value={form.phone}
-  onChange={handleChange}
-    name="phone"
-    placeholder="+1 (555) 123-4567"
-className='input-style' 
-
-  required
-  />
-
-  
-</div>
- <div className="flex flex-col ">
-  <label htmlFor="services" className="text-sm font-bold text-gray-700 mb-2">
-    Services <span className="text-blue-900">*</span>
-  </label>
-<select
-  name="service"
-  value={form.service}
-  onChange={handleChange}
-  required
-  className="w-full rounded-lg border border-gray-300 p-3"
->
-  <option value="">Select a Service</option>
-  {services.map((service) => (
-    <option key={service.value} value={service.value}>
-      {service.label}
-    </option>
-  ))}
-</select>
-  </div>
-<div className='flex flex-col'>
-  <label htmlFor="services" className="text-sm font-bold text-gray-700 mb-2">
-    Business Type <span className="text-blue-900">*</span>
-  </label>
-<select 
-name="businessType"
- value={form.businessType}
-  onChange={handleChange}
-  required
-className="w-full rounded-lg border border-gray-300 p-3
-bg-white text-gray-900
-dark:bg-gray-800 dark:text-white dark:border-gray-600
-focus:ring-2 focus:ring-blue-500 outline-none">
-    <option value="">Select Your Business Type</option>
-    {marketing.map((market) => (
-      <option key={market.value} value={market.value}>
-        {market.label}
-      </option>
-    ))}
-  </select>
-</div>
-<div className='flex flex-col'>
-  <label htmlFor="services" className="text-sm font-bold text-gray-700 mb-2">
-    Marketing Budget <span className="text-blue-900">*</span>
-  </label>
-<select
-  name="budget"
-  value={form.budget}
-  onChange={handleChange}
-  required
-  className="w-full rounded-lg border border-gray-300 p-3"
->
-  <option value="">Select Your Monthly Marketing Budget</option>
-  {budget.map((b) => (
-    <option key={b.value} value={b.value}>
-      {b.label}
-    </option>
-  ))}
-</select>
-  
-</div>
-<textarea
-          rows={3}
-          name="message"
-            value={form.message}
-  onChange={handleChange}
-          placeholder="Type Here..."
-   className="w-full rounded-lg border border-gray-300 p-3 md:col-span-2
-bg-white text-gray-900 placeholder-gray-500  
-dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 dark:border-blue-600"
-        ></textarea>
-
-        {/* Button */}
-        <div className="md:col-span-2">
-          <button
-          type="submit"
-  disabled={loading}
-            className="w-full cursor-pointer   bg-[#213150] text-white py-3 rounded-md
-             hover:bg-blue-900  transition"
+          <form
+            onSubmit={handleSubmit}
+            className="grid grid-cols-1 md:grid-cols-2 gap-5 space-y-4 md:space-y-0"
           >
-              {loading ? "Sending..." : "Make An Inquiry"}
-
-          </button>
-          <div className="text-center text-md md:text-lg text-gray-600 mt-5">No spam. Just real strategies that work.</div>
+            {/* Name */}
+            <div className="flex flex-col">
+              <label className="text-gray-700 font-semibold mb-2">Full Name*</label>
+              <input
+                type="text"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                placeholder="Enter your name"
+                className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition"
+                required
+              />
+            </div>
+            {/* Email */}
+            <div className="flex flex-col">
+              <label className="text-gray-700 font-semibold mb-2">Email*</label>
+              <input
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="Enter your email"
+                className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition"
+                required
+              />
+            </div>
+            {/* Phone */}
+            <div className="flex flex-col">
+              <label className="text-gray-700 font-semibold mb-2">Phone Number*</label>
+              <input
+                type="tel"
+                name="phone"
+                value={form.phone}
+                onChange={handleChange}
+                placeholder="+1 (555) 123-4567"
+                className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition"
+                required
+              />
+            </div>
+            {/* Service */}
+            <div className="flex flex-col">
+              <label className="text-gray-700 font-semibold mb-2">Services*</label>
+              <select
+                name="service"
+                value={form.service}
+                onChange={handleChange}
+                className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition"
+                required
+              >
+                <option value="">Select a Service</option>
+                {services.map((s) => (
+                  <option key={s.value} value={s.value}>
+                    {s.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+            {/* Business Type */}
+            <div className="flex flex-col">
+              <label className="text-gray-700 font-semibold mb-2">Business Type*</label>
+              <select
+                name="businessType"
+                value={form.businessType}
+                onChange={handleChange}
+                className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition"
+                required
+              >
+                <option value="">Select Your Business Type</option>
+                {marketing.map((m) => (
+                  <option key={m.value} value={m.value}>
+                    {m.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+            {/* Budget */}
+            <div className="flex flex-col">
+              <label className="text-gray-700 font-semibold mb-2">Marketing Budget*</label>
+              <select
+                name="budget"
+                value={form.budget}
+                onChange={handleChange}
+                className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition"
+                required
+              >
+                <option value="">Select Your Monthly Budget</option>
+                {budget.map((b) => (
+                  <option key={b.value} value={b.value}>
+                    {b.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+            {/* Message */}
+            <div className="md:col-span-2 flex flex-col">
+              <label className="text-gray-700 font-semibold mb-2">Message</label>
+              <textarea
+                name="message"
+                value={form.message}
+                onChange={handleChange}
+                rows={4}
+                placeholder="Type Here..."
+                className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition"
+              ></textarea>
+            </div>
+            {/* TCPA */}
+            <div className="md:col-span-2 flex flex-col gap-2">
+              <label className="flex items-start gap-2 text-gray-700">
+                <input
+                  type="checkbox"
+                  name="tcpaConsent"
+                  checked={form.tcpaConsent}
+                  onChange={handleChange}
+                  required
+                  className="mt-1 h-4 w-4 rounded border-gray-300"
+                />
+                By clicking "Make An Inquiry", you consent to be contacted. Please read our{" "}
+                <a href="/privacy-policy" className="text-blue-600 hover:underline">
+                  Privacy Policy
+                </a>{" "}
+                and{" "}
+                <a href="/terms" className="text-blue-600 hover:underline">
+                  Terms of Service
+                </a>
+                .
+              </label>
+            </div>
+            {/* Submit */}
+            <div className="md:col-span-2">
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full bg-blue-900 hover:bg-blue-800 text-white py-3 rounded-lg font-semibold transition transform hover:scale-105"
+              >
+                {loading ? "Sending..." : "Make An Inquiry"}
+              </button>
+              <p className="text-center text-gray-600 mt-3">No spam. Just real strategies that work.</p>
+            </div>
+          </form>
         </div>
-</form>
-          </div>
-          <div className="right w-full lg:w-1/2  h-full lg:h-[720px] p-6">
-            <div className="flex flex-col items-center w-full  h-full space-y-4">
-       <a
-  href="#services"
-  className="w-full bg-[#213150] text-white flex items-center justify-center gap-2 xl:gap-3
-  py-2 px-6  rounded-lg font-semibold text-sm sm:text-base lg:text-lg
-  hover:bg-blue-900 transition"
->
-  <PhoneCall size={20} className="lg:shrink-0" />
 
-  <span className=" min-w-0 lg:whitespace-nowrap  text-center">
-Consult an Elite Roofing Marketing Specialist Now
-  </span>
-</a>
-    <a
-  href="#services"
-  className="w-full text-blue-900 bg-white flex items-center border border-blue-900 justify-center gap-2 xl:gap-3
-  py-2 px-6  rounded-lg font-semibold text-sm sm:text-base lg:text-lg
-  hover:bg-[#213150] hover:text-white transition"
->
-            <FaEnvelope size={20} className='lg:shrink-0' />
+        {/* Right Panel */}
+        <div className="w-full lg:w-1/2 flex flex-col gap-6 animate-slideUp">
+          <a
+            href="#services"
+            className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg bg-blue-900 text-white font-semibold hover:bg-blue-800 transition transform hover:scale-105"
+          >
+            <PhoneCall size={20} /> Consult an Elite Roofing Marketing Specialist Now
+          </a>
+          <a
+            href="#services"
+            className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg bg-white text-blue-900 border border-blue-900 font-semibold hover:bg-blue-900 hover:text-white transition transform hover:scale-105"
+          >
+            <FaEnvelope size={20} /> Consult an Elite Roofing Marketing Specialist Now
+          </a>
 
-  <span className=" min-w-0 lg:whitespace-nowrap  text-center">
-Consult an Elite Roofing Marketing Specialist Now
-  </span>
-</a>
-<div className='w-full my-4 h-[250px] border border-gray-300 rounded-md shadow-md'>
-<div className='flex flex-col justify-start p-6 '>
-<h1 className='text-lg md:text-xl font-semibold'>Get In Touch
-</h1>
-<div className='justify-start gap-3 mt-4 cursor-pointer items-center flex '>
-  <PhoneCall size={22} className='text-blue-900 ' />
-<span className='text-gray-600 text-base md:text-lg'>+1 (336) 515-7898</span>
-</div>
-<div className='justify-start gap-3 cursor-pointer mt-4 items-center flex '>
-  <FaEnvelope size={22} className='text-blue-900 ' />
-<span className='text-gray-600 text-base md:text-lg'>sales@cibirix.com</span>
-</div>
-<div className='justify-start gap-3 cursor-pointer mt-4 items-center flex '>
-  <MapPin size={22} className='text-blue-900 ' />
-<span className='text-gray-600 text-base md:text-lg'>Serving all of USA
-</span>
-</div>
-<div className='justify-start gap-3 cursor-pointer mt-4 items-center flex '>
-  <Clock size={22} className='text-blue-900 ' />
-<span className='text-gray-600 text-base md:text-lg'>Mon-Fri: 9AM–6PM IST
-</span>
-</div>
-</div>
-</div>
-{/* <div className='w-full my-4 h-full md:h-[150px]  border border-orange-200 bg-orange-50 rounded-lg shadow-md'>
-<div className='flex flex-col justify-center items-center p-6 '>
-<h1 className='text-md md:text-xl text-center text-blue-900  font-semibold'> "Act Now – Your Peers Won't"
-
-</h1>
-<p className='text-sm md:text-base text-center text-gray-600 mt-3'>
-  Each day lacking a digital marketing plan is a day your competition is 
-  securing roofing contracts that belong to you. Begin your expansion now.
-
-
-
-</p>
-
-
-</div>
-</div> */}
-
+          {/* Contact Card */}
+          <div className="bg-white shadow-lg rounded-xl p-6 space-y-4 hover:shadow-2xl transition transform hover:scale-105">
+            <h4 className="font-semibold text-lg text-blue-900">Get In Touch</h4>
+            <div className="flex items-center gap-3">
+              <PhoneCall className="text-blue-900" /> <span className="text-gray-700">+1 (336) 515-7898</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <FaEnvelope className="text-blue-900" /> <span className="text-gray-700">sales@cibirix.com</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <MapPin className="text-blue-900" /> <span className="text-gray-700">Serving all of USA</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <Clock className="text-blue-900" /> <span className="text-gray-700">Mon-Fri: 9AM–6PM IST</span>
             </div>
           </div>
         </div>
+      </div>
     </section>
-)
-}
+  );
+};
 
-export default Ready
+export default Ready;

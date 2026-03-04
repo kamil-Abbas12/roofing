@@ -9,7 +9,7 @@ const Get = () => {
   <div className="container mx-auto  px-4 sm:px-6 lg:px-8 text-center">
 
     <span className="block text-xl md:text-2xl lg:text-5xl xl:text-6xl text-blue-900 font-bold">
-      With Cibirix, Roofing Contractors Get
+      With Top Dog, Roofing Contractors Get
     </span>
 
     <span className="block text-xl md:text-2xl lg:text-5xl xl:text-6xl text-blue-900 font-bold mb-3">

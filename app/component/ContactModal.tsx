@@ -34,54 +34,54 @@ interface ContactModalProps {
   open: boolean;
   onClose: () => void;
 }
-
 const ContactModal: React.FC<ContactModalProps> = ({ open, onClose }) => {
-  if (!open) return null;
- const [form, setForm] = useState({
-  name: "",
-  email: "",
-  phone: "",
-  service: "",
-  businessType: "",
-  budget: "",
-  message: "",
-});
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    businessType: "",
+    budget: "",
+    message: "",
+    tcpaConsent: false, // ✅ ADD
+  });
 
-const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  if (!open) return null;
 const handleChange = (
   e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
 ) => {
-  setForm({ ...form, [e.target.name]: e.target.value });
+  const target = e.target as HTMLInputElement;
+
+  setForm({
+    ...form,
+    [target.name]: target.type === "checkbox" ? target.checked : target.value,
+  });
 };
+
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
-  setLoading(true);
 
-  const res = await fetch("/api/contact", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(form),
-  });
+  const formEl = e.currentTarget as HTMLFormElement;
 
-  const data = await res.json();
-
-  if (data.success) {
-    alert("Inquiry Sent Successfully!");
-    setForm({
-      name: "",
-      email: "",
-      phone: "",
-      service: "",
-      businessType: "",
-      budget: "",
-      message: "",
-    });
-  } else {
-    alert("Something went wrong");
+  // ✅ Force browser to show validation UI if invalid
+  if (!formEl.checkValidity()) {
+    formEl.reportValidity();
+    return;
   }
 
-  setLoading(false);
+  // ✅ Extra guarantee for TCPA (even if browser quirks)
+  if (!form.tcpaConsent) {
+    alert("Please agree to the TCPA consent before submitting.");
+    return;
+  }
+
+  setLoading(true);
+
+  // ... keep the rest as-is
 };
+
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
@@ -114,15 +114,20 @@ className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5 lg:my-10 space-y-2 lg:spac
   </label>
 
   <input
-    id="name"
-    type="text"
-    name="name"
-    value={form.name}
+  id="phone"
+  type="tel"                 
+  value={form.phone}
   onChange={handleChange}
-    placeholder="Enter your full name"
-className="input-style"
-   required
-  />
+  name="phone"
+  placeholder="+1 (555) 123-4567"
+  className="input-style"
+  autoComplete="tel"
+  inputMode="tel"
+  pattern="^\s*(\+?1[\s.-]?)?(\(\s*\d{3}\s*\)|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}\s*$"  
+  title="Enter a valid phone number (e.g., +1 (555) 123-4567 or 555-123-4567)."
+  required
+/>
+
 </div>
  <div className="flex flex-col">
   <label htmlFor="email" className="text-sm font-bold text-gray-700 mb-2">
@@ -130,15 +135,17 @@ className="input-style"
   </label>
 
   <input
-    id="email"
-    type="text"
-    value={form.email}
+  id="email"
+  type="email"              
+  value={form.email}
   onChange={handleChange}
-    name="email"
-    placeholder="Enter your email address"
-className='input-style' 
- required
-  />
+  name="email"
+  placeholder="Enter your email address"
+  className="input-style"
+  autoComplete="email"
+  required
+/>
+
 </div>
  <div className="flex flex-col ">
   <label htmlFor="name" className="text-sm font-bold text-gray-700 mb-2">
@@ -229,6 +236,53 @@ focus:ring-2 focus:ring-blue-500 outline-none">
 bg-white text-gray-900 placeholder-gray-500  
 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 dark:border-blue-600"
         ></textarea>
+{/* TCPA */}
+<div className="md:col-span-2">
+  <div className="text-2xl font-extrabold text-blue-900 mb-2">TCPA</div>
+
+  <label className="flex items-start gap-3 text-sm text-gray-700 leading-6">
+    <input
+  type="checkbox"
+  name="tcpaConsent"
+  checked={form.tcpaConsent}
+  onChange={handleChange}
+  required                   // ✅ browser blocks submit if unchecked
+  className="mt-1 h-4 w-4 rounded border-gray-300"
+/>
+
+
+    <span>
+      By clicking &quot;Make An Inquiry&quot;, (1) You consent and request to be
+      contacted by your company,{" "}
+      <a
+        href="#"
+        className="text-blue-600 hover:text-blue-800 underline"
+      >
+        Third Parties/Affiliates
+      </a>{" "}
+      working on our behalf, and law firm(s) by phone, email, and text/SMS to the
+      home or mobile number(s) you provided even if your provided number is on a
+      national or state do not call list. In some cases, pre-recorded messages
+      and automated technology may be used to contact you for marketing purposes.
+      Please read our{" "}
+      <a
+        href="/privacy-policy"
+        className="text-blue-600 hover:text-blue-800 underline"
+      >
+        Privacy Policy
+      </a>{" "}
+      and{" "}
+      <a
+        href="/terms"
+        className="text-blue-600 hover:text-blue-800 underline"
+      >
+        Terms Of Service
+      </a>
+      . There is no requirement that you provide consent as a condition of any
+      purchase.
+    </span>
+  </label>
+</div>
 
         {/* Button */}
         <div className="md:col-span-2">

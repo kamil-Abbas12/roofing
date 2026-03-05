@@ -1,109 +1,175 @@
 "use client";
-import React from "react";
-import { TrendingUp, FileText, Calendar, MapPin, LucideIcon } from "lucide-react";
+import React, { useRef, useState, useEffect } from "react";
+import { TrendingUp, FileText, Calendar, MapPin, LucideIcon, Quote } from "lucide-react";
+
+function useInView<T extends HTMLElement>(opts?: IntersectionObserverInit) {
+  const ref = useRef<T | null>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    if (!ref.current) return;
+    const el = ref.current;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.2, ...opts }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [opts]);
+
+  return { ref, inView };
+}
+
+const images = ["/roof4.jpg", "/roof2.jpg", "/roof3.jpg"]; // carousel images
 
 const From = () => {
-  return (
-    <section id="Results" className="bg-gray-50 py-20">
-      <div className="max-w-7xl mx-auto px-6">
+  const heading = useInView<HTMLDivElement>();
+  const leftCol = useInView<HTMLDivElement>();
+  const rightCol = useInView<HTMLDivElement>();
+  const [currentImg, setCurrentImg] = useState(0);
 
+  // Carousel effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImg((prev) => (prev + 1) % images.length);
+    }, 4000); // change every 4 seconds
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <section className="relative isolate overflow-hidden py-20 bg-white text-white">
+      {/* Animated background blobs */}
+      {/* <div className="absolute inset-0 -z-10 pointer-events-none">
+        <div className="absolute -top-28 -left-28 h-[460px] w-[460px] rounded-full bg-blue-300/20 blur-3xl animate-blob" />
+        <div className="absolute top-6 -right-28 h-[560px] w-[560px] rounded-full bg-blue-400/20 blur-3xl animate-blob a-delay-200" />
+        <div className="absolute -bottom-44 left-1/3 h-[540px] w-[540px] rounded-full bg-blue-500/20 blur-3xl animate-blob a-delay-400" />
+      </div> */}
+
+      <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
-        <div className="text-center mb-14">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 animate-fadeInUp">
+        <div
+          ref={heading.ref}
+          className={`text-center mb-14 transition-all duration-700 ${
+            heading.inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900">
             Proven Performance for Premier Roofers
           </h1>
-          <p className="mt-4 text-gray-600 max-w-3xl mx-auto text-lg animate-fadeInUp delay-100">
-            Don't just take our word for it. Witness the measurable growth
-            our digital marketing expertise delivers for roofing enterprises like yours.
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-blue-900/80">
+            Witness measurable growth with our digital marketing expertise, tailored for roofing businesses.
           </p>
         </div>
 
-        {/* GRID */}
+        {/* Grid */}
         <div className="grid lg:grid-cols-2 gap-10 items-stretch">
-
-          {/* LEFT COLUMN */}
-          <div className="flex flex-col h-full space-y-6">
-
-            {/* WHITE CARD */}
-            <div className="bg-white rounded-2xl shadow-md p-10 flex-1 animate-fadeInUp">
-              <h2 className="text-xl font-semibold text-blue-900 mb-10">
-                In a strategic partnership, one US roofing contractor achieved:
-              </h2>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:mt-10">
-                <Stat icon={TrendingUp} value="320%" title="Storm Damage Inquiries" desc="High-intent homeowners seeking urgent post-storm restoration." />
-                <Stat icon={FileText} value="180%" title="Insurance Claim Volume" desc="Verified, lucrative projects backed by major insurance providers." />
-                <Stat icon={Calendar} value="4,200+" title="Qualified Leads Captured" desc="Generated within eight months of our collaboration." />
-                <Stat icon={MapPin} value="5" title="Strategic Territory Expansions" desc="Successfully scaled operations into new high-value markets." />
-              </div>
-            </div>
-
-            {/* BLUE BOX BELOW */}
-            <div className="bg-blue-600 text-white rounded-xl p-6 animate-fadeInUp delay-200">
-              <h4 className="text-lg font-semibold mb-2">
-                The Success Story
-              </h4>
-              <p className="text-sm leading-relaxed">
-                This roofing contractor evolved from chasing referrals and surviving slow seasons into the premier authority 
-                for storm damage and insurance claims, successfully scaling operations to multiple states across the USA.
-              </p>
-            </div>
+          {/* LEFT COLUMN - Feature Cards */}
+          <div
+            ref={leftCol.ref}
+            className={`flex flex-col h-full space-y-6 transition-all duration-700 ${
+              leftCol.inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
+            <FeatureCard
+              title="320% Storm Damage Inquiries"
+              desc="High-intent homeowners seeking urgent post-storm restoration."
+              icon={TrendingUp}
+              delay={0}
+            />
+            <FeatureCard
+              title="180% Insurance Claim Volume"
+              desc="Verified, lucrative projects backed by major insurance providers."
+              icon={FileText}
+              delay={100}
+            />
+            <FeatureCard
+              title="4,200+ Qualified Leads"
+              desc="Generated within eight months of our collaboration."
+              icon={Calendar}
+              delay={200}
+            />
+            <FeatureCard
+              title="5 Strategic Territory Expansions"
+              desc="Successfully scaled operations into new high-value markets."
+              icon={MapPin}
+              delay={300}
+            />
           </div>
 
-          {/* RIGHT IMAGE / CAROUSEL */}
-          <div className="relative rounded-2xl overflow-hidden shadow-md h-full min-h-[620px] animate-fadeInUp delay-300">
-            {/* Replace with carousel component if desired */}
+          {/* RIGHT IMAGE + Testimonial */}
+          <div
+            ref={rightCol.ref}
+            className={`relative rounded-3xl overflow-hidden h-full min-h-[620px] shadow-lg ring-1 ring-white/20 transition-all duration-700 ${
+              rightCol.inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
             <img
-              src="/roof.jpg"
+              src={images[currentImg]}
               alt="Roof"
-              className="w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000"
             />
-
-            {/* Testimonial */}
-            <div className="absolute bottom-8 left-8 bg-white rounded-xl p-5 shadow-lg max-w-sm animate-fadeInUp delay-400">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+            <div className="absolute bottom-7 left-7 right-7 sm:right-auto bg-blue-950 rounded-2xl p-5 shadow-xl ring-1 ring-blue-400 max-w-md floaty">
               <div className="flex items-start gap-3 mb-3">
-                <div className="w-14 h-14 bg-blue-100 rounded-full flex-shrink-0 items-center 
-                text-center pt-4 justify-center font-bold text-blue-600">
+                <div className="w-14 h-14 rounded-full flex-shrink-0 bg-blue-500 ring-1 ring-blue-200/60 grid place-items-center font-bold text-white">
                   RC
                 </div>
-
-                <p className="text-sm text-gray-600 italic">
-                  "Cibirix revolutionized our roofing business. We shifted from hunting
-                   for leads to becoming the primary choice, where homeowners now seek us out first."
-                </p>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 text-white mb-1">
+                    <Quote className="w-4 h-4 text-cyan-200" />
+                    <span className="text-xs font-semibold text-white/80">Verified Partner Result</span>
+                  </div>
+                  <p className="text-sm italic text-white/90">
+                    "Cibirix revolutionized our roofing business. We shifted from hunting for leads to becoming the primary choice."
+                  </p>
+                </div>
               </div>
-
-              <p className="font-semibold text-gray-900">
-                Roofing Contractor
-              </p>
-              <p className="text-sm text-gray-500">
-                Raleigh, NC
-              </p>
+              <p className="font-semibold text-white">Roofing Contractor</p>
+              <p className="text-sm text-white/80">Raleigh, NC</p>
             </div>
           </div>
         </div>
       </div>
+
+      <style>{`
+        @keyframes blob {
+          0%{transform:translate(0,0) scale(1);}
+          33%{transform:translate(18px,-22px) scale(1.05);}
+          66%{transform:translate(-16px,14px) scale(0.98);}
+          100%{transform:translate(0,0) scale(1);}
+        }
+        .animate-blob {animation:blob 9s ease-in-out infinite;}
+        .a-delay-200 {animation-delay:200ms;}
+        .a-delay-400 {animation-delay:400ms;}
+
+        @keyframes floaty {0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);}}
+        .floaty {animation:floaty 4s ease-in-out infinite;}
+      `}</style>
     </section>
   );
 };
 
-// Fixed Stat component
-type StatProps = {
-  icon: LucideIcon;
-  value: string;
-  title: string;
-  desc: string;
-};
-
-const Stat = ({ icon: Icon, value, title, desc }: StatProps) => (
-  <div className="text-center animate-fadeInUp">
-    <div className="w-14 h-14 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4 text-blue-500">
-      <Icon className="w-6 h-6" />
+// Feature card component
+const FeatureCard = ({ title, desc, icon: Icon, delay = 0 }: { title: string; desc: string; icon: LucideIcon; delay?: number }) => {
+  const { ref, inView } = useInView<HTMLDivElement>();
+  return (
+    <div
+      ref={ref}
+      style={{ transitionDelay: `${delay}ms` }}
+      className={`group relative rounded-2xl p-6 bg-blue-950 text-white shadow-lg ring-1 ring-blue-900 transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-2xl hover:scale-[1.02] opacity-0 translate-y-8 ${inView ? "opacity-100 translate-y-0" : ""}`}
+    >
+      <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-blue-00 text-white mb-4">
+        <Icon className="w-6 h-6" />
+      </div>
+      <h3 className="text-xl font-semibold">{title}</h3>
+      <p className="mt-2 text-sm text-white/90">{desc}</p>
     </div>
-    <h3 className="text-3xl font-bold text-blue-600">{value}</h3>
-    <p className="font-semibold text-gray-800 mt-1">{title}</p>
-    <p className="text-sm text-gray-500 mt-2">{desc}</p>
-  </div>
-);
+  );
+};
 
 export default From;

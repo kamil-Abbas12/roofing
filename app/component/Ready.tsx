@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import { Clock, MapPin, PhoneCall } from "lucide-react";
 import { FaEnvelope } from "react-icons/fa";
@@ -88,9 +89,9 @@ const Ready = () => {
       </div>
 
       {/* Content */}
-      <div className="w-full flex flex-col lg:flex-row justify-between items-start gap-8 mt-10 lg:mt-20">
+      <div className="w-full flex flex-col lg:flex-row justify-between items-stretch gap-8 mt-10 lg:mt-20">
         {/* Form */}
-        <div className="w-full lg:w-1/2 bg-white shadow-xl rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 animate-slideUp">
+        <div className="w-full lg:w-1/2 bg-white shadow-xl rounded-2xl p-6 md:p-8 hover:shadow-2xl transition-all duration-300 animate-slideUp">
           <h3 className="text-xl md:text-2xl font-bold text-blue-900 mb-4">
             Fill out this simple contact form or call us at
           </h3>
@@ -113,6 +114,7 @@ const Ready = () => {
                 required
               />
             </div>
+
             {/* Email */}
             <div className="flex flex-col">
               <label className="text-gray-700 font-semibold mb-2">Email*</label>
@@ -126,6 +128,7 @@ const Ready = () => {
                 required
               />
             </div>
+
             {/* Phone */}
             <div className="flex flex-col">
               <label className="text-gray-700 font-semibold mb-2">Phone Number*</label>
@@ -139,6 +142,7 @@ const Ready = () => {
                 required
               />
             </div>
+
             {/* Service */}
             <div className="flex flex-col">
               <label className="text-gray-700 font-semibold mb-2">Services*</label>
@@ -157,6 +161,7 @@ const Ready = () => {
                 ))}
               </select>
             </div>
+
             {/* Business Type */}
             <div className="flex flex-col">
               <label className="text-gray-700 font-semibold mb-2">Business Type*</label>
@@ -175,6 +180,7 @@ const Ready = () => {
                 ))}
               </select>
             </div>
+
             {/* Budget */}
             <div className="flex flex-col">
               <label className="text-gray-700 font-semibold mb-2">Marketing Budget*</label>
@@ -193,6 +199,7 @@ const Ready = () => {
                 ))}
               </select>
             </div>
+
             {/* Message */}
             <div className="md:col-span-2 flex flex-col">
               <label className="text-gray-700 font-semibold mb-2">Message</label>
@@ -205,9 +212,10 @@ const Ready = () => {
                 className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition"
               ></textarea>
             </div>
+
             {/* TCPA */}
             <div className="md:col-span-2 flex flex-col gap-2">
-              <label className="flex items-start gap-2 text-gray-700">
+              <label className="flex flex-wrap items-start gap-2 text-gray-700">
                 <input
                   type="checkbox"
                   name="tcpaConsent"
@@ -227,12 +235,13 @@ const Ready = () => {
                 .
               </label>
             </div>
+
             {/* Submit */}
             <div className="md:col-span-2">
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-blue-900 hover:bg-blue-800 text-white py-3 rounded-lg font-semibold transition transform hover:scale-105"
+                className="w-full bg-blue-900 hover:bg-blue-800 text-white py-3 rounded-lg font-semibold transition transform lg:hover:scale-105"
               >
                 {loading ? "Sending..." : "Make An Inquiry"}
               </button>
@@ -242,22 +251,22 @@ const Ready = () => {
         </div>
 
         {/* Right Panel */}
-        <div className="w-full lg:w-1/2 flex flex-col gap-6 animate-slideUp">
+        <div className="w-full lg:w-1/2 flex flex-col gap-4">
           <a
             href="#services"
-            className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg bg-blue-900 text-white font-semibold hover:bg-blue-800 transition transform hover:scale-105"
+            className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg bg-blue-900 text-white font-semibold hover:bg-blue-800 transition lg:hover:scale-105"
           >
             <PhoneCall size={20} /> Consult an Elite Roofing Marketing Specialist Now
           </a>
           <a
             href="#services"
-            className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg bg-white text-blue-900 border border-blue-900 font-semibold hover:bg-blue-900 hover:text-white transition transform hover:scale-105"
+            className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg bg-white text-blue-900 border border-blue-900 font-semibold hover:bg-blue-900 hover:text-white transition lg:hover:scale-105"
           >
             <FaEnvelope size={20} /> Consult an Elite Roofing Marketing Specialist Now
           </a>
 
           {/* Contact Card */}
-          <div className="bg-white shadow-lg rounded-xl p-6 space-y-4 hover:shadow-2xl transition transform hover:scale-105">
+          <div className="bg-white shadow-lg rounded-xl p-6 space-y-4 hover:shadow-2xl transition lg:hover:scale-105">
             <h4 className="font-semibold text-lg text-blue-900">Get In Touch</h4>
             <div className="flex items-center gap-3">
               <PhoneCall className="text-blue-900" /> <span className="text-gray-700">+1 (336) 515-7898</span>

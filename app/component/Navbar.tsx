@@ -43,20 +43,22 @@ const Navbar = () => {
 
   const navBase = "w-full fixed top-0 z-50 transition-all duration-300";
   const navStyle = scrolled
-    ? "bg-white/95 backdrop-blur shadow border-b border-slate-200"
-    : "bg-transparent shadow-none";
-  const textStyle = scrolled ? "text-slate-900" : "text-white";
-  const linkStyle = scrolled
-    ? "text-slate-700 hover:text-blue-700"
-    : "text-white/90 hover:text-white";
-  const iconStyle = scrolled ? "text-slate-900" : "text-white";
-  const primaryBtn = scrolled
-    ? "bg-blue-600 text-white hover:bg-blue-700"
-    : "bg-blue-500/90 text-white hover:bg-blue-500";
-  const outlineBtn = scrolled
-    ? "border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white"
-    : "border-white/80 text-white hover:bg-white hover:text-[#061a62]";
+  ? "bg-white/95 backdrop-blur shadow border-b border-slate-200"
+  : "bg-transparent";
 
+const textStyle = scrolled ? "text-slate-900" : "text-white";
+
+const linkStyle = scrolled
+  ? "text-slate-700 hover:text-blue-700"
+  : "text-blue-900 hover:text-blue-700";
+
+const iconStyle = scrolled ? "text-slate-900" : "text-white";
+  const primaryBtn = scrolled
+  ? "bg-blue-600 text-white hover:bg-blue-700"
+  : "bg-white text-blue-900 hover:bg-gray-100";
+const outlineBtn = scrolled
+  ? "border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white"
+  : "border-blue-900 text-blue-900 bg-white/90 hover:bg-blue-900 hover:text-white";
   return (
     <nav className={`${navBase} ${navStyle} h-20`}>
       {/* NAVBAR CONTAINER */}
@@ -107,8 +109,7 @@ const Navbar = () => {
                 activeSection === sec
                   ? scrolled
                     ? "text-blue-700 font-semibold"
-                    : "text-white font-semibold"
-                  : ""
+: "text-blue-900 font-semibold"                  : ""
               }`}
             >
               {sec}

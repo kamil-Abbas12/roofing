@@ -71,10 +71,17 @@ const Ready = () => {
   };
 
   return (
-    <section
+   <section
       id="Contact"
-      className="bg-gradient-to-r from-blue-50 to-blue-100 py-10 md:py-16 xl:py-20 px-6 md:px-10 xl:px-40 w-full"
+      className="relative isolate overflow-hidden py-12 md:py-16 lg:py-20
+       xl:py-24 px-6 md:px-10 lg:px-20 xl:px-40 bg-gradient-to-br from-[#F7FAFF] via-[#EFF7FF] to-[#EAFBFF]"
     >
+      {/* Background blobs */}
+      <div aria-hidden className="absolute inset-0 -z-10 pointer-events-none">
+        <div className="absolute -top-24 -left-24 h-[420px] w-[420px] rounded-full bg-cyan-300/25 blur-3xl animate-blob" />
+        <div className="absolute top-10 -right-28 h-[520px] w-[520px] rounded-full bg-blue-400/20 blur-3xl animate-blob [animation-delay:600ms]" />
+        <div className="absolute -bottom-40 left-1/3 h-[520px] w-[520px] rounded-full bg-sky-300/25 blur-3xl animate-blob [animation-delay:1200ms]" />
+      </div>
       {/* Heading */}
       <div className="text-center max-w-6xl mx-auto animate-fadeIn">
         <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-blue-900 leading-tight">
@@ -150,7 +157,7 @@ const Ready = () => {
                 name="service"
                 value={form.service}
                 onChange={handleChange}
-                className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition"
+  className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition text-gray-900 placeholder:text-gray-400"
                 required
               >
                 <option value="">Select a Service</option>
@@ -169,7 +176,7 @@ const Ready = () => {
                 name="businessType"
                 value={form.businessType}
                 onChange={handleChange}
-                className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition"
+  className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition text-gray-900 placeholder:text-gray-400"
                 required
               >
                 <option value="">Select Your Business Type</option>
@@ -188,7 +195,7 @@ const Ready = () => {
                 name="budget"
                 value={form.budget}
                 onChange={handleChange}
-                className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition"
+  className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition text-gray-900 placeholder:text-gray-400"
                 required
               >
                 <option value="">Select Your Monthly Budget</option>
@@ -214,27 +221,49 @@ const Ready = () => {
             </div>
 
             {/* TCPA */}
-            <div className="md:col-span-2 flex flex-col gap-2">
-              <label className="flex flex-wrap items-start gap-2 text-gray-700">
-                <input
-                  type="checkbox"
-                  name="tcpaConsent"
-                  checked={form.tcpaConsent}
-                  onChange={handleChange}
-                  required
-                  className="mt-1 h-4 w-4 rounded border-gray-300"
-                />
-                By clicking "Make An Inquiry", you consent to be contacted. Please read our{" "}
-                <a href="/privacy-policy" className="text-blue-600 hover:underline">
-                  Privacy Policy
-                </a>{" "}
-                and{" "}
-                <a href="/terms" className="text-blue-600 hover:underline">
-                  Terms of Service
-                </a>
-                .
-              </label>
-            </div>
+        {/* TCPA */}
+<div className="md:col-span-2 mt-2">
+  <h4 className="text-lg md:text-xl font-bold text-blue-900 mb-2">TCPA</h4>
+
+  <label className="flex items-start gap-3 text-gray-700 text-xs md:text-sm leading-relaxed">
+    <input
+      type="checkbox"
+      name="tcpaConsent"
+      checked={form.tcpaConsent}
+      onChange={handleChange}
+      required
+      className="mt-1 h-4 w-4 rounded border-gray-300 accent-blue-600 cursor-pointer"
+    />
+
+    <span>
+      By clicking "Get Quote", (1) You consent and request to be contacted by
+      topinstantquotes.com,{" "}
+      <span className="text-blue-600 font-medium">
+        Third Parties/Affiliates
+      </span>{" "}
+      working on our behalf, and law firm(s) by phone, email, and text/SMS to
+      the home or mobile number(s) you provided even if your provided number is
+      on a national or state do not call list. In some cases, pre-recorded
+      messages and automated technology may be used to contact you for
+      marketing purposes. Please read our{" "}
+      <a
+        href="/privacy-policy"
+        className="text-blue-600 hover:underline font-medium"
+      >
+        Privacy Policy
+      </a>{" "}
+      and{" "}
+      <a
+        href="/terms"
+        className="text-blue-600 hover:underline font-medium"
+      >
+        Terms Of Service
+      </a>
+      . There is no requirement that you provide consent as a condition of any
+      purchase.
+    </span>
+  </label>
+</div>
 
             {/* Submit */}
             <div className="md:col-span-2">
@@ -266,25 +295,32 @@ const Ready = () => {
           </a>
 
           {/* Contact Card */}
-          <div className="bg-white shadow-lg rounded-xl p-6 space-y-4 hover:shadow-2xl transition lg:hover:scale-105">
-            <h4 className="font-semibold text-lg text-blue-900">Get In Touch</h4>
-            <div className="flex items-center gap-3">
-              <a href="tel:2762548576">
-              <PhoneCall className="text-blue-900" /> <span className="text-gray-700">+1 (336) 515-7898</span>
-            </a>
-            </div>
-            <div className="flex items-center gap-3">
-              <a href="mailto:info@topdoglead.com">
-              <FaEnvelope className="text-blue-900" /> <span className="text-gray-700">info@topdoglead.com</span>
-              </a>
-            </div>
-            <div className="flex items-center gap-3">
-              <MapPin className="text-blue-900" /> <span className="text-gray-700">Serving all of USA</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Clock className="text-blue-900" /> <span className="text-gray-700">Mon-Fri: 9AM–6PM IST</span>
-            </div>
-          </div>
+        <div className="bg-white shadow-lg rounded-xl p-6 space-y-4 hover:shadow-2xl transition lg:hover:scale-105">
+  <h4 className="font-semibold text-lg text-blue-900">Get In Touch</h4>
+
+  {/* Single row for call and email */}
+  <div className="flex flex-row items-center gap-6">
+    <a href="tel:+13365157898" className="flex items-center gap-2">
+      <PhoneCall size={18} className="text-blue-900" />
+      <span className="text-gray-700">+1 (336) 515-7898</span>
+    </a>
+
+    <a href="mailto:info@topdoglead.com" className="flex items-center gap-2">
+      <FaEnvelope className="text-blue-900" />
+      <span className="text-gray-700">info@topdoglead.com</span>
+    </a>
+  </div>
+
+  {/* Other info can stay in separate rows */}
+  <div className="flex items-center gap-3">
+    <MapPin className="text-blue-900" />
+    <span className="text-gray-700">Serving all of USA</span>
+  </div>
+  <div className="flex items-center gap-3">
+    <Clock className="text-blue-900" />
+    <span className="text-gray-700">Mon-Fri: 9AM–6PM USA</span>
+  </div>
+</div>
         </div>
       </div>
     </section>

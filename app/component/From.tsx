@@ -42,13 +42,14 @@ const From = () => {
   }, []);
 
   return (
-    <section className="relative isolate overflow-hidden py-20 bg-white text-white">
+    <section
+     className="relative isolate overflow-hidden py-20 bg-white text-white">
       {/* Animated background blobs */}
-      {/* <div className="absolute inset-0 -z-10 pointer-events-none">
+       <div className="absolute inset-0 -z-10 pointer-events-none">
         <div className="absolute -top-28 -left-28 h-[460px] w-[460px] rounded-full bg-blue-300/20 blur-3xl animate-blob" />
         <div className="absolute top-6 -right-28 h-[560px] w-[560px] rounded-full bg-blue-400/20 blur-3xl animate-blob a-delay-200" />
         <div className="absolute -bottom-44 left-1/3 h-[540px] w-[540px] rounded-full bg-blue-500/20 blur-3xl animate-blob a-delay-400" />
-      </div> */}
+      </div> 
 
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
@@ -69,12 +70,12 @@ const From = () => {
         {/* Grid */}
         <div className="grid lg:grid-cols-2 gap-10 items-stretch">
           {/* LEFT COLUMN - Feature Cards */}
-          <div
-            ref={leftCol.ref}
-            className={`flex flex-col h-full space-y-6 transition-all duration-700 ${
-              leftCol.inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
-          >
+        <div
+  ref={leftCol.ref}
+  className={`grid grid-cols-2 gap-6 h-full transition-all duration-700 ${
+    leftCol.inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+  }`}
+>
             <FeatureCard
               title="320% Storm Damage Inquiries"
               desc="High-intent homeowners seeking urgent post-storm restoration."
@@ -99,6 +100,15 @@ const From = () => {
               icon={MapPin}
               delay={300}
             />
+             <div className="col-span-2">
+    <FeatureCard
+      title="Success Stories"
+      desc="The Success Story This roofing contractor evolved from chasing referrals and surviving slow seasons into the premier authority for storm damage and insurance claims, successfully scaling operations to multiple states across the USA. Cibirix revolutionized our roofing business. We shifted from hunting for leads to becoming the primary choice, where homeowners now seek us out first.
+"
+      icon={TrendingUp}
+      delay={400}
+    />
+  </div>
           </div>
 
           {/* RIGHT IMAGE + Testimonial */}

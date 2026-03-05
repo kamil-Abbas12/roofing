@@ -91,7 +91,8 @@ export default function RoofingTestimonials() {
           {/* PREVIOUS BUTTON */}
           <button
   ref={prevRef}
-  className="absolute -left-16 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-white p-3 shadow-xl border group transition md:flex"
+  className="  absolute -left-16 top-1/2 z-10 hidden -translate-y-1/2
+   rounded-full bg-white p-3 shadow-xl border group transition md:flex"
 >
   <ChevronLeft className="h-5 w-5 text-gray-700 transition" />
 </button>
@@ -113,7 +114,7 @@ export default function RoofingTestimonials() {
             observeParents
             autoplay={{ delay: 3500, disableOnInteraction: false }}
             pagination={{ clickable: true }}
-            navigation
+            navigation={false}
             onBeforeInit={(swiper: SwiperType) => {
               if (typeof swiper.params.navigation !== "boolean") {
                 swiper.params.navigation!.prevEl = prevRef.current;

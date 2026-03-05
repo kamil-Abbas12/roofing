@@ -42,7 +42,8 @@ const Get = () => {
   return (
     <section
       id="Services"
-      className="relative isolate overflow-hidden py-12 md:py-16 lg:py-20 xl:py-24 px-6 md:px-10 lg:px-20 xl:px-40 bg-gradient-to-br from-[#F7FAFF] via-[#EFF7FF] to-[#EAFBFF]"
+      className="relative isolate overflow-hidden py-12 md:py-16 lg:py-20
+       xl:py-24 px-6 md:px-10 lg:px-20 xl:px-40 bg-gradient-to-br from-[#F7FAFF] via-[#EFF7FF] to-[#EAFBFF]"
     >
       {/* Background blobs */}
       <div aria-hidden className="absolute inset-0 -z-10 pointer-events-none">
@@ -52,7 +53,7 @@ const Get = () => {
       </div>
 
       <div className="container mx-auto text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-blue-900">
+        <h1 className="text-4xl md:text-5xl lg:text-5xl  font-extrabold text-blue-900">
           With Top Dog, Roofing Contractors Get
         </h1>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-blue-900 mt-2 mb-6">

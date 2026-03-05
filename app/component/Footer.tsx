@@ -37,7 +37,7 @@ export default function Footer() {
 
             <div className="mt-4 space-y-2 text-sm">
               <a
-                href="mailto:support@topdoglead.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=info@topdoglead.com&su=New%20Lead%20Inquiry"
                 className="block text-blue-300 hover:text-white"
               >
                 support@topdoglead.com

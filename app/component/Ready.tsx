@@ -110,7 +110,7 @@ const Ready = () => {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="Enter your name"
-                className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition"
+  className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition text-gray-900 placeholder:text-gray-400"
                 required
               />
             </div>
@@ -124,7 +124,7 @@ const Ready = () => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="Enter your email"
-                className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition"
+  className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition text-gray-900 placeholder:text-gray-400"
                 required
               />
             </div>
@@ -138,7 +138,7 @@ const Ready = () => {
                 value={form.phone}
                 onChange={handleChange}
                 placeholder="+1 (555) 123-4567"
-                className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition"
+  className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition text-gray-900 placeholder:text-gray-400"
                 required
               />
             </div>
@@ -209,7 +209,7 @@ const Ready = () => {
                 onChange={handleChange}
                 rows={4}
                 placeholder="Type Here..."
-                className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition"
+  className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition text-gray-900 placeholder:text-gray-400"
               ></textarea>
             </div>
 
@@ -253,13 +253,13 @@ const Ready = () => {
         {/* Right Panel */}
         <div className="w-full lg:w-1/2 flex flex-col gap-4">
           <a
-            href="#services"
+            href="tel:2762548576"
             className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg bg-blue-900 text-white font-semibold hover:bg-blue-800 transition lg:hover:scale-105"
           >
             <PhoneCall size={20} /> Consult an Elite Roofing Marketing Specialist Now
           </a>
           <a
-            href="#services"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=info@topdoglead.com&su=New%20Lead%20Inquiry"
             className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg bg-white text-blue-900 border border-blue-900 font-semibold hover:bg-blue-900 hover:text-white transition lg:hover:scale-105"
           >
             <FaEnvelope size={20} /> Consult an Elite Roofing Marketing Specialist Now
@@ -269,10 +269,14 @@ const Ready = () => {
           <div className="bg-white shadow-lg rounded-xl p-6 space-y-4 hover:shadow-2xl transition lg:hover:scale-105">
             <h4 className="font-semibold text-lg text-blue-900">Get In Touch</h4>
             <div className="flex items-center gap-3">
+              <a href="tel:2762548576">
               <PhoneCall className="text-blue-900" /> <span className="text-gray-700">+1 (336) 515-7898</span>
+            </a>
             </div>
             <div className="flex items-center gap-3">
-              <FaEnvelope className="text-blue-900" /> <span className="text-gray-700">sales@cibirix.com</span>
+              <a href="mailto:info@topdoglead.com">
+              <FaEnvelope className="text-blue-900" /> <span className="text-gray-700">info@topdoglead.com</span>
+              </a>
             </div>
             <div className="flex items-center gap-3">
               <MapPin className="text-blue-900" /> <span className="text-gray-700">Serving all of USA</span>

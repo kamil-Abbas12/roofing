@@ -1,7 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { Menu, Phone, X } from "lucide-react";
+
+import React, { useEffect, useRef, useState } from "react";
+import { Menu, Phone, X, ChevronDown } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaEnvelope } from "react-icons/fa";
 
 const sections = ["Services", "Results", "Contact"];
@@ -11,10 +13,17 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  // NEW: Blog dropdown states
+  const [blogOpen, setBlogOpen] = useState(false);
+  const [mobileBlogOpen, setMobileBlogOpen] = useState(false);
+  const blogWrapRef = useRef<HTMLDivElement | null>(null);
+
   // Handle scroll background
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
+      // Optional: close dropdown on scroll to avoid floating menu
+      setBlogOpen(false);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -41,29 +50,39 @@ const Navbar = () => {
     return () => observer.disconnect();
   }, []);
 
+  // NEW: click outside to close blog dropdown (desktop)
+  useEffect(() => {
+    const onDown = (e: MouseEvent) => {
+      if (!blogWrapRef.current) return;
+      if (!blogWrapRef.current.contains(e.target as Node)) setBlogOpen(false);
+    };
+    window.addEventListener("mousedown", onDown);
+    return () => window.removeEventListener("mousedown", onDown);
+  }, []);
+
   const navBase = "w-full fixed top-0 z-50 transition-all duration-300";
   const navStyle = scrolled
-  ? "bg-white/95 backdrop-blur shadow border-b border-slate-200"
-  : "bg-transparent";
+    ? "bg-white/95 backdrop-blur shadow border-b border-slate-200"
+    : "bg-transparent";
 
-const textStyle = scrolled ? "text-slate-900" : "text-white";
+  const textStyle = scrolled ? "text-slate-900" : "text-white";
 
-const linkStyle = scrolled
-  ? "text-slate-700 hover:text-blue-700"
-  : "text-blue-900 hover:text-blue-700";
+  const linkStyle = scrolled
+    ? "text-slate-700 hover:text-blue-700"
+    : "text-blue-900 hover:text-blue-700";
 
-const iconStyle = scrolled ? "text-slate-900" : "text-white";
+  const iconStyle = scrolled ? "text-slate-900" : "text-white";
   const primaryBtn = scrolled
-  ? "bg-blue-600 text-white hover:bg-blue-700"
-  : "bg-white text-blue-900 hover:bg-gray-100";
-const outlineBtn = scrolled
-  ? "border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white"
-  : "border-blue-900 text-blue-900 bg-white/90 hover:bg-blue-900 hover:text-white";
+    ? "bg-blue-600 text-white hover:bg-blue-700"
+    : "bg-white text-blue-900 hover:bg-gray-100";
+  const outlineBtn = scrolled
+    ? "border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white"
+    : "border-blue-900 text-blue-900 bg-white/90 hover:bg-blue-900 hover:text-white";
+
   return (
     <nav className={`${navBase} ${navStyle} h-20`}>
       {/* NAVBAR CONTAINER */}
       <div className="relative w-full mx-auto px-4 md:px-6 lg:px-10 xl:px-40 flex items-center justify-between h-20">
-
         {/* LOGO */}
         <div className="flex items-center">
           <Image
@@ -96,7 +115,9 @@ const outlineBtn = scrolled
         </div>
 
         {/* DESKTOP MENU */}
-        <div className={`hidden lg:flex font-medium space-x-6 xl:space-x-10 ${textStyle}`}>
+        <div
+          className={`hidden lg:flex font-medium space-x-6 xl:space-x-10 ${textStyle}`}
+        >
           {sections.map((sec) => (
             <button
               key={sec}
@@ -104,17 +125,55 @@ const outlineBtn = scrolled
                 const el = document.getElementById(sec);
                 if (el) el.scrollIntoView({ behavior: "smooth" });
                 setMenuOpen(false);
+                setBlogOpen(false);
               }}
               className={`block text-base sm:text-lg font-medium transition ${linkStyle} ${
                 activeSection === sec
                   ? scrolled
                     ? "text-blue-700 font-semibold"
-: "text-blue-900 font-semibold"                  : ""
+                    : "text-blue-900 font-semibold"
+                  : ""
               }`}
             >
               {sec}
             </button>
           ))}
+
+          {/* NEW: BLOG DROPDOWN (Desktop) */}
+          <div className="relative" ref={blogWrapRef}>
+            <button
+              type="button"
+              onClick={() => setBlogOpen((v) => !v)}
+              className={`inline-flex items-center gap-2 text-base sm:text-lg font-medium transition ${linkStyle}`}
+            >
+              Blog
+             <ChevronDown
+  size={18}
+  className={`${textStyle} transition-transform duration-200 ${
+    blogOpen ? "rotate-180" : ""
+  }`}
+/>
+            </button>
+
+            {blogOpen && (
+              <div className="absolute left-0 mt-3 w-56 overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-black/5">
+                <Link
+                  href="/blog"
+                  onClick={() => setBlogOpen(false)}
+                  className="block px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50"
+                >
+                  Blog Grid
+                </Link>
+                <Link
+                  href="/blog/sidebar"
+                  onClick={() => setBlogOpen(false)}
+                  className="block px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50"
+                >
+                  Blog Sidebar
+                </Link>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* DESKTOP RIGHT BUTTONS */}
@@ -140,8 +199,18 @@ const outlineBtn = scrolled
 
         {/* MOBILE MENU ICON */}
         <div className="lg:hidden flex items-center">
-          <button onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? <X size={28} className={iconStyle} /> : <Menu size={28} className={iconStyle} />}
+          <button
+            onClick={() => {
+              setMenuOpen(!menuOpen);
+              // optional: keep blog open state in sync
+              if (menuOpen) setMobileBlogOpen(false);
+            }}
+          >
+            {menuOpen ? (
+              <X size={28} className={iconStyle} />
+            ) : (
+              <Menu size={28} className={iconStyle} />
+            )}
           </button>
         </div>
       </div>
@@ -149,7 +218,9 @@ const outlineBtn = scrolled
       {/* MOBILE DROPDOWN MENU */}
       <div
         className={`lg:hidden bg-white shadow-md transition-all duration-300 ${
-          menuOpen ? "max-h-screen py-4 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+          menuOpen
+            ? "max-h-screen py-4 opacity-100"
+            : "max-h-0 opacity-0 overflow-hidden"
         }`}
       >
         <div className="flex flex-col space-y-4 px-6">
@@ -160,12 +231,63 @@ const outlineBtn = scrolled
                 const el = document.getElementById(sec);
                 if (el) el.scrollIntoView({ behavior: "smooth" });
                 setMenuOpen(false);
+                setMobileBlogOpen(false);
               }}
               className="w-full text-center text-base sm:text-lg font-medium text-gray-700 hover:text-blue-950 transition"
             >
               {sec}
             </button>
           ))}
+
+          {/* NEW: BLOG DROPDOWN (Mobile) */}
+          <div className="w-full">
+            <button
+              type="button"
+              onClick={() => setMobileBlogOpen((v) => !v)}
+              className="w-full flex items-center justify-center gap-2 
+              text-base sm:text-lg font-medium text-gray-900 hover:text-blue-950 transition"
+            >
+              Blog
+             <ChevronDown
+  size={18}
+  className={`text-gray-700 transition-transform duration-200 ${
+    mobileBlogOpen ? "rotate-180" : ""
+  }`}
+/>
+            </button>
+
+            <div
+              className={`grid transition-all duration-300 ${
+                mobileBlogOpen
+                  ? "grid-rows-[1fr] opacity-100 mt-3"
+                  : "grid-rows-[0fr] opacity-0 mt-0"
+              }`}
+            >
+              <div className="overflow-hidden flex flex-col gap-2">
+                <Link
+                  href="/blog"
+                  onClick={() => {
+                    setMenuOpen(false);
+                    setMobileBlogOpen(false);
+                  }}
+                  className="w-full text-center text-sm font-semibold text-slate-700 hover:text-blue-950 transition py-2 rounded-md hover:bg-slate-50"
+                >
+                  Blog Grid
+                </Link>
+
+                <Link
+                  href="/blog/sidebar"
+                  onClick={() => {
+                    setMenuOpen(false);
+                    setMobileBlogOpen(false);
+                  }}
+                  className="w-full text-center text-sm font-semibold text-slate-700 hover:text-blue-950 transition py-2 rounded-md hover:bg-slate-50"
+                >
+                  Blog Sidebar
+                </Link>
+              </div>
+            </div>
+          </div>
 
           {/* CONTACT BUTTON MOBILE */}
           <a

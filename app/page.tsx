@@ -5,6 +5,7 @@ import Get from "./component/Get";
 import From from "./component/From";
 import Ready from "./component/Ready";
 import RoofingTestimonials from "./component/RoofingTestimonials";
+import Blog from "./component/Blog";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
     <Get/>
     <From/> 
     <RoofingTestimonials/>
+    <Blog/>
     <Ready/>
     </>
   );

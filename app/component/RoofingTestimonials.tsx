@@ -101,7 +101,8 @@ export default function RoofingTestimonials() {
          {/* NEXT BUTTON */}
 <button
   ref={nextRef}
-  className="absolute -right-16 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-white p-3 shadow-xl border group transition md:flex"
+  className="absolute -right-16 top-1/2 z-10 hidden -translate-y-1/2 rounded-full
+   bg-white p-3 shadow-xl border group transition md:flex"
 >
   <ChevronRight className="h-5 w-5 text-gray-700 transition" />
 </button>

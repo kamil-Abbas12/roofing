@@ -101,19 +101,17 @@ Homeowners trust TopDog Roofing to connect them with experienced roofing profess
 />
 
 <FeatureCard
-  title="24"
-  subtitle="Hour Inspection Response"
+  title="24 Hours"
+  subtitle=" Inspection Response"
   desc="Fast inspections to quickly address roofing issues."
   icon={Timer}
   delay={300}
 />
 <div className="sm:col-span-2">
       <FeatureCard
-      title="ROOFING SUCESS Story"
+      title="ROOFING SUCESS STORY"
       subtitle=""
-      desc="After a severe storm damaged a homeowner’s roof, our contractor network provided a same-day inspection and
-       insurance claim support, helping the homeowner get a full roof replacement approved quickly.
-Now their home is fully protected with a brand-new, durable roofing system.
+      desc="When a powerful storm left a homeowner’s roof badly damaged, our contractor network arranged a same-day inspection and assisted with the insurance claim, helping secure quick approval for a full roof replacement. The home is now fully protected with a brand-new, durable roofing system..
 "
       icon={TrendingUp}
       delay={400}
@@ -136,21 +134,13 @@ Now their home is fully protected with a brand-new, durable roofing system.
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
             <div className="absolute bottom-7 left-7 right-7 sm:right-auto bg-blue-950 rounded-2xl p-5 shadow-xl ring-1 ring-blue-400 max-w-md floaty">
               <div className="flex items-start gap-3 mb-3">
-                <div className="w-14 h-14 rounded-full flex-shrink-0 bg-blue-500 ring-1 ring-blue-200/60 grid place-items-center font-bold text-white">
-                  RC
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 text-white mb-1">
-                    <Quote className="w-4 h-4 text-cyan-200" />
-                    <span className="text-xs font-semibold text-white/80">Verified Partner Result</span>
-                  </div>
-                  <p className="text-sm italic text-white/90">
-                    "Roofing revolutionized our roofing business. We shifted from hunting for leads to becoming the primary choice."
-                  </p>
-                </div>
+                <h3 className="text-white text-md">
+      A roof built strong is a promise kept, guarding your home while you rest. Every project is crafted with care and trusted by homeowners across the community. With expertise and dedication, we rise to protect, ensuring your peace of mind no matter the call.
+                </h3>
+          
+              
               </div>
-              <p className="font-semibold text-white">Roofing Contractor</p>
-              <p className="text-sm text-white/80">Raleigh, NC</p>
+            
             </div>
           </div>
         </div>

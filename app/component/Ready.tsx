@@ -189,23 +189,7 @@ const Ready = () => {
             </div>
 
             {/* Budget */}
-            <div className="flex flex-col">
-              <label className="text-gray-700 font-semibold mb-2">Marketing Budget*</label>
-              <select
-                name="budget"
-                value={form.budget}
-                onChange={handleChange}
-  className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition text-gray-900 placeholder:text-gray-400"
-                required
-              >
-                <option value="">Select Your Monthly Budget</option>
-                {budget.map((b) => (
-                  <option key={b.value} value={b.value}>
-                    {b.label}
-                  </option>
-                ))}
-              </select>
-            </div>
+           
 
             {/* Message */}
             <div className="md:col-span-2 flex flex-col">
@@ -283,15 +267,23 @@ const Ready = () => {
         <div className="w-full lg:w-1/2 flex flex-col gap-4">
           <a
             href="tel:2762548576"
-            className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg bg-blue-900 text-white font-semibold hover:bg-blue-800 transition lg:hover:scale-105"
+            className="w-full flex items-center
+            text-lg justify-center gap-2 py-3 px-6 rounded-lg bg-blue-900 text-white border
+             border-blue-900 font-semibold hover:bg-blue-900 hover:text-blue-900 hover:bg-white transition 
+             lg:hover:scale-105"
           >
-            <PhoneCall size={20} /> Consult an Elite Roofing Marketing Specialist Now
+            <PhoneCall size={20} /> Consult  Elite Roofing Marketing Specialist Now
           </a>
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=info@topdoglead.com&su=New%20Lead%20Inquiry"
-            className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg bg-white text-blue-900 border border-blue-900 font-semibold hover:bg-blue-900 hover:text-white transition lg:hover:scale-105"
+            className="w-full flex items-center
+            text-lg justify-center gap-2 py-3 px-6 rounded-lg bg-blue-900 text-white border
+             border-blue-900 font-semibold hover:bg-blue-900 hover:text-blue-900 hover:bg-white transition 
+             lg:hover:scale-105"
           >
-            <FaEnvelope size={20} /> Consult an Elite Roofing Marketing Specialist Now
+            <FaEnvelope className="" size={20} />
+            Submit Your Expert Project Inquiry Now
+
           </a>
 
           {/* Contact Card */}
@@ -299,24 +291,26 @@ const Ready = () => {
   <h4 className="font-semibold text-lg text-blue-900">Get In Touch</h4>
 
   {/* Single row for call and email */}
-  <div className="flex flex-row items-center gap-6">
-    <a href="tel:+13365157898" className="flex items-center gap-2">
-      <PhoneCall size={18} className="text-blue-900" />
-      <span className="text-gray-700">+1 (336) 515-7898</span>
+  <div className="flex flex-col items-start gap-6">
+    <a href="tel:2762548576
+" className="flex items-center gap-2">
+      <PhoneCall size={20} className="text-blue-900" />
+      <span className="text-gray-700">2762548576</span>
     </a>
 
-    <a href="mailto:info@topdoglead.com" className="flex items-center gap-2">
-      <FaEnvelope className="text-blue-900" />
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@topdoglead.com&su=New%20Lead%20Inquiry"
+     className="flex  items-center gap-2">
+      <FaEnvelope size={20} className="text-blue-900" />
       <span className="text-gray-700">info@topdoglead.com</span>
     </a>
   </div>
 
   {/* Other info can stay in separate rows */}
-  <div className="flex items-center gap-3">
+  <div className="flex items-center gap-2">
     <MapPin className="text-blue-900" />
     <span className="text-gray-700">Serving all of USA</span>
   </div>
-  <div className="flex items-center gap-3">
+  <div className="flex items-center gap-2">
     <Clock className="text-blue-900" />
     <span className="text-gray-700">Mon-Fri: 9AM–6PM USA</span>
   </div>

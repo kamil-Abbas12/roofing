@@ -1,26 +1,28 @@
 "use client";
-import { Globe, MessageCircleCheck, PenSquare, Search, ArrowUpRight } from "lucide-react";
+import { Globe, MessageCircleCheck, PenSquare, Search, ArrowUpRight, Code2, Code2Icon, ThumbsUp, Handshake, HandHeart } from "lucide-react";
 import React from "react";
 import { GrMapLocation } from "react-icons/gr";
 import { PiArrowElbowLeftUp } from "react-icons/pi";
 import { motion, Variants } from "framer-motion";
+import { Code } from 'lucide-react';
+import { BarChart3 } from "lucide-react";
 
 const Get = () => {
   const cards = [
     {
-      icon: <Search className="h-8 w-8" />,
-      title: "SEO Strategies for Roofers",
-      text: "Dominate local searches when homeowners look for “roof repair near me,” “storm damage roofing,” and “emergency roof leak help” in your area."
+      icon: <Handshake className="h-8 w-8" />,
+      title: "Why Consult Our Experts?",
+      text: "We bridge the gap between just another contractor and the undisputed local authority. By leveraging a nationwide network of 15,000 specialists, we provide the strategic data and elite craftsmanship your property deserves. You aren't just getting a roof; you’re gaining access to industry-leading standards that competitors simply cannot match.."
     },
     {
-      icon: <PiArrowElbowLeftUp className="h-8 w-8" />,
-      title: "Digital Ads for Roofing Leads",
-      text: "Reach homeowners searching for roof repairs, replacements, and storm damage solutions with precise, high-converting ad campaigns."
+      icon: <HandHeart className="h-8 w-8" />,
+      title: "How We Serve You",
+      text: "We replace the storm chaser chaos with a seamless, professional, and personalized experience. Our process is built on transparency and speed because we know insurance claims move fast. From the first face-to-face meeting to the final inspection, we treat your home with a white-glove approach, ensuring a warm, welcoming environment throughout the entire restoration process."
     },
     {
-      icon: <GrMapLocation className="h-8 w-8" />,
-      title: "Premium Roofing Leads: Google Guaranteed",
-      text: "Secure the prestigious Google Guaranteed checkmark and dominate the top of local roofing results, paying only for the phone calls and messages you receive."
+      icon: <BarChart3 className="h-8 w-8" />,
+      title: "The Results You Can Expect",
+      text: "Experience total peace of mind with a sturdier, safer, and more valuable investment. Our proven frameworks don't just patch holes; they provide long-term protection and curb appeal that stands the test of time. Whether it’s maintenance or a full storm recovery, you walk away with a top-rated roof and the confidence that your most important asset is fully secured."
     },
     // {
     //   icon: <Globe className="h-8 w-8" />,
@@ -53,15 +55,14 @@ const Get = () => {
       </div>
 
       <div className="container mx-auto text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-5xl  font-extrabold text-blue-900">
-          With Top Dog, Roofing Contractors Get
+        <h1 className="text-4xl md:text-5xl lg:text-5xl  font-bold text-blue-900">
+Schedule your master consultation
         </h1>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-blue-900 mt-2 mb-6">
-          Noticed, Chosen, and Trusted
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mt-2 mb-6">
+          Today!
         </h2>
         <p className="text-lg md:text-xl lg:text-2xl text-slate-700 max-w-5xl mx-auto mb-12">
-          Our powerful digital marketing strategies help roofing businesses become the preferred choice for repairs, replacements, and storm damage services across the USA.
-        </p>
+Get elite protection for your property with nationwide experts specializing in durable repairs, total replacements, and rapid storm damage restoration.        </p>
 
         {/* GRID */}
        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 xl:gap-10">

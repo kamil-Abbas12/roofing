@@ -15,38 +15,38 @@ import "swiper/css/navigation";
 
 const testimonials = [
   {
-    name: "Michael Anderson",
+    name: "Ethan Carter",
     role: "Homeowner",
     image: "/pic1.jpg",
-    text: "TopDog Roofing did an outstanding job replacing our roof. The team was professional",
+    text: "TopDog Roofing did an outstanding job replacing our roof. ",
   },
   {
-    name: "Sarah Williams",
+    name: "Olivia Bennett",
     role: "Property Manager",
     image: "/pic2.jpg",
-    text: "From inspection to completion, everything was handled smoothly. They explained .",
+    text: "From inspection to completion, everything was handled smoothly. ",
   },
   {
-    name: "Daniel Roberts",
-    role: "Business Owner",
+    name: "Lucas Hayes",
+    role: "Property Client",
     image: "/pic3.jpg",
     text: "After storm damage, we needed urgent roof repair.",
   },
   {
-    name: "Mitchell Roberts",
-    role: "Business Owner",
+    name: "Chloe Simmons",
+    role: "Property Client",
     image: "/pic4.jpg",
     text: "Their team responded quickly and restored our commercial roof efficiently. ",
   },
   {
-    name: "Brian Roberts",
-    role: "Business Owner",
+    name: "Mason Foster",
+    role: "Property Client",
     image: "/pic5.jpg",
-    text: "Outstanding service and communication. Highly recommend their roofing services.",
+    text: "Outstanding service and communication. ",
   },
   {
-    name: "Daniel Roberts",
-    role: "Business Owner",
+    name: "Sophia Reynolds",
+    role: "Property Client",
     image: "/pic6.jpg",
     text: "Professional team and excellent craftsmanship.",
   },
@@ -73,7 +73,7 @@ export default function RoofingTestimonials() {
           className="text-center"
         >
           <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1 text-sm font-medium text-blue-900 shadow">
-            Client Feedback
+            Customers Feedback
           </span>
 
           <h2 className="mt-6 text-4xl font-bold text-white md:text-5xl">

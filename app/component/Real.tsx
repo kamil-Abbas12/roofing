@@ -60,7 +60,7 @@ const item: Variants = {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 xl:gap-10 my-8 lg:my-14 xl:my-20"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8 xl:gap-10 my-8 lg:my-14 xl:my-20"
         >
 
           {/* CARD 1 */}
@@ -82,7 +82,7 @@ const item: Variants = {
                 The High Cost of Being a Secret
               </h2>
 
-              <p className="text-sm md:text-lg text-gray-300 text-left mt-4">
+              <p className="text-sm md:text-lg  text-gray-300 text-center mt-4 ">
                 A weak digital footprint is an open invitation for competitors to steal your market share. Without a dominant online presence, you’re missing out on high-ticket storm restoration and premium contracts every single day.
               </p>
             </div>
@@ -107,7 +107,7 @@ const item: Variants = {
                 Eliminating the Off-Season Slump
               </h2>
 
-              <p className="text-sm md:text-lg text-gray-300 text-left mt-4">
+              <p className="text-sm md:text-lg text-gray-300 text-center mt-4">
                 Elite roofing companies don't wait for the phone to ring-they make it ring. If your growth stops the moment the sun comes out or referrals slow down, you aren't running a market leader.
               </p>
             </div>
@@ -129,11 +129,13 @@ const item: Variants = {
               </motion.div>
 
               <h2 className="text-lg xl:text-xl text-white mt-6 font-semibold text-center">
-                The Invisible Storm Chaser
+                The Invisible Storm Chaser Force
               </h2>
 
-              <p className="text-sm md:text-lg text-gray-300 text-left mt-4">
-                Insurance claims move fast. If you aren't the first face a homeowner sees after a hail storm, you’ve already lost the contract.
+              <p className="text-sm md:text-lg text-gray-300 text-center mt-4 ">
+                Insurance claims move fast. If you aren't the first face a homeowner sees after a hail storm, 
+                you’ve already lost the contract.Every minute you
+                  wait is a lead your competitor just signed
               </p>
             </div>
           </motion.div>
@@ -154,11 +156,12 @@ const item: Variants = {
               </motion.div>
 
               <h2 className="text-lg xl:text-xl text-white mt-6 font-semibold text-center">
-                The High Cost of Operating in the Dark
+                The High Cost of Operating in  Dark
               </h2>
 
-              <p className="text-sm md:text-lg text-gray-300 text-left mt-4">
-                If you can’t see exactly where your best contracts are coming from, you’re just handing your market share to competitors.
+              <p className="text-sm md:text-lg text-gray-300 text-center mt-4">
+                If you can’t see exactly where your best contracts are coming from,
+                 you’re just handing your market share to competitors.Own your local market at cheap cost
               </p>
             </div>
           </motion.div>

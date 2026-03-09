@@ -1,7 +1,6 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
-import { TrendingUp, FileText, Calendar, MapPin, LucideIcon, Quote } from "lucide-react";
-
+import { TrendingUp, Hammer, Star, Clock, Timer, LucideIcon, Quote, Award } from "lucide-react";
 function useInView<T extends HTMLElement>(opts?: IntersectionObserverInit) {
   const ref = useRef<T | null>(null);
   const [inView, setInView] = useState(false);
@@ -25,7 +24,7 @@ function useInView<T extends HTMLElement>(opts?: IntersectionObserverInit) {
   return { ref, inView };
 }
 
-const images = ["/roof4.jpg", "/roof2.jpg", "/roof3.jpg"]; // carousel images
+const images = ["/roof4.jpg", "/roof5.jpg", "/roof3.jpg"]; // carousel images
 
 const From = () => {
   const heading = useInView<HTMLDivElement>();
@@ -43,6 +42,7 @@ const From = () => {
 
   return (
     <section
+    id="Result"
      className="relative isolate overflow-hidden py-20 bg-white text-white">
       {/* Animated background blobs */}
        <div className="absolute inset-0 -z-10 pointer-events-none">
@@ -51,7 +51,7 @@ const From = () => {
         <div className="absolute -bottom-44 left-1/3 h-[540px] w-[540px] rounded-full bg-blue-500/20 blur-3xl animate-blob a-delay-400" />
       </div> 
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6">
         {/* Heading */}
         <div
           ref={heading.ref}
@@ -60,10 +60,10 @@ const From = () => {
           }`}
         >
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900">
-            Proven Performance for Premier Roofers
+Roofing Experts Homeowners Trust
           </h1>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-blue-900/80">
-            Witness measurable growth with our digital marketing expertise, tailored for roofing businesses.
+Homeowners trust TopDog Roofing to connect them with experienced roofing professionals who deliver reliable service, fast response times, and high-quality workmanship.
           </p>
         </div>
 
@@ -72,38 +72,48 @@ const From = () => {
           {/* LEFT COLUMN - Feature Cards */}
         <div
   ref={leftCol.ref}
-  className={`grid grid-cols-2 gap-6 h-full transition-all duration-700 ${
+  className={`grid grid-cols-1 sm:grid-cols-2 gap-6 h-full transition-all duration-700 ${
     leftCol.inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
   }`}
 >
-            <FeatureCard
-              title="320% Storm Damage Inquiries"
-              desc="High-intent homeowners seeking urgent post-storm restoration."
-              icon={TrendingUp}
-              delay={0}
-            />
-            <FeatureCard
-              title="180% Insurance Claim Volume"
-              desc="Verified, lucrative projects backed by major insurance providers."
-              icon={FileText}
-              delay={100}
-            />
-            <FeatureCard
-              title="4,200+ Qualified Leads"
-              desc="Generated within eight months of our collaboration."
-              icon={Calendar}
-              delay={200}
-            />
-            <FeatureCard
-              title="5 Strategic Territory Expansions"
-              desc="Successfully scaled operations into new high-value markets."
-              icon={MapPin}
-              delay={300}
-            />
-             <div className="col-span-2">
-    <FeatureCard
-      title="Success Stories"
-      desc="The Success Story This roofing contractor evolved from chasing referrals and surviving slow seasons into the premier authority for storm damage and insurance claims, successfully scaling operations to multiple states across the USA. Cibirix revolutionized our roofing business. We shifted from hunting for leads to becoming the primary choice, where homeowners now seek us out first.
+           <FeatureCard
+  title="1,000+ "
+  subtitle="Roofs Repaired & Replaced"
+  desc="Trusted roofing services for homeowners across multiple communities."
+  icon={Hammer}
+  delay={0}
+/>
+
+<FeatureCard
+  title="4.8★ "
+  subtitle="Average Customer Rating"
+  desc="Highly rated by homeowners for quality work and reliable service."
+  icon={Star}
+  delay={100}
+/>
+
+<FeatureCard
+  title="10+ "
+  subtitle="Years Roofing Experience"
+  desc="Experienced roofing professionals delivering dependable results."
+  icon={Award}
+  delay={200}
+/>
+
+<FeatureCard
+  title="24"
+  subtitle="Hour Inspection Response"
+  desc="Fast inspections to quickly address roofing issues."
+  icon={Timer}
+  delay={300}
+/>
+<div className="sm:col-span-2">
+      <FeatureCard
+      title="ROOFING SUCESS Story"
+      subtitle=""
+      desc="After a severe storm damaged a homeowner’s roof, our contractor network provided a same-day inspection and
+       insurance claim support, helping the homeowner get a full roof replacement approved quickly.
+Now their home is fully protected with a brand-new, durable roofing system.
 "
       icon={TrendingUp}
       delay={400}
@@ -135,7 +145,7 @@ const From = () => {
                     <span className="text-xs font-semibold text-white/80">Verified Partner Result</span>
                   </div>
                   <p className="text-sm italic text-white/90">
-                    "Cibirix revolutionized our roofing business. We shifted from hunting for leads to becoming the primary choice."
+                    "Roofing revolutionized our roofing business. We shifted from hunting for leads to becoming the primary choice."
                   </p>
                 </div>
               </div>
@@ -165,18 +175,20 @@ const From = () => {
 };
 
 // Feature card component
-const FeatureCard = ({ title, desc, icon: Icon, delay = 0 }: { title: string; desc: string; icon: LucideIcon; delay?: number }) => {
+const FeatureCard = ({ title,subtitle, desc, icon: Icon, delay = 0 }: { title: string; subtitle:string; desc: string; icon: LucideIcon; delay?: number }) => {
   const { ref, inView } = useInView<HTMLDivElement>();
   return (
     <div
       ref={ref}
       style={{ transitionDelay: `${delay}ms` }}
-      className={`group relative rounded-2xl p-6 bg-blue-950 text-white shadow-lg ring-1 ring-blue-900 transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-2xl hover:scale-[1.02] opacity-0 translate-y-8 ${inView ? "opacity-100 translate-y-0" : ""}`}
+     className={`group relative rounded-2xl p-6 bg-gradient-to-br  from-blue-900 to-blue-950 text-white shadow-lg ring-2 ring-blue-600 transition-all duration-500 ease-out opacity-0 translate-y-8 ${inView ? "opacity-100 translate-y-0" : ""}`}
     >
-      <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-blue-00 text-white mb-4">
-        <Icon className="w-6 h-6" />
+      <div className="w-12 h-12 rounded-xl flex items-center justify-start bg-blue-00 text-white mb-4">
+        <Icon className="w-6 h-6 " />
       </div>
-      <h3 className="text-xl font-semibold">{title}</h3>
+      <h3 className="text-xl font-semibold ">{title}</h3>
+            <h3 className="text-lg xl:text-md font-semibold mt-2">{subtitle}</h3>
+
       <p className="mt-2 text-sm text-white/90">{desc}</p>
     </div>
   );

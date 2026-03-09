@@ -36,13 +36,15 @@ export default function Blog() {
     .map(({ p }) => p);
 
   return (
-    <section className="w-full bg-gradient-to-b from-gray-50 via-white to-gray-100 py-14">
+    <section
+    id="blog"
+    className="w-full bg-gradient-to-b from-gray-50 via-white to-gray-100 py-14">
       <div className="mx-auto w-full max-w-6xl px-4">
 
         {/* Header */}
-        <div className="mb-6 flex items-center justify-between gap-4">
+        <div className="mb-6 flex flex-col md:flex-row items-center justify-between gap-4">
 
-          <h2 className="animate-fadeUp text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="animate-fadeUp text-xl  md:text-3xl font-extrabold tracking-tight text-gray-900 ">
             Roofing Tips & Insights <br className="hidden sm:block" />
             From Industry Experts
           </h2>

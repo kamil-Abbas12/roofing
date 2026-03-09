@@ -38,17 +38,15 @@ const fadeUp: Variants = {
 };
 
 export default function Hero({
-  label = "Roofing",
-  title = "Brighten Your Smile\nwith Expert Dental\nSolutions",
-  description = `Experience personalized, comprehensive roofing for all ages in a warm,
-welcoming environment. Your healthiest, brightest smile starts here.`,
+  title = "Shield your home with professional roofing specialists",
+  description = `Ensure lasting, complete protection for your house in a calm, stress-free process. Your sturdiest, most reliable shelter starts with us.`,
   ctaText = "Get Started Now",
   ctaHref = "#",
   customersCount = "23k",
-  customersLabel = "happy customers",
+  customersLabel = "Happy customers",
   avatarUrls = [],
-  years = "15",
-  yearsLabel = "Years of Experience",
+  years = "Certified ",
+  yearsLabel = " Professionals",
   rightImageSrc = "/roof2.jpg",
 }: HeroProps) {
   const titleLines = title.split("\n");
@@ -66,7 +64,6 @@ welcoming environment. Your healthiest, brightest smile starts here.`,
   <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2 xl:gap-20">
     {/* LEFT SIDE */}
     <motion.div variants={container} initial="hidden" animate="show" className="text-blue-900 text-center xl:text-left">
-      <motion.p variants={fadeUp} className="text-sm font-medium text-blue-800/90">{label}</motion.p>
       <motion.h1 variants={fadeUp} className="mt-4 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
         {titleLines.map((line, idx) => (
           <span key={idx}>
@@ -76,7 +73,7 @@ welcoming environment. Your healthiest, brightest smile starts here.`,
         ))}
       </motion.h1>
 
-      <motion.div variants={fadeUp} className="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center">
+      <motion.div variants={fadeUp} className="mt-10 flex flex-col gap-5 sm:flex-row items-center">
         <a href={ctaHref} className="inline-flex h-11 w-fit items-center justify-center rounded-xl bg-[#3f72d7] px-6 text-sm font-semibold text-white shadow-sm transition hover:bg-[#3566c9]">{ctaText}</a>
 
         <div className="flex items-center gap-4">
@@ -94,7 +91,7 @@ welcoming environment. Your healthiest, brightest smile starts here.`,
         </div>
       </motion.div>
 
-      <motion.p variants={fadeUp} className="mt-10 max-w-xl whitespace-pre-line text-sm leading-relaxed text-blue-900/75">
+      <motion.p variants={fadeUp} className="mt-10 max-w-xl whitespace-pre-line text-sm md:text-base leading-relaxed text-blue-900/75">
         {description}
       </motion.p>
     </motion.div>
@@ -112,8 +109,8 @@ welcoming environment. Your healthiest, brightest smile starts here.`,
         </div>
 
         <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }} className="absolute bottom-6 right-6 w-[140px] rounded-2xl bg-[#4a79d6] px-5 py-6 text-center text-white shadow-lg">
-          <div className="text-5xl font-extrabold leading-none">{years}</div>
-          <div className="mt-2 text-xs font-medium text-white/90">{yearsLabel}</div>
+          <div className="text-sm font-medium text-white/90">{years}</div>
+          <div className="mt-2 text-sm font-medium text-white/90">{yearsLabel}</div>
         </motion.div>
       </motion.div>
 

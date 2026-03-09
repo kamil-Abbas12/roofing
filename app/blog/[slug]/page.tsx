@@ -44,7 +44,7 @@ export default async function BlogDetailPage({
           <Image src={post.image} alt={post.title} fill className="object-cover" />
         </div>
 
-        <div className="prose prose-slate mt-8 max-w-none prose-headings:text-[#0b2b55] prose-p:text-[#0b2b55]/80">
+        <div className="prose prose-slate mt-8 max-w-none prose-headings:text-[#0b2b55] text-gray-900 prose-p:text-[#0b2b55]/80">
           {post.content.map((p, i) => (
             <p key={i}>{p}</p>
           ))}

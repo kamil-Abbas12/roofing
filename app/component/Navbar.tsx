@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaEnvelope } from "react-icons/fa";
 
-const sections = ["Services", "Results", "Contact"];
+const sections = ["Services", "Results", "Contact" ];
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -80,15 +80,15 @@ const Navbar = () => {
     : "border-blue-900 text-blue-900 bg-white/90 hover:bg-blue-900 hover:text-white";
 
   return (
-    <nav className={`${navBase} ${navStyle} h-20`}>
+    <nav className={`${navBase} ${navStyle} h-25`}>
       {/* NAVBAR CONTAINER */}
       <div className="relative w-full mx-auto px-4 md:px-6 lg:px-10 xl:px-40 flex items-center justify-between h-20">
         {/* LOGO */}
         <div className="flex items-center">
           <Image
             src="/logo1.png"
-            width={80}
-            height={20}
+            width={100}
+            height={25}
             alt="logo"
             className="cursor-pointer object-contain"
           />

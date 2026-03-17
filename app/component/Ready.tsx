@@ -99,10 +99,19 @@ const Ready = () => {
       <div className="w-full flex flex-col lg:flex-row justify-between items-stretch gap-8 mt-10 lg:mt-20">
         {/* Form */}
         <div className="w-full lg:w-1/2 bg-white shadow-xl rounded-2xl p-6 md:p-8 hover:shadow-2xl transition-all duration-300 animate-slideUp">
-          <h3 className="text-xl md:text-2xl font-bold text-blue-900 mb-4">
-            Fill out this simple contact form or call us at
-          </h3>
-          <p className="text-blue-800 font-semibold mb-6">+1 (336) 515-7898</p>
+         <div className="mb-6  ">
+
+          <span className="text-xl md:text-2xl font-bold text-blue-900 ">
+            Fill out this simple 
+                      </span>
+
+                      <span className="text-xl md:text-2xl font-bold text-blue-800 ml-2 ">
+
+            contact form or call us at
+                      </span>
+
+          <span className="text-xl md:text-2xl font-bold text-blue-900 ml-2 ">   +1 866 964 4568 </span>
+         </div>
 
           <form
             onSubmit={handleSubmit}
@@ -144,7 +153,7 @@ const Ready = () => {
                 name="phone"
                 value={form.phone}
                 onChange={handleChange}
-                placeholder="+1 (555) 123-4567"
+                placeholder="+186 696 44568 "
   className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition text-gray-900 placeholder:text-gray-400"
                 required
               />
@@ -266,7 +275,7 @@ const Ready = () => {
         {/* Right Panel */}
         <div className="w-full lg:w-1/2 flex flex-col gap-4">
           <a
-            href="tel:2762548576"
+            href="tel:18669644568"
             className="w-full flex items-center
             text-lg justify-center gap-2 py-3 px-6 rounded-lg bg-blue-900 text-white border
              border-blue-900 font-semibold hover:bg-blue-900 hover:text-blue-900 hover:bg-white transition 
@@ -292,10 +301,10 @@ const Ready = () => {
 
   {/* Single row for call and email */}
   <div className="flex flex-col items-start gap-6">
-    <a href="tel:2762548576
+    <a href="tel:18669644568
 " className="flex items-center gap-2">
       <PhoneCall size={20} className="text-blue-900" />
-      <span className="text-gray-700">2762548576</span>
+      <span className="text-gray-700">+1 866 964 4568</span>
     </a>
 
     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@topdoglead.com&su=New%20Lead%20Inquiry"

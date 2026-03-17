@@ -107,6 +107,7 @@ export default function RoofingTestimonials() {
   <ChevronRight className="h-5 w-5 text-gray-700 transition" />
 </button>
           <Swiper
+          className='pb-16 md:pb-20 lg:pb-24'
             modules={[Autoplay, Pagination, Navigation]}
             slidesPerView={1}
             loop
@@ -127,17 +128,18 @@ export default function RoofingTestimonials() {
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
             }}
-            className="pb-14"
+    
           >
             {testimonials.map((item, index) => (
-<SwiperSlide key={index} className="flex h-auto">
-                  <motion.div
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ y: -10 }}
-                  className="group relative h-full rounded-2xl bg-white p-8 shadow-lg transition overflow-hidden"
-                >
+<SwiperSlide key={index} className="flex">
+  <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5, delay: index * 0.1 }}
+    whileHover={{ y: -10 }}
+    className="group relative flex flex-col h-full rounded-2xl
+     bg-white p-8 shadow-lg transition overflow-hidden h-auto md:h-[250px]  lg:min-h-[200px]"
+  >
 
                   {/* top gradient line */}
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600"></div>

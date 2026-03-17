@@ -73,7 +73,7 @@ const Navbar = () => {
 
   const iconStyle = scrolled ? "text-slate-900" : "text-white";
   const primaryBtn = scrolled
-    ? "bg-blue-600 text-white hover:bg-blue-700"
+    ? "bg-blue-900 text-white hover:bg-blue-950"
     : "bg-white text-blue-900 hover:bg-gray-100";
   const outlineBtn = scrolled
     ? "border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white"
@@ -179,7 +179,7 @@ const Navbar = () => {
         {/* DESKTOP RIGHT BUTTONS */}
         <div className="hidden lg:flex gap-5">
           <a
-            href="tel:2762548576"
+            href="tel:18669644568"
             className={`px-5 py-2 rounded-md font-medium flex items-center transition border ${outlineBtn}`}
           >
             <Phone size={18} className="mr-2" />
@@ -270,7 +270,8 @@ const Navbar = () => {
                     setMenuOpen(false);
                     setMobileBlogOpen(false);
                   }}
-                  className="w-full text-center text-sm font-semibold text-slate-700 hover:text-blue-950 transition py-2 rounded-md hover:bg-slate-50"
+                  className="w-full text-center text-sm font-semibold
+                   text-slate-700 hover:text-blue-950 transition py-2 rounded-md hover:bg-slate-50"
                 >
                   Blog Grid
                 </Link>
@@ -302,7 +303,7 @@ const Navbar = () => {
 
           {/* CALL BUTTON MOBILE */}
           <a
-            href="tel:2762548576"
+            href="tel:18669644568"
             className="w-full text-center text-blue-950 border border-blue-950 px-5 py-2 rounded-md font-medium flex items-center justify-center hover:bg-[#213150] hover:text-white transition"
           >
             <Phone size={16} className="mr-2" />

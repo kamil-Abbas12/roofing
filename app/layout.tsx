@@ -5,6 +5,7 @@ import Navbar from "./component/Navbar";
 import Footer from "./component/Footer";
 import DiscountPopup from "./component/DiscountPopup";
 import { Poppins } from "next/font/google";
+import ChatBox from "./component/ChatBox";
 const poppins = Poppins({
   weight: ['400', '600', '700'], // regular, semi-bold, bold
   subsets: ['latin'],
@@ -39,6 +40,8 @@ export default function RootLayout({
               <DiscountPopup />
 
         {children}
+          {/* <ChatBox /> */}
+
               <Footer/>
 
       </body>

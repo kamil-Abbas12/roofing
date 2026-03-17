@@ -63,42 +63,36 @@ const DiscountPopup = () => {
           </div>
 
           {/* Content (text kept the same as your original) */}
-          <div className="text-center">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-              Call Today!
-            </h2>
+          <div className="mt-6 text-center space-y-4">
 
-            <p className="mt-4 text-gray-700">
-              Get{" "}
-              <span className="text-5xl font-extrabold tracking-tight text-red-500">
-                30%
-              </span>{" "}
-              <span className="text-xl font-semibold text-red-500">to</span>{" "}
-              <span className="text-5xl font-extrabold tracking-tight text-red-500">
-                40%
-              </span>{" "}
-              <span className="text-lg font-semibold text-gray-800">
-                Discount.
-              </span>
-            </p>
+          <h2 className="text-2xl font-bold text-gray-900">
+            Need Roofing Assistance?
+          </h2>
 
-            {/* CTA button (styled like reference “GET IT”) */}
-            <a
-              href="tel:2762548576"
-              className="mt-7 inline-flex w-full items-center justify-center rounded-full bg-red-500 px-6 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-lg transition hover:bg-red-600 active:scale-[0.99]"
-            >
-              Call Now
-            </a>
+          <p className="text-gray-600 text-sm leading-relaxed">
+            You may qualify for a
+            <span className="block text-3xl font-extrabold text-red-500 mt-2">
+              $0 Down Roof Replacement
+            </span>
+          </p>
 
-            {/* “NO, THANKS” like reference */}
-            <button
-              onClick={() => setIsOpen(false)}
-              className="mt-5 text-xs font-bold uppercase tracking-wider text-gray-600 underline decoration-gray-300 underline-offset-4 transition hover:text-gray-900"
-              type="button"
-            >
-              No, Thanks
-            </button>
-          </div>
+          {/* CTA */}
+          <a
+            href="tel:18669644568"
+            className="mt-4 inline-flex w-full justify-center rounded-lg bg-red-500 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-red-600"
+          >
+            Call Now To See If You Qualify
+          </a>
+
+          {/* Cancel */}
+          <button
+            onClick={() => setIsOpen(false)}
+            className="text-xs text-gray-500 hover:text-gray-800"
+          >
+            No Thanks
+          </button>
+
+        </div>
         </div>
       </div>
     </div>

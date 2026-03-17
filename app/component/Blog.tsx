@@ -37,14 +37,13 @@ export default function Blog() {
 
   return (
     <section
-    id="blog"
-    className="w-full bg-gradient-to-b from-gray-50 via-white to-gray-100 py-14">
+      id="blog"
+      className="w-full bg-gradient-to-b from-gray-50 via-white to-gray-100 py-14"
+    >
       <div className="mx-auto w-full max-w-6xl px-4">
-
         {/* Header */}
-        <div className="mb-6 flex flex-col md:flex-row items-center justify-between gap-4">
-
-          <h2 className="animate-fadeUp text-xl  md:text-3xl font-extrabold tracking-tight text-gray-900 ">
+        <div className="mb-6 flex flex-col items-center justify-between gap-4 md:flex-row">
+          <h2 className="animate-fadeUp text-xl font-extrabold tracking-tight text-gray-900 md:text-3xl">
             Roofing Tips & Insights <br className="hidden sm:block" />
             From Industry Experts
           </h2>
@@ -58,23 +57,38 @@ export default function Blog() {
               <ChevronRightIcon className="h-4 w-4" />
             </span>
           </Link>
-
         </div>
 
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
-
           {/* Left big image */}
           <Link
             href={`/blog/${featured.slug}`}
             className="relative overflow-hidden rounded-2xl shadow-md ring-1 ring-black/5 lg:col-span-6"
           >
+            {/* Keep your 4/5 layout, but remove black bars by using a blurred cover backdrop */}
+            <div className="relative aspect-[4/5] w-full overflow-hidden bg-gray-200">
+              {/* Background layer (fills the box, blurred) */}
+              <Image
+                src={featured.image}
+                alt=""
+                fill
+                aria-hidden
+                className="object-cover blur-2xl scale-110"
+                quality={60}
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                priority
+              />
+              {/* Slight tint so blur looks cleaner */}
+              <div className="absolute inset-0 bg-black/10" />
 
-            <div className="relative aspect-[4/5] w-full">
+              {/* Foreground layer (shows full image without cropping) */}
               <Image
                 src={featured.image}
                 alt={featured.title}
                 fill
-                className="object-cover"
+                className="object-contain"
+                quality={95}
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 priority
               />
             </div>
@@ -82,7 +96,6 @@ export default function Blog() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/0 to-black/0" />
 
             <div className="absolute bottom-4 left-4 right-4">
-
               <div className="inline-flex items-center gap-2 rounded-full bg-orange-500 px-3 py-1 text-xs font-semibold text-white">
                 {featured.date}
               </div>
@@ -90,28 +103,23 @@ export default function Blog() {
               <h3 className="mt-2 text-lg font-extrabold text-white drop-shadow sm:text-xl">
                 {featured.title}
               </h3>
-
             </div>
           </Link>
 
           {/* Right section */}
           <div className="lg:col-span-6">
-
             {/* Featured card */}
             <Link
               key={featured.slug}
               href={`/blog/${featured.slug}`}
-              className="block animate-slideUpFade rounded-2xl border border-gray-200 bg-white p-5 shadow-md hover:shadow-xl transition"
+              className="block animate-slideUpFade rounded-2xl border border-gray-200 bg-white p-5 shadow-md transition hover:shadow-xl"
             >
-
               <div className="inline-flex items-center gap-2 rounded-full bg-orange-500 px-3 py-1 text-xs font-semibold text-white">
                 {featured.date}
               </div>
 
               <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-12 sm:items-center">
-
                 <div className="sm:col-span-7">
-
                   <h3 className="text-lg font-extrabold leading-snug text-gray-900">
                     {featured.title}
                   </h3>
@@ -123,36 +131,43 @@ export default function Blog() {
                   <div className="mt-3 text-xs font-semibold text-gray-500">
                     {featured.category} • {featured.readTime}
                   </div>
-
                 </div>
 
                 <div className="relative overflow-hidden rounded-xl sm:col-span-5">
-                  <div className="relative aspect-[16/10]">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-gray-200">
+                    {/* Same trick here to avoid weird bars if aspect mismatches */}
+                    <Image
+                      src={featured.image}
+                      alt=""
+                      fill
+                      aria-hidden
+                      className="object-cover blur-xl scale-110"
+                      quality={55}
+                      sizes="(min-width: 1024px) 25vw, 100vw"
+                    />
+                    <div className="absolute inset-0 bg-black/5" />
                     <Image
                       src={featured.image}
                       alt={featured.title}
                       fill
-                      className="object-cover"
+                      className="object-contain"
+                      quality={90}
+                      sizes="(min-width: 1024px) 25vw, 100vw"
                     />
                   </div>
                 </div>
-
               </div>
             </Link>
 
             {/* Side posts */}
             <div className="mt-5 space-y-4">
-
               {sidePosts.map((post) => (
-
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="group flex items-center gap-4 rounded-2xl bg-white p-4 shadow-md border border-gray-200 transition hover:-translate-y-1 hover:shadow-xl"
+                  className="group flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-md transition hover:-translate-y-1 hover:shadow-xl"
                 >
-
                   <div className="min-w-0 flex-1">
-
                     <div className="inline-flex items-center gap-2 rounded-full bg-orange-500 px-3 py-1 text-xs font-semibold text-white">
                       {post.date}
                     </div>
@@ -164,26 +179,22 @@ export default function Blog() {
                     <p className="mt-1 line-clamp-2 text-xs text-gray-600 sm:text-sm">
                       {post.excerpt}
                     </p>
-
                   </div>
 
-                  <div className="relative h-16 w-24 overflow-hidden rounded-xl">
+                  <div className="relative h-16 w-24 overflow-hidden rounded-xl bg-gray-200">
                     <Image
                       src={post.image}
                       alt={post.title}
                       fill
                       className="object-cover transition duration-300 group-hover:scale-[1.05]"
+                      quality={85}
+                      sizes="96px"
                     />
                   </div>
-
                 </Link>
-
               ))}
-
             </div>
-
           </div>
-
         </div>
       </div>
     </section>

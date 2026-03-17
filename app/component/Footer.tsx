@@ -44,12 +44,11 @@ export default function Footer() {
               </a>
 
               <a
-                href="tel:+16784628013"
+                href="tel:+18669644568"
                 className="flex items-center gap-2 hover:text-blue-300"
               >
                 <Phone size={16} />
-                +1 678 462 8013
-              </a>
++1 866 964 4568              </a>
             </div>
           </div>
 

@@ -31,7 +31,7 @@ export default function Footer() {
 
             <p className="text-sm text-slate-200/80 leading-6">
               Top Dog Roofing helps local roofers grow faster with exclusive 
-              pay-per-call leads. We connect you with homeowners actively 
+              pay per call leads. We connect you with homeowners actively 
               searching for roofing services in your area.
             </p>
 

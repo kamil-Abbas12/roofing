@@ -63,7 +63,8 @@ const From = () => {
 Roofing Experts Homeowners Trust
           </h1>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-blue-900/80">
-Homeowners trust TopDog Roofing to connect them with experienced roofing professionals who deliver reliable service, fast response times, and high-quality workmanship.
+Homeowners trust TopDog Roofing to connect 
+them with experienced roofing professionals who deliver reliable service, fast response times, and high quality workmanship.
           </p>
         </div>
 
@@ -111,7 +112,10 @@ Homeowners trust TopDog Roofing to connect them with experienced roofing profess
       <FeatureCard
       title="ROOFING SUCESS STORY"
       subtitle=""
-      desc="When a powerful storm left a homeowner’s roof badly damaged, our contractor network arranged a same-day inspection and assisted with the insurance claim, helping secure quick approval for a full roof replacement. The home is now fully protected with a brand-new, durable roofing system..
+      desc="When a powerful storm left a homeowner’s roof badly damaged, our contractor network arranged a
+       same day inspection and assisted 
+       with the insurance claim, helping secure quick approval for a full roof replacement.
+        The home is now fully protected with a brand new, durable roofing system..
 "
       icon={TrendingUp}
       delay={400}

@@ -12,33 +12,19 @@ const Get = () => {
     {
       icon: <Handshake className="h-8 w-8" />,
       title: "Why Consult Our Experts?",
-      text: "We bridge the gap between just another contractor and the undisputed local authority. By leveraging a nationwide network of 15,000 specialists, we provide the strategic data and elite craftsmanship your property deserves. You aren't just getting a roof; you’re gaining access to industry-leading standards that competitors simply cannot match.."
+      text: "We bridge the gap between just another contractor and the undisputed local authority. By leveraging a nationwide network of 15,000 specialists, we provide the strategic data and elite craftsmanship your property deserves. You aren't just getting a roof; you’re gaining access to industry-leading standards that competitors simply cannot match."
     },
     {
       icon: <HandHeart className="h-8 w-8" />,
       title: "How We Serve You",
-      text: "We replace the storm chaser chaos with a seamless, professional, and personalized experience. Our process is built on transparency and speed because we know insurance claims move fast. From the first face-to-face meeting to the final inspection, we treat your home with a white-glove approach, ensuring a warm, welcoming environment throughout the entire restoration process."
+      text: "We replace the storm chaser chaos with a seamless, professional, and personalized experience. Our process is built on transparency and speed because we know insurance claims move fast. From the first face to face meeting to the final inspection, we treat your home with a white glove approach, ensuring a warm, welcoming environment throughout the entire restoration process."
     },
     {
       icon: <BarChart3 className="h-8 w-8" />,
       title: "The Results You Can Expect",
-      text: "Experience total peace of mind with a sturdier, safer, and more valuable investment. Our proven frameworks don't just patch holes; they provide long-term protection and curb appeal that stands the test of time. Whether it’s maintenance or a full storm recovery, you walk away with a top-rated roof and the confidence that your most important asset is fully secured."
+      text: "Experience total peace of mind with a sturdier, safer, and more valuable investment. Our proven frameworks don't just patch holes; they provide long term protection and curb appeal that stands the test of time. Whether it’s maintenance or a full storm recovery, you walk away with a top rated roof and the confidence that your most important asset is fully secured."
     },
-    // {
-    //   icon: <Globe className="h-8 w-8" />,
-    //   title: "Local SEO & Map Rankings for Roofers",
-    //   text: "Maximize your visibility in Google Maps whenever residents look for expert roofing services nearby."
-    // },
-    // {
-    //   icon: <PenSquare className="h-8 w-8" />,
-    //   title: "Elite Roofer Web Design",
-    //   text: "High-speed digital platforms that transform organic traffic into exclusive roofing leads."
-    // },
-    // {
-    //   icon: <MessageCircleCheck className="h-8 w-8" />,
-    //   title: "Roofer Content & Socials",
-    //   text: "Project transformation showcases, weather recovery guides, and timely updates that establish authority."
-    // }
+    
   ];
 
   return (
@@ -62,7 +48,8 @@ Schedule your master consultation
           Today!
         </h2>
         <p className="text-lg md:text-xl lg:text-2xl text-slate-700 max-w-5xl mx-auto mb-12">
-Get elite protection for your property with nationwide experts specializing in durable repairs, total replacements, and rapid storm damage restoration.        </p>
+Elite property protection with expert repairs, replacements, and fast storm restoration.      
+  </p>
 
         {/* GRID */}
        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 xl:gap-10">
@@ -88,14 +75,14 @@ Get elite protection for your property with nationwide experts specializing in d
 
       <p className="mt-3 text-sm lg:text-base text-slate-600">{card.text}</p>
 
-      <div className="mt-auto pt-4 relative">
-        <div className="absolute bottom-5 right-5">
-          <span className="absolute inset-0 rounded-full bg-cyan-400/30 blur-[1px] animate-pingSlow" />
-          <div className="relative h-11 w-11 rounded-full bg-gradient-to-br from-cyan-500 to-sky-500 text-white flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
-            <ArrowUpRight className="h-5 w-5" />
-          </div>
-        </div>
-      </div>
+     <div className="mt-auto pt-6 flex justify-end">
+  <div className="relative">
+    <span className="absolute inset-0 rounded-full bg-cyan-400/30 blur-[1px] animate-pingSlow" />
+    <div className="relative h-11 w-11 rounded-full bg-gradient-to-br from-cyan-500 to-sky-500 text-white flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
+      <ArrowUpRight className="h-5 w-5" />
+    </div>
+  </div>
+</div>
     </motion.div>
   ))}
 </div>

@@ -104,7 +104,7 @@ const item: Variants = {
               </motion.div>
 
               <h2 className="text-lg xl:text-xl text-white mt-6 font-semibold text-center">
-                Eliminating the Off-Season Slump
+                Eliminating the Off Season Slump
               </h2>
 
               <p className="text-sm md:text-lg text-gray-300 text-center mt-4">

@@ -80,14 +80,14 @@ const Navbar = () => {
     : "border-blue-900 text-blue-900 bg-white/90 hover:bg-blue-900 hover:text-white";
 
   return (
-    <nav className={`${navBase} ${navStyle} h-25`}>
+    <nav className={`${navBase} ${navStyle} h-19`}>
       {/* NAVBAR CONTAINER */}
-      <div className="relative w-full mx-auto px-4 md:px-6 lg:px-10 xl:px-40 flex items-center justify-between h-20">
+      <div className="relative w-full mx-auto px-4 md:px-6 lg:px-10  xl:px-29 flex items-center justify-between h-20">
         {/* LOGO */}
         <div className="flex items-center">
           <Image
-            src="/logo1.png"
-            width={100}
+            src="/logo2.png"
+            width={120}
             height={25}
             alt="logo"
             className="cursor-pointer object-contain"

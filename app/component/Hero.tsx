@@ -39,7 +39,8 @@ const fadeUp: Variants = {
 
 export default function Hero({
   title = "Shield your home with professional roofing specialists",
-  description = `Ensure lasting, complete protection for your house in a calm, stress-free process. Your sturdiest, most reliable shelter starts with us.`,
+  description = `Your Strongest Shield Starts Here.
+  Comprehensive protection, simplified for you.`,
   ctaText = "Get Started Now",
   ctaHref = "#",
   customersCount = "23k",
@@ -108,7 +109,8 @@ export default function Hero({
           <div className="absolute inset-0 bg-gradient-to-tr from-black/10 via-transparent to-black/5" />
         </div>
 
-        <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }} className="absolute bottom-6 right-6 w-[140px] rounded-2xl bg-[#4a79d6] px-5 py-6 text-center text-white shadow-lg">
+        <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }} className="absolute bottom-6
+         right-6 w-[140px] rounded-2xl bg-[#4a79d6] px-5 py-6 text-center text-white shadow-lg">
           <div className="text-sm font-medium text-white/90">{years}</div>
           <div className="mt-2 text-sm font-medium text-white/90">{yearsLabel}</div>
         </motion.div>

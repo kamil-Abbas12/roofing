@@ -1,7 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BLOGS } from "@/data/blogs";
+export async function generateMetadata({ params }: any) {
+  const { slug } = await params;
+  const post = BLOGS.find((p) => p.slug === slug);
 
+  if (!post) {
+    return {
+      title: "Blog | Top Dog Roofing",
+    };
+  }
+
+  return {
+    title: `${post.title} | Top Dog Roofing`,
+    description: post.excerpt || post.caption || "Roofing tips and insights",
+  };
+}
 export default async function BlogDetailPage({
   params,
 }: {

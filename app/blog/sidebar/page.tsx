@@ -1,7 +1,13 @@
 import Link from "next/link";
 import { BLOGS, CATEGORIES } from "@/data/blogs";
 import BlogCard from "@/app/component/BlogCard";
-
+export const metadata = {
+  title: "Roofing Blog with Categories | Top Dog Roofing",
+  description: "Explore roofing articles with categories.",
+  alternates: {
+    canonical: "https://roofing.topdoglead.com/blog",
+  },
+};
 export default function BlogSidebarPage() {
   return (
 <main className="min-h-screen bg-[#f7efe6] pt-28">

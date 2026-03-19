@@ -1,6 +1,9 @@
 import { BLOGS } from "@/data/blogs";
 import BlogCard from "../component/BlogCard";
-
+export const metadata = {
+  title: "Roofing Blog | Tips, Repairs & Guides",
+  description: "Browse roofing tips, storm damage repair guides, and expert advice.",
+};
 export default function BlogGridPage() {
   return (
     <main className="min-h-screen bg-[#f7efe6]">

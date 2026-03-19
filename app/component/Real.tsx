@@ -51,7 +51,7 @@ const item: Variants = {
           viewport={{ once: true }}
           className="text-lg md:text-xl xl:text-2xl text-gray-300 mt-4"
         >
-          Your reputation is built on sharpness; our leads are built on perfection.
+Engineered Leads. Measurable Results
         </motion.p>
 
         {/* GRID */}

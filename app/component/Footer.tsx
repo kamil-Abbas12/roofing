@@ -22,7 +22,7 @@ export default function Footer() {
           {/* LEFT SIDE */}
           <div className="max-w-md">
             <Image
-              src="/logo2.png"
+              src="/logo1.png"
               width={70}
               height={60}
               alt="Top Dog Roofing"

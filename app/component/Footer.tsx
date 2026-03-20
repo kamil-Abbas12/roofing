@@ -13,7 +13,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#0B2350] text-white">
+    <footer className="bg-[#0B2350] text-white" aria-label="Site footer">
       <div className="max-w-7xl mx-auto px-6 lg:px-16 py-12">
 
         {/* TOP */}
@@ -25,20 +25,21 @@ export default function Footer() {
               src="/logo1.webp"
               width={70}
               height={60}
-              alt="Top Dog Roofing"
+              alt="Top Dog Roofing logo"
               className="mb-4"
             />
 
             <p className="text-sm text-slate-200/80 leading-6">
-              Top Dog Roofing helps local roofers grow faster with exclusive 
-              pay per call leads. We connect you with homeowners actively 
+              Top Dog Roofing helps local roofers grow faster with exclusive
+              pay per call leads. We connect you with homeowners actively
               searching for roofing services in your area.
             </p>
 
-            <div className="mt-4 space-y-2 text-sm">
+            <address className="mt-4 space-y-2 text-sm not-italic">
               <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=info@topdoglead.com&su=New%20Lead%20Inquiry"
+                href="mailto:support@topdoglead.com"
                 className="block text-blue-300 hover:text-white"
+                aria-label="Email support at support@topdoglead.com"
               >
                 support@topdoglead.com
               </a>
@@ -46,14 +47,16 @@ export default function Footer() {
               <a
                 href="tel:+18669644568"
                 className="flex items-center gap-2 hover:text-blue-300"
+                aria-label="Call us at 1-866-964-4568"
               >
-                <Phone size={16} />
-+1 866 964 4568              </a>
-            </div>
+                <Phone size={16} aria-hidden="true" />
+                +1 866 964 4568
+              </a>
+            </address>
           </div>
 
-          {/* RIGHT SIDE NAVIGATION */}
-          <div>
+          {/* QUICK LINKS */}
+          <nav aria-label="Footer quick links">
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <div className="flex flex-col space-y-3 text-sm">
               {sections.map((sec) => (
@@ -61,25 +64,45 @@ export default function Footer() {
                   key={sec}
                   onClick={() => scrollToSection(sec)}
                   className="text-slate-200/80 hover:text-white text-left"
+                  aria-label={`Go to ${sec} section`}
                 >
                   {sec}
                 </button>
               ))}
             </div>
-          </div>
+          </nav>
 
           {/* SOCIAL */}
           <div>
             <h3 className="font-semibold mb-4">Follow Us</h3>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-blue-400">
-                <Facebook size={20} />
+              {/* ✅ aria-label on every icon-only link — fixes Lighthouse "Links do not have a discernible name" */}
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-400"
+                aria-label="Follow us on Facebook"
+              >
+                <Facebook size={20} aria-hidden="true" />
               </a>
-              <a href="#" className="hover:text-pink-400">
-                <Instagram size={20} />
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-pink-400"
+                aria-label="Follow us on Instagram"
+              >
+                <Instagram size={20} aria-hidden="true" />
               </a>
-              <a href="#" className="hover:text-blue-300">
-                <Linkedin size={20} />
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-300"
+                aria-label="Follow us on LinkedIn"
+              >
+                <Linkedin size={20} aria-hidden="true" />
               </a>
             </div>
           </div>

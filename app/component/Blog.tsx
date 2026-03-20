@@ -38,162 +38,182 @@ export default function Blog() {
   return (
     <section
       id="blog"
+      aria-labelledby="blog-heading"
       className="w-full bg-gradient-to-b from-gray-50 via-white to-gray-100 py-14"
     >
       <div className="mx-auto w-full max-w-6xl px-4">
+
         {/* Header */}
         <div className="mb-6 flex flex-col items-center justify-between gap-4 md:flex-row">
-          <h2 className="animate-fadeUp text-xl font-extrabold tracking-tight text-gray-900 md:text-3xl">
-            Roofing Tips & Insights <br className="hidden sm:block" />
+          <h2
+            id="blog-heading"
+            className="animate-fadeUp text-xl font-extrabold tracking-tight text-gray-900 md:text-3xl"
+          >
+            Roofing Tips &amp; Insights{" "}
+            <br className="hidden sm:block" />
             From Industry Experts
           </h2>
 
           <Link
             href="/blog"
             className="group inline-flex items-center gap-2 rounded-full bg-blue-900 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:brightness-95"
+            aria-label="View all roofing blog posts"
           >
             View All
-            <span className="grid h-7 w-7 place-items-center rounded-full bg-white/20">
+            <span className="grid h-7 w-7 place-items-center rounded-full bg-white/20" aria-hidden="true">
               <ChevronRightIcon className="h-4 w-4" />
             </span>
           </Link>
         </div>
 
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
-          {/* Left big image */}
-          <Link
-            href={`/blog/${featured.slug}`}
-            className="relative overflow-hidden rounded-2xl shadow-md ring-1 ring-black/5 lg:col-span-6"
-          >
-            {/* Keep your 4/5 layout, but remove black bars by using a blurred cover backdrop */}
-            <div className="relative aspect-[4/5] w-full overflow-hidden bg-gray-200">
-              {/* Background layer (fills the box, blurred) */}
-              <Image
-                src={featured.image}
-                alt=""
-                fill
-                aria-hidden
-                className="object-cover blur-2xl scale-110"
-                quality={60}
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                priority
-              />
-              {/* Slight tint so blur looks cleaner */}
-              <div className="absolute inset-0 bg-black/10" />
 
-              {/* Foreground layer (shows full image without cropping) */}
-              <Image
-                src={featured.image}
-                alt={featured.title}
-                fill
-                className="object-contain"
-                quality={95}
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                priority
-              />
-            </div>
+          {/* ✅ Left featured image — wrapped in <article> for semantic meaning */}
+          <article className="lg:col-span-6">
+            <Link
+              href={`/blog/${featured.slug}`}
+              className="relative block overflow-hidden rounded-2xl shadow-md ring-1 ring-black/5"
+              aria-label={`Read featured post: ${featured.title}`}
+            >
+              <div className="relative aspect-[4/5] w-full overflow-hidden bg-gray-200">
+                {/* Blurred background fill — decorative */}
+                <Image
+                  src={featured.image}
+                  alt=""
+                  fill
+                  aria-hidden="true"
+                  className="object-cover blur-2xl scale-110"
+                  quality={60}
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  priority
+                />
+                <div className="absolute inset-0 bg-black/10" aria-hidden="true" />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/0 to-black/0" />
-
-            <div className="absolute bottom-4 left-4 right-4">
-              <div className="inline-flex items-center gap-2 rounded-full bg-orange-500 px-3 py-1 text-xs font-semibold text-white">
-                {featured.date}
+                {/* Foreground image — meaningful alt */}
+                <Image
+                  src={featured.image}
+                  alt={featured.title}
+                  fill
+                  className="object-contain"
+                  quality={95}
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  priority
+                />
               </div>
 
-              <h3 className="mt-2 text-lg font-extrabold text-white drop-shadow sm:text-xl">
-                {featured.title}
-              </h3>
-            </div>
-          </Link>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/0 to-black/0" aria-hidden="true" />
+
+              <div className="absolute bottom-4 left-4 right-4">
+                {/* ✅ orange-500 text-white date badge — contrast fix: add font-bold + ensure bg is dark enough */}
+                <div className="inline-flex items-center gap-2 rounded-full bg-orange-600 px-3 py-1 text-xs font-bold text-white">
+                  <time dateTime={featured.date}>{featured.date}</time>
+                </div>
+                {/* ✅ h3 correct — child of section h2 */}
+                <h3 className="mt-2 text-lg font-extrabold text-white drop-shadow sm:text-xl">
+                  {featured.title}
+                </h3>
+              </div>
+            </Link>
+          </article>
 
           {/* Right section */}
           <div className="lg:col-span-6">
+
             {/* Featured card */}
-            <Link
-              key={featured.slug}
-              href={`/blog/${featured.slug}`}
-              className="block animate-slideUpFade rounded-2xl border border-gray-200 bg-white p-5 shadow-md transition hover:shadow-xl"
-            >
-              <div className="inline-flex items-center gap-2 rounded-full bg-orange-500 px-3 py-1 text-xs font-semibold text-white">
-                {featured.date}
-              </div>
-
-              <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-12 sm:items-center">
-                <div className="sm:col-span-7">
-                  <h3 className="text-lg font-extrabold leading-snug text-gray-900">
-                    {featured.title}
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                    {featured.excerpt}
-                  </p>
-
-                  <div className="mt-3 text-xs font-semibold text-gray-500">
-                    {featured.category} • {featured.readTime}
-                  </div>
+            <article>
+              <Link
+                key={featured.slug}
+                href={`/blog/${featured.slug}`}
+                className="block animate-slideUpFade rounded-2xl border border-gray-200 bg-white p-5 shadow-md transition hover:shadow-xl"
+                aria-label={`Read: ${featured.title}`}
+              >
+                <div className="inline-flex items-center gap-2 rounded-full bg-orange-600 px-3 py-1 text-xs font-bold text-white">
+                  <time dateTime={featured.date}>{featured.date}</time>
                 </div>
 
-                <div className="relative overflow-hidden rounded-xl sm:col-span-5">
-                  <div className="relative aspect-[16/10] overflow-hidden bg-gray-200">
-                    {/* Same trick here to avoid weird bars if aspect mismatches */}
-                    <Image
-                      src={featured.image}
-                      alt=""
-                      fill
-                      aria-hidden
-                      className="object-cover blur-xl scale-110"
-                      quality={55}
-                      sizes="(min-width: 1024px) 25vw, 100vw"
-                    />
-                    <div className="absolute inset-0 bg-black/5" />
-                    <Image
-                      src={featured.image}
-                      alt={featured.title}
-                      fill
-                      className="object-contain"
-                      quality={90}
-                      sizes="(min-width: 1024px) 25vw, 100vw"
-                    />
+                <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-12 sm:items-center">
+                  <div className="sm:col-span-7">
+                    <h3 className="text-lg font-extrabold leading-snug text-gray-900">
+                      {featured.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                      {featured.excerpt}
+                    </p>
+                    <div className="mt-3 text-xs font-semibold text-gray-500">
+                      <span>{featured.category}</span>
+                      <span aria-hidden="true"> • </span>
+                      <span>{featured.readTime}</span>
+                    </div>
+                  </div>
+
+                  <div className="relative overflow-hidden rounded-xl sm:col-span-5">
+                    <div className="relative aspect-[16/10] overflow-hidden bg-gray-200">
+                      {/* Blurred bg — decorative */}
+                      <Image
+                        src={featured.image}
+                        alt=""
+                        fill
+                        aria-hidden="true"
+                        className="object-cover blur-xl scale-110"
+                        quality={55}
+                        sizes="(min-width: 1024px) 25vw, 100vw"
+                      />
+                      <div className="absolute inset-0 bg-black/5" aria-hidden="true" />
+                      {/* Foreground */}
+                      <Image
+                        src={featured.image}
+                        alt={featured.title}
+                        fill
+                        className="object-contain"
+                        quality={90}
+                        sizes="(min-width: 1024px) 25vw, 100vw"
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </article>
 
             {/* Side posts */}
-            <div className="mt-5 space-y-4">
+            <ul className="mt-5 space-y-4" aria-label="More blog posts">
               {sidePosts.map((post) => (
-                <Link
-                  key={post.slug}
-                  href={`/blog/${post.slug}`}
-                  className="group flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-md transition hover:-translate-y-1 hover:shadow-xl"
-                >
-                  <div className="min-w-0 flex-1">
-                    <div className="inline-flex items-center gap-2 rounded-full bg-orange-500 px-3 py-1 text-xs font-semibold text-white">
-                      {post.date}
-                    </div>
+                <li key={post.slug}>
+                  <article>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="group flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-md transition hover:-translate-y-1 hover:shadow-xl"
+                      aria-label={`Read: ${post.title}`}
+                    >
+                      <div className="min-w-0 flex-1">
+                        <div className="inline-flex items-center gap-2 rounded-full bg-orange-600 px-3 py-1 text-xs font-bold text-white">
+                          <time dateTime={post.date}>{post.date}</time>
+                        </div>
 
-                    <h4 className="mt-2 line-clamp-2 text-sm font-extrabold text-gray-900 sm:text-base">
-                      {post.title}
-                    </h4>
+                        {/* ✅ h4 → h3: avoids heading level skip (h2 → h4) */}
+                        <h3 className="mt-2 line-clamp-2 text-sm font-extrabold text-gray-900 sm:text-base">
+                          {post.title}
+                        </h3>
 
-                    <p className="mt-1 line-clamp-2 text-xs text-gray-600 sm:text-sm">
-                      {post.excerpt}
-                    </p>
-                  </div>
+                        <p className="mt-1 line-clamp-2 text-xs text-gray-600 sm:text-sm">
+                          {post.excerpt}
+                        </p>
+                      </div>
 
-                  <div className="relative h-16 w-24 overflow-hidden rounded-xl bg-gray-200">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      className="object-cover transition duration-300 group-hover:scale-[1.05]"
-                      quality={85}
-                      sizes="96px"
-                    />
-                  </div>
-                </Link>
+                      <div className="relative h-16 w-24 flex-shrink-0 overflow-hidden rounded-xl bg-gray-200">
+                        <Image
+                          src={post.image}
+                          alt={post.title}
+                          fill
+                          className="object-cover transition duration-300 group-hover:scale-[1.05]"
+                          quality={85}
+                          sizes="96px"
+                        />
+                      </div>
+                    </Link>
+                  </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </div>

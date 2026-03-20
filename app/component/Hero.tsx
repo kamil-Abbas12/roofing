@@ -48,7 +48,7 @@ Comprehensive protection, simplified for you.`,
   avatarUrls = [],
   years = "Certified",
   yearsLabel = "Professionals",
-  rightImageSrc = "/roof2.jpg",
+  rightImageSrc = "/roof2.webp",
 }: HeroProps) {
   const titleLines = title.split("\n");
 
@@ -108,7 +108,7 @@ Comprehensive protection, simplified for you.`,
             {/* Customers */}
             <div className="flex items-center gap-4">
               <div className="flex -space-x-2">
-                {["/pic1.jpg", "/pic2.jpg", "/pic3.jpg"].map((src, i) => (
+                {["/pic1.webp", "/pic2.webp", "/pic3.webp"].map((src, i) => (
                   <div
                     key={i}
                     className="relative h-8 w-8 overflow-hidden rounded-full ring-2 ring-white/90"

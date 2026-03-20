@@ -113,3 +113,17 @@ body {
     bottom: -40px !important; /* moves pagination further down */
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Improve tap targets */
+button, a {
+  min-height: 44px;
+  min-width: 44px;
+}

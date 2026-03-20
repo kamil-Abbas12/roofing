@@ -31,7 +31,7 @@ const One = () => {
           <div className="w-full lg:w-1/2">
             <div className="relative w-full h-[420px] md:h-[500px] rounded-xl overflow-hidden shadow-md">
               <Image
-                src="/full.jpg"
+                src="/full.webp"
                 alt="Roofing marketing"
                 fill
                 className="object-cover"

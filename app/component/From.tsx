@@ -24,7 +24,7 @@ function useInView<T extends HTMLElement>(opts?: IntersectionObserverInit) {
   return { ref, inView };
 }
 
-const images = ["/roof4.jpg", "/roof5.jpg", "/roof3.jpg"]; // carousel images
+const images = ["/roof4.webp", "/roof5.webp", "/roof3.webp"]; // carousel images
 
 const From = () => {
   const heading = useInView<HTMLDivElement>();

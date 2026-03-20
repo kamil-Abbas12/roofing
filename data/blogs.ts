@@ -27,7 +27,7 @@ export const BLOGS: BlogPost[] = [
 
     category: "Roof Repair",
     readTime: "5 min read",
-    image: "/blog1.jpeg",
+    image: "/blog1.webp",
 
     content: [
       "Moss: The Structural Sponge. Unlike grass, moss doesn’t have traditional roots. Instead it anchors itself into your shingles. As it grows, it lifts the edges of the shingles and breaks the seal that keeps your home watertight.",
@@ -61,7 +61,7 @@ export const BLOGS: BlogPost[] = [
 
     category: "Roof Installation",
     readTime: "6 min read",
-    image: "/roof2.jpg",
+    image: "/roof2.webp",
 
     content: [
       "Asphalt shingles remain the most affordable and common roofing option for homeowners.",
@@ -85,7 +85,7 @@ export const BLOGS: BlogPost[] = [
 
     category: "Roof Maintenance",
     readTime: "4 min read",
-    image: "/roof1.jpg",
+    image: "/roof1.webp",
 
     content: [
       "Clean your gutters regularly to prevent water buildup that can damage shingles and roof edges.",

@@ -1,14 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BLOGS } from "@/data/blogs";
+
 export async function generateMetadata({ params }: any) {
   const { slug } = await params;
   const post = BLOGS.find((p) => p.slug === slug);
 
   if (!post) {
-    return {
-      title: "Blog | Top Dog Roofing",
-    };
+    return { title: "Blog | Top Dog Roofing" };
   }
 
   return {
@@ -16,6 +15,7 @@ export async function generateMetadata({ params }: any) {
     description: post.excerpt || post.caption || "Roofing tips and insights",
   };
 }
+
 export default async function BlogDetailPage({
   params,
 }: {
@@ -26,7 +26,7 @@ export default async function BlogDetailPage({
 
   if (!post) {
     return (
-      <main className="min-h-screen bg-[#f7efe6] mt-20">
+      <main className="min-h-screen bg-[#f7efe6] mt-20" role="main">
         <div className="mx-auto max-w-3xl px-4 py-40 text-center">
           <h1 className="text-2xl font-extrabold text-[#0b2b55]">
             Post not found
@@ -34,6 +34,7 @@ export default async function BlogDetailPage({
 
           <Link
             href="/blog"
+            aria-label="Go back to blog page"
             className="mt-4 inline-block text-[#ff7a1a]"
           >
             Back to Blog
@@ -44,65 +45,69 @@ export default async function BlogDetailPage({
   }
 
   return (
-    <main className="min-h-screen bg-[#f7efe6]">
+    <main className="min-h-screen bg-[#f7efe6]" role="main">
       <article className="mx-auto max-w-3xl px-4 py-20">
+        
+        {/* Header */}
+        <header>
+          <Link
+            href="/blog"
+            aria-label="Go back to blog list"
+            className="text-sm font-semibold text-[#ff7a1a]"
+          >
+            ← Back to Blog
+          </Link>
 
-        {/* Back */}
-        <Link
-          href="/blog"
-          className="text-sm font-semibold text-[#ff7a1a]"
-        >
-          ← Back to Blog
-        </Link>
+          <h1 className="mt-4 text-3xl font-extrabold leading-tight text-[#0b2b55]">
+            {post.title}
+          </h1>
 
-        {/* Title */}
-        <h1 className="mt-4 text-3xl font-extrabold leading-tight text-[#0b2b55]">
-          {post.title}
-        </h1>
+          <div className="mt-3 text-sm text-[#0b2b55]/80">
+            {post.date} • {post.category} • {post.readTime}
+          </div>
+        </header>
 
-        {/* Meta */}
-        <div className="mt-3 text-sm text-[#0b2b55]/70">
-          {post.date} • {post.category} • {post.readTime}
-        </div>
-
-        {/* Caption BEFORE image */}
-        <p className="mt-6 text-center text-base italic leading-relaxed text-[#0b2b55]/80">
+        {/* Caption */}
+        <p className="mt-6 text-center text-base italic leading-relaxed text-[#0b2b55]/90">
           {post.caption}
         </p>
 
-        {/* Blog Image */}
+        {/* Image */}
         <div className="relative mt-6 aspect-[16/10] w-full overflow-hidden rounded-2xl ring-1 ring-black/5">
           <Image
             src={post.image}
-            alt={post.title}
+            alt={`Image for ${post.title}`}
             fill
             className="object-cover"
+            priority
           />
         </div>
 
-        {/* Blog Content */}
-        <div className="prose prose-slate mt-8 max-w-none text-[#0b2b55]/90">
+        {/* Content */}
+        <section className="prose prose-slate mt-8 max-w-none text-[#0b2b55]/90">
           {post.content.map((paragraph, i) => (
             <p key={i}>{paragraph}</p>
           ))}
-        </div>
+        </section>
 
         {/* Navigation */}
-        <div className="mt-10 flex flex-wrap gap-3">
+        <nav className="mt-10 flex flex-wrap gap-3">
           <Link
             href="/blog"
+            aria-label="Go to blog grid page"
             className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#0b2b55] ring-1 ring-black/5"
           >
-            Blog Grid
+            View Blog Grid
           </Link>
 
           <Link
             href="/blog/sidebar"
+            aria-label="Go to blog sidebar page"
             className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#0b2b55] ring-1 ring-black/5"
           >
-            Blog Sidebar
+            View Blog Sidebar
           </Link>
-        </div>
+        </nav>
 
       </article>
     </main>

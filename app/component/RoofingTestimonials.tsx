@@ -17,37 +17,37 @@ const testimonials = [
   {
     name: "Ethan Carter",
     role: "Homeowner",
-    image: "/pic1.jpg",
+    image: "/pic1.webp",
     text: "TopDog Roofing did an outstanding job replacing our roof. ",
   },
   {
     name: "Olivia Bennett",
     role: "Property Manager",
-    image: "/pic2.jpg",
+    image: "/pic2.webp",
     text: "From inspection to completion, everything was handled smoothly. ",
   },
   {
     name: "Lucas Hayes",
     role: "Property Client",
-    image: "/pic3.jpg",
+    image: "/pic3.webp",
     text: "After storm damage, we needed urgent roof repair.",
   },
   {
     name: "Chloe Simmons",
     role: "Property Client",
-    image: "/pic4.jpg",
+    image: "/pic4.webp",
     text: "Their team responded quickly and restored our commercial roof efficiently. ",
   },
   {
     name: "Mason Foster",
     role: "Property Client",
-    image: "/pic5.jpg",
+    image: "/pic5.webp",
     text: "Outstanding service and communication. ",
   },
   {
     name: "Sophia Reynolds",
     role: "Property Client",
-    image: "/pic6.jpg",
+    image: "/pic6.webp",
     text: "Professional team and excellent craftsmanship.",
   },
 ];

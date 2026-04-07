@@ -142,7 +142,7 @@ const Navbar = () => {
                     <Link
                       key={s.href}
                       href={s.href}
-                      className="flex flex-col px-3 py-2.5 rounded-xl hover:bg-blue-50 transition group"
+                      className="flex flex-col px-3 py-2.5 rounded-xl hover:bg-blue-50 transition group cursor-pointer"
                       onClick={() => setServicesOpen(false)}
                       role="menuitem"
                     >
@@ -158,7 +158,7 @@ const Navbar = () => {
                 <div className="bg-blue-50 px-5 py-3 mt-1">
                   <Link
                     href="/services"
-                    className="text-xs font-semibold text-blue-700 hover:text-blue-900"
+                    className="text-xs font-semibold text-blue-700 hover:text-blue-900 cursor-pointer"
                     onClick={() => setServicesOpen(false)}
                   >
                     View All Services →
@@ -176,7 +176,7 @@ const Navbar = () => {
                 const el = document.getElementById(sec);
                 if (el) el.scrollIntoView({ behavior: "smooth" });
               }}
-              className={`relative transition ${linkStyle}`}
+              className={`relative transition cursor-pointer ${linkStyle}`}
               aria-label={`Go to ${sec} section`}
             >
               {sec}
@@ -212,7 +212,7 @@ const Navbar = () => {
                   <Link
                     key={b.href}
                     href={b.href}
-                    className="block px-4 py-3 text-sm text-slate-800 hover:bg-slate-50"
+                    className="block px-4 py-3 text-sm text-slate-800 hover:bg-slate-50 cursor-pointer"
                     onClick={() => setBlogOpen(false)}
                     role="menuitem"
                   >
@@ -228,7 +228,7 @@ const Navbar = () => {
         <div className="hidden lg:flex gap-3">
           <a
             href="tel:+18669644568"
-            className={`px-5 py-2 rounded-lg flex items-center transition border font-medium text-sm ${outlineBtn}`}
+            className={`px-5 py-2 rounded-lg flex items-center transition border font-medium text-sm cursor-pointer ${outlineBtn}`}
             aria-label="Call TopDog Roofing at 1-866-964-4568"
           >
             <Phone size={16} className="mr-2" aria-hidden="true" />
@@ -251,6 +251,7 @@ const Navbar = () => {
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+            className="cursor-pointer"
           >
             {menuOpen
               ? <X size={28} className={iconStyle} aria-hidden="true" />
@@ -272,7 +273,7 @@ const Navbar = () => {
           <div>
             <button
               onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-              className="w-full flex items-center justify-between py-3 text-gray-700 hover:text-blue-900 font-medium"
+              className="w-full flex items-center justify-between py-3 text-gray-700 hover:text-blue-900 font-medium cursor-pointer"
               aria-expanded={mobileServicesOpen}
             >
               Services
@@ -287,7 +288,7 @@ const Navbar = () => {
                   <Link
                     key={s.href}
                     href={s.href}
-                    className="block py-2 text-sm text-slate-600 hover:text-blue-700 border-l-2 border-blue-100 pl-3"
+                    className="block py-2 text-sm text-slate-600 hover:text-blue-700 border-l-2 border-blue-100 pl-3 cursor-pointer"
                     onClick={() => { setMenuOpen(false); setMobileServicesOpen(false); }}
                   >
                     {s.label}
@@ -305,7 +306,7 @@ const Navbar = () => {
                 if (el) el.scrollIntoView({ behavior: "smooth" });
                 setMenuOpen(false);
               }}
-              className="py-3 text-gray-700 hover:text-blue-900 text-left font-medium"
+              className="py-3 text-gray-700 hover:text-blue-900 text-left font-medium cursor-pointer"
               aria-label={`Go to ${sec} section`}
             >
               {sec}
@@ -314,7 +315,7 @@ const Navbar = () => {
 
           <Link
             href="/blog"
-            className="py-3 text-gray-700 hover:text-blue-900 font-medium"
+            className="py-3 text-gray-700 hover:text-blue-900 font-medium cursor-pointer"
             onClick={() => setMenuOpen(false)}
           >
             Blog
@@ -323,7 +324,7 @@ const Navbar = () => {
           <div className="pt-3 flex flex-col gap-3">
             <a
               href="mailto:info@topdoglead.com"
-              className="px-5 py-2.5 rounded-lg flex items-center justify-center bg-blue-900 text-white font-medium"
+              className="px-5 py-2.5 rounded-lg flex items-center justify-center bg-blue-900 text-white font-medium cursor-pointer"
               aria-label="Send us an email"
             >
               <FaEnvelope className="mr-2" aria-hidden="true" />
@@ -331,7 +332,7 @@ const Navbar = () => {
             </a>
             <a
               href="tel:+18669644568"
-              className="border border-blue-900 text-blue-900 px-5 py-2.5 rounded-lg flex items-center justify-center hover:bg-blue-900 hover:text-white font-medium"
+              className="border border-blue-900 text-blue-900 px-5 py-2.5 rounded-lg flex items-center justify-center hover:bg-blue-900 hover:text-white font-medium cursor-pointer"
               aria-label="Call us at 1-866-964-4568"
             >
               <Phone className="mr-2" size={16} aria-hidden="true" />

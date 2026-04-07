@@ -11,6 +11,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  // ✅ service page URLs
+  const serviceUrls = [
+    "roof-repair",
+    "roof-replacement",
+    "storm-damage",
+    "commercial-roofing",
+    "roof-inspection",
+    "new-construction",
+  ].map((slug) => ({
+    url: `${baseUrl}/services/${slug}`,
+    lastModified: new Date(),
+    priority: 0.85,
+  }));
+
   return [
     {
       url: baseUrl,
@@ -27,6 +41,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/services`,
+      lastModified: new Date(),
+      priority: 0.9,
+    },
+
+    // ✅ service pages
+    ...serviceUrls,
 
     // ✅ dynamic blogs
     ...blogUrls,

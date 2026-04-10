@@ -49,6 +49,44 @@ export const BLOGS: BlogPost[] = [
   },
 
   {
+    slug: "attic-insulation-roof-lifespan",
+    title: "Why Your Attic Insulation Affects Your Roof’s Lifespan",
+    date: "12 Jan 2025",
+
+    caption:
+      "When most homeowners think about roof maintenance, they picture clearing out gutters or checking for missing shingles. But one of the most critical factors for a long-lasting roof isn't actually on the outside. It’s hidden in your attic. Proper insulation does more than just lower your energy bills; it acts as a protective barrier that preserves the structural integrity of your entire roofing system. Here is why your attic insulation is the unsung hero of your roof’s lifespan.",
+
+    excerpt:
+      "Discover how proper attic insulation protects your roof from heat, moisture, and structural damage.",
+
+    category: "Roof Maintenance",
+    readTime: "6 min read",
+    image: "/blog2.webp",
+
+    content: [
+      'Preventing the "Slow Cook" (Heat Regulation). During the scorching summer months, your roof takes a beating from the sun. Without adequate insulation, the heat trapped in your attic can reach temperatures upward of 150°F.',
+
+      'The Damage: This extreme heat radiates upward, effectively "baking" your shingles from the inside out.',
+
+      "The Result: Overheated shingles become brittle, lose their protective granules, and warp prematurely. Good insulation keeps that heat from building up, ensuring your shingles stay within a safe temperature range.",
+
+      "Eliminating Ice Dams in Winter. In colder climates, insulation is your first line of defense against ice dams. Ice dams occur when heat escapes from your living space into the attic, warming the roof deck and melting the snow above.",
+
+      "The Cycle: Melted snow runs down to the eaves where it refreezes into ice, forming a barrier.",
+
+      "The Risk: This forces water back under shingles, leading to rotted wood, mold, and interior leaks that significantly reduce roof lifespan.",
+
+      "Managing Moisture and Condensation. Insulation also plays a critical role in moisture control. Warm, moist air rises into the attic and condenses on the cold roof deck.",
+
+      "Pro Tip: Without proper insulation and a vapor barrier, moisture buildup leads to mold, mildew, and rotting of the plywood sheathing.",
+
+      "Reducing Structural Stress. Extreme temperature fluctuations cause roofing materials to expand and contract, known as thermal shock.",
+
+      "Proper Insulation: Creates a stable thermal buffer, reducing stress on nails, sealants, and wood, preventing shingle creep and structural fatigue.",
+    ],
+  },
+
+  {
     slug: "choosing-the-right-roof",
     title: "How To Choose The Right Roofing Material For Your Home",
     date: "12 Jan 2025",
@@ -72,29 +110,7 @@ export const BLOGS: BlogPost[] = [
     ],
   },
 
-  {
-    slug: "extend-roof-lifespan",
-    title: "Simple Maintenance Tips To Extend Your Roof Lifespan",
-    date: "12 Jan 2025",
-
-    caption:
-      "Regular inspections and maintenance can dramatically extend the life of your roof and prevent costly repairs.",
-
-    excerpt:
-      "Regular roof maintenance can save thousands in repairs and keep your home protected year-round.",
-
-    category: "Roof Maintenance",
-    readTime: "4 min read",
-    image: "/roof1.webp",
-
-    content: [
-      "Clean your gutters regularly to prevent water buildup that can damage shingles and roof edges.",
-
-      "Inspect your roof after storms for missing or damaged shingles that may expose the roof structure.",
-
-      "Schedule professional roof inspections at least once or twice a year to catch issues early.",
-    ],
-  },
+ 
 ];
 
 export const CATEGORIES = [

@@ -31,7 +31,7 @@ export default function BlogSidebarPage() {
             <div className="mt-6">
               <Link
                 href="/blog"
-                className="inline-flex items-center justify-center rounded-full bg-[#ff7a1a] px-4 py-2 text-sm font-semibold text-white"
+                className="inline-flex items-center justify-center rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white"
               >
                 Go to Blog Grid
               </Link>

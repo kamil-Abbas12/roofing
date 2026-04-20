@@ -53,7 +53,7 @@ export default async function BlogDetailPage({
           <Link
             href="/blog"
             aria-label="Go back to blog list"
-            className="text-sm font-semibold text-[#ff7a1a]"
+            className="text-sm font-semibold text-blue-600"
           >
             ← Back to Blog
           </Link>

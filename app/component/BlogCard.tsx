@@ -24,7 +24,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
 
         <div className="p-4 flex flex-col flex-1">
           {/* ✅ orange-500 on white fails WCAG AA for small text → use orange-600 */}
-          <div className="inline-flex items-center gap-2 rounded-full bg-orange-600 px-3 py-1 text-xs font-bold text-white self-start">
+          <div className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-3 py-1 text-xs font-bold text-white self-start">
             {/* ✅ Decorative dot — aria-hidden */}
             <span className="h-2 w-2 rounded-full bg-white" aria-hidden="true" />
             {/* ✅ Use <time> for machine-readable dates */}

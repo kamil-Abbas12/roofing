@@ -231,7 +231,7 @@ export default function ServicePageLayout({
               Our Simple Process
             </h2>
             <p className="text-slate-500 text-center mb-12 max-w-xl mx-auto">
-              From first call to final inspection — transparent, fast, and stress-free.
+              From first call to final inspection - transparent, fast, and stress-free.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {steps.map((step, i) => (

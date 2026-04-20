@@ -136,7 +136,7 @@ export default function RootLayout({
           id="topdog-structured-data"
           type="application/ld+json"
           strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
+          dangerouslySetInnerHTML={{ 
             __html: JSON.stringify(structuredData),
           }}
         />

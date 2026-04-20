@@ -104,7 +104,7 @@ export default function ServicesPage() {
             Complete Roofing Services<br className="hidden lg:block" /> for Every Need
           </h1>
           <p className="text-lg text-slate-500 max-w-2xl mx-auto mb-8">
-            From emergency leak repair to full commercial roofing systems — TopDog Roofing connects you
+            From emergency leak repair to full commercial roofing systems - TopDog Roofing connects you
             with certified specialists for every roofing need, anywhere in the USA.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

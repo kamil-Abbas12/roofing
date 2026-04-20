@@ -105,7 +105,7 @@ export default function Blog() {
 
               <div className="absolute bottom-4 left-4 right-4">
                 {/* ✅ orange-500 text-white date badge — contrast fix: add font-bold + ensure bg is dark enough */}
-                <div className="inline-flex items-center gap-2 rounded-full bg-orange-600 px-3 py-1 text-xs font-bold text-white">
+                <div className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-3 py-1 text-xs font-bold text-white">
                   <time dateTime={featured.date}>{featured.date}</time>
                 </div>
                 {/* ✅ h3 correct — child of section h2 */}
@@ -127,7 +127,7 @@ export default function Blog() {
                 className="block animate-slideUpFade rounded-2xl border border-gray-200 bg-white p-5 shadow-md transition hover:shadow-xl"
                 aria-label={`Read: ${featured.title}`}
               >
-                <div className="inline-flex items-center gap-2 rounded-full bg-orange-600 px-3 py-1 text-xs font-bold text-white">
+                <div className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-3 py-1 text-xs font-bold text-white">
                   <time dateTime={featured.date}>{featured.date}</time>
                 </div>
 
@@ -185,7 +185,7 @@ export default function Blog() {
                       aria-label={`Read: ${post.title}`}
                     >
                       <div className="min-w-0 flex-1">
-                        <div className="inline-flex items-center gap-2 rounded-full bg-orange-600 px-3 py-1 text-xs font-bold text-white">
+                        <div className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-3 py-1 text-xs font-bold text-white">
                           <time dateTime={post.date}>{post.date}</time>
                         </div>
 

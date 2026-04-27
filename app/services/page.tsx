@@ -96,7 +96,7 @@ export default function ServicesPage() {
 
       <main className="pt-28 pb-20" id="main-content">
         {/* HERO */}
-        <section className="max-w-7xl mx-auto px-6 lg:px-16 text-center mb-16 bg-gray-950">
+        <section className="max-w-7xl mx-auto px-6 lg:px-16 text-center mb-16 ">
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1.5 rounded-full mb-5">
             OUR SERVICES
           </span>

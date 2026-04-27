@@ -130,7 +130,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={`${poppins.className} ${geistSans.variable} ${geistMono.variable}`}>
         <Script
           id="topdog-structured-data"

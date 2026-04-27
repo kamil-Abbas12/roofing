@@ -14,21 +14,13 @@ const marketing = [
   { value: "Full Service Roofing Company", label: "Full Service Roofing Company" },
 ];
 
-const services = [
-  { value: "SEO Services", label: "SEO Services" },
-  { value: "Google Ads", label: "Google Ads" },
-  { value: "Web Design", label: "Web Design" },
-  { value: "Local SEO", label: "Local SEO" },
-  { value: "Social Media Marketing", label: "Social Media Marketing" },
-  { value: "Full Marketing Package", label: "Full Marketing Package" },
-];
+
 
 const Ready = () => {
   const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
-    service: "",
     businessType: "",
     message: "",
     tcpaConsent: false,
@@ -150,24 +142,7 @@ const Ready = () => {
               />
             </div>
 
-            {/* Service */}
-            <div className="flex flex-col">
-              {/* ✅ htmlFor + id on select — fixes Lighthouse "Select elements do not have associated label" */}
-              <label htmlFor="service" className="text-gray-700 font-semibold mb-2">Services *</label>
-              <select
-                id="service"
-                name="service"
-                value={form.service}
-                onChange={handleChange}
-                className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition text-gray-900"
-                required
-              >
-                <option value="">Select a Service</option>
-                {services.map((s) => (
-                  <option key={s.value} value={s.value}>{s.label}</option>
-                ))}
-              </select>
-            </div>
+           
 
             {/* Business Type */}
             <div className="flex flex-col">

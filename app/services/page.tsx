@@ -100,7 +100,7 @@ export default function ServicesPage() {
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1.5 rounded-full mb-5">
             OUR SERVICES
           </span>
-          <h1 className="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-5 leading-tight">
+          <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-950 mb-5 leading-tight">
             Complete Roofing Services<br className="hidden lg:block" /> for Every Need
           </h1>
           <p className="text-lg text-slate-500 max-w-2xl mx-auto mb-8">

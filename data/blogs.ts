@@ -89,7 +89,7 @@ export const BLOGS: BlogPost[] = [
  {
   slug: "choosing-the-right-roof",
   title: "Why Spring is the Best Time to Schedule a Roof Inspection",
-  date: "12 Jan 2025",
+  date: "8 May 2026",
 
   caption:
     "Spring is the perfect season to inspect your roof after months of winter stress and prevent costly repairs before storm season arrives.",

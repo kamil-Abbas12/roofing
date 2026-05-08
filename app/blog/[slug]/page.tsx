@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BLOGS } from "@/data/blogs";
+import { BLOGS, ContentBlock } from "@/data/blogs";
 
 export async function generateMetadata({ params }: any) {
   const { slug } = await params;
@@ -14,6 +14,62 @@ export async function generateMetadata({ params }: any) {
     title: `${post.title} | Top Dog Roofing`,
     description: post.excerpt || post.caption || "Roofing tips and insights",
   };
+}
+
+function RenderBlock({ block, index }: { block: ContentBlock; index: number }) {
+  switch (block.type) {
+    case "heading":
+      return (
+        <h2
+          key={index}
+          className="mt-8 mb-3 inline-block  px-1 text-xl font-extrabold text-black"
+        >
+          {block.text}
+        </h2>
+      );
+
+    case "paragraph":
+      return (
+        <p key={index} className="mb-4 leading-relaxed text-[#0b2b55]/90">
+          {block.text}
+        </p>
+      );
+
+    case "bullets":
+      return (
+        <ul key={index} className="mb-4 ml-5 list-disc space-y-1">
+          {block.items.map((item, j) => (
+            <li key={j} className="leading-relaxed text-[#0b2b55]/90">
+              {item.bold && (
+                <span className="font-bold text-[#0b2b55]">{item.bold}</span>
+              )}
+              {item.text}
+            </li>
+          ))}
+        </ul>
+      );
+
+    case "pro_tip":
+      return (
+        <p key={index} className="mb-4 leading-relaxed text-[#0b2b55]/90">
+          <span className="font-bold text-[#0b2b55]">Pro Tip:</span>{" "}
+          {block.text}
+        </p>
+      );
+
+    case "closing":
+      return (
+        <p
+          key={index}
+          className="mt-8 text-base font-bold italic leading-relaxed text-[#0b2b55]"
+        >
+          {block.text}
+        </p>
+      );
+
+    default:
+      return null;
+  }
 }
 
 export default async function BlogDetailPage({
@@ -31,7 +87,6 @@ export default async function BlogDetailPage({
           <h1 className="text-2xl font-extrabold text-[#0b2b55]">
             Post not found
           </h1>
-
           <Link
             href="/blog"
             aria-label="Go back to blog page"
@@ -47,7 +102,7 @@ export default async function BlogDetailPage({
   return (
     <main className="min-h-screen bg-[#f7efe6]" role="main">
       <article className="mx-auto max-w-3xl px-4 py-20">
-        
+
         {/* Header */}
         <header>
           <Link
@@ -84,9 +139,9 @@ export default async function BlogDetailPage({
         </div>
 
         {/* Content */}
-        <section className="prose prose-slate mt-8 max-w-none text-[#0b2b55]/90">
-          {post.content.map((paragraph, i) => (
-            <p key={i}>{paragraph}</p>
+        <section className="mt-8 max-w-none">
+          {post.content.map((block, i) => (
+            <RenderBlock key={i} block={block} index={i} />
           ))}
         </section>
 

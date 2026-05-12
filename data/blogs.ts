@@ -24,7 +24,7 @@ export const BLOGS: BlogPost[] = [
     slug: "signs-your-roof-needs-repair",
     title:
       "The Silent Sabotage: Why Roof Moss and Algae Are Costing You Thousands",
-    date: "12 Jan 2025",
+    date: "10 March 2025",
 
     caption:
       'Most homeowners see a bit of green on their roof and think, "I\'ll get to that next summer." The problem? Moss and algae don\'t wait for your schedule. By the time you can see them clearly from the driveway, the damage is already happening under the surface. They aren\'t just sitting on your roof; they are eating it.',
@@ -111,7 +111,7 @@ export const BLOGS: BlogPost[] = [
   {
     slug: "attic-insulation-roof-lifespan",
     title: "Why Your Attic Insulation Affects Your Roof's Lifespan",
-    date: "12 Jan 2025",
+    date: "10 April 2026",
 
     caption:
       "When most homeowners think about roof maintenance, they picture clearing out gutters or checking for missing shingles. But one of the most critical factors for a long-lasting roof isn't actually on the outside. It's hidden in your attic. Proper insulation does more than just lower your energy bills; it acts as a protective barrier that preserves the structural integrity of your entire roofing system. Here is why your attic insulation is the unsung hero of your roof's lifespan.",

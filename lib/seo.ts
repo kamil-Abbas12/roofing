@@ -178,8 +178,7 @@ export const SERVICE_SEO: Record<
     metaDescription:
       "Certified roof inspection services with same-day response. Detailed reports, drone inspections, pre-purchase & post-storm inspections available. Book online!",
     keywords: [
-      "best roofing websites",
-      "top 10 roofing websites",
+      
       "roof inspection",
       "roof inspection near me",
       "free roof inspection",

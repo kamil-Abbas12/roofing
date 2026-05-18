@@ -2,13 +2,34 @@ import mongoose from "mongoose";
 
 const ContactSchema = new mongoose.Schema(
   {
-    name: String,
-    email: String,
-    phone: String,
-    service: String,
-    businessType: String,
-    budget: String,
-    message: String,
+    name: {
+      type: String,
+      required: true,
+    },
+
+    email: {
+      type: String,
+      required: true,
+    },
+
+    phone: {
+      type: String,
+      required: true,
+    },
+
+    businessType: {
+      type: String,
+      required: true,
+    },
+
+    message: {
+      type: String,
+    },
+
+    tcpaConsent: {
+      type: Boolean,
+      required: true,
+    },
   },
   { timestamps: true }
 );

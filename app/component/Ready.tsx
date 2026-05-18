@@ -38,20 +38,56 @@ const Ready = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const formEl = e.currentTarget as HTMLFormElement;
-    if (!formEl.checkValidity()) {
-      formEl.reportValidity();
-      return;
-    }
-    if (!form.tcpaConsent) {
-      alert("Please agree to the TCPA consent before submitting.");
-      return;
-    }
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  const formEl = e.currentTarget as HTMLFormElement;
+
+  if (!formEl.checkValidity()) {
+    formEl.reportValidity();
+    return;
+  }
+
+  if (!form.tcpaConsent) {
+    alert("Please agree to the TCPA consent before submitting.");
+    return;
+  }
+
+  try {
     setLoading(true);
-    // Submit logic here...
-  };
+
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.message || "Something went wrong");
+    }
+
+    alert("Inquiry submitted successfully!");
+
+    // reset form
+    setForm({
+      name: "",
+      email: "",
+      phone: "",
+      businessType: "",
+      message: "",
+      tcpaConsent: false,
+    });
+  } catch (error) {
+    console.error(error);
+    alert("Failed to submit inquiry.");
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <section
@@ -110,37 +146,75 @@ const Ready = () => {
               />
             </div>
 
-            {/* Email */}
-            <div className="flex flex-col">
-              <label htmlFor="email" className="text-gray-700 font-semibold mb-2">Email *</label>
-              <input
-                id="email"
-                type="email"
-                name="email"
-                value={form.email}
-                onChange={handleChange}
-                placeholder="Enter your email"
-                className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition text-gray-900 placeholder:text-gray-400"
-                required
-                autoComplete="email"
-              />
-            </div>
+          {/* Email */}
+<div className="flex flex-col">
+  <label
+    htmlFor="email"
+    className="text-gray-700 font-semibold mb-2"
+  >
+    Email *
+  </label>
 
-            {/* Phone */}
-            <div className="flex flex-col">
-              <label htmlFor="phone" className="text-gray-700 font-semibold mb-2">Phone Number *</label>
-              <input
-                id="phone"
-                type="tel"
-                name="phone"
-                value={form.phone}
-                onChange={handleChange}
-                placeholder="+1 866 964 4568"
-                className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition text-gray-900 placeholder:text-gray-400"
-                required
-                autoComplete="tel"
-              />
-            </div>
+  <input
+    id="email"
+    type="email"
+    name="email"
+    value={form.email}
+    onChange={handleChange}
+    placeholder="Enter your email"
+    className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition text-gray-900 placeholder:text-gray-400"
+    required
+    autoComplete="email"
+
+    pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+
+    title="Please enter a valid email address"
+  />
+</div>
+      {/* Phone */}
+<div className="flex flex-col">
+  <label
+    htmlFor="phone"
+    className="text-gray-700 font-semibold mb-2"
+  >
+    Phone Number *
+  </label>
+
+  <input
+    id="phone"
+    type="tel"
+    name="phone"
+    value={form.phone}
+    onChange={(e) => {
+      // allow only numbers and +
+      let value = e.target.value.replace(/[^\d+]/g, "");
+
+      // only one + at start
+      if (value.includes("+")) {
+        value =
+          "+" + value.replace(/\+/g, "").replace(/^\+/, "");
+      }
+
+      // limit total length
+      if (value.length > 15) {
+        value = value.slice(0, 15);
+      }
+
+      setForm({
+        ...form,
+        phone: value,
+      });
+    }}
+    placeholder="+18669644568"
+    className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition text-gray-900 placeholder:text-gray-400"
+    required
+    autoComplete="tel"
+    inputMode="numeric"
+    maxLength={15}
+pattern="^[0-9]{10,15}$"
+    title="Enter a valid phone number"
+  />
+</div>
 
            
 
@@ -238,48 +312,59 @@ const Ready = () => {
           </a>
 
           <a
-            href="mailto:info@topdoglead.com"
-            className="w-full flex items-center text-lg justify-center gap-2 py-3 px-6 rounded-lg bg-blue-900 text-white border border-blue-900 font-semibold hover:bg-white hover:text-blue-900 transition lg:hover:scale-105"
+ href="https://mail.google.com/mail/?view=cm&fs=1&to=info@topdoglead.com"
+  target="_blank"
+  rel="noopener noreferrer"            className="w-full flex items-center text-lg justify-center gap-2 py-3 px-6 rounded-lg bg-blue-900 text-white border border-blue-900 font-semibold hover:bg-white hover:text-blue-900 transition lg:hover:scale-105"
             aria-label="Submit your project inquiry via email to info@topdoglead.com"
           >
             <FaEnvelope size={20} aria-hidden="true" />
             Submit Your Expert Project Inquiry Now
           </a>
 
-          {/* Contact Card */}
-          <div className="bg-white shadow-lg rounded-xl p-6 space-y-4 hover:shadow-2xl transition lg:hover:scale-105">
-            {/* ✅ h4 → h3 for sequential heading order */}
-            <h3 className="font-semibold text-lg text-blue-900">Get In Touch</h3>
+          
+   {/* Contact Card */}
+<div className="bg-white shadow-lg rounded-xl p-8 hover:shadow-2xl transition lg:hover:scale-105">
+  <h3 className="font-semibold text-2xl text-blue-900 mb-8">
+    Get In Touch
+  </h3>
 
-            <address className="not-italic flex flex-col items-start gap-6">
-              <a
-                href="tel:+18669644568"
-                className="flex items-center gap-2"
-                aria-label="Call us at 1-866-964-4568"
-              >
-                <PhoneCall size={20} className="text-blue-900" aria-hidden="true" />
-                <span className="text-gray-700">+1 866 964 4568</span>
-              </a>
+  <address className="not-italic flex flex-col gap-8 text-gray-700">
 
-              <a
-                href="mailto:info@topdoglead.com"
-                className="flex items-center gap-2"
-                aria-label="Email us at info@topdoglead.com"
-              >
-                <FaEnvelope size={20} className="text-blue-900" aria-hidden="true" />
-                <span className="text-gray-700">info@topdoglead.com</span>
-              </a>
-            </address>
+    {/* Phone */}
+    <a
+      href="tel:+18669644568"
+      className="flex items-center gap-5 min-h-[40px]"
+    >
+      <PhoneCall size={24} className="text-blue-900 shrink-0" />
+      <span className="text-[18px]">+1 866 964 4568</span>
+    </a>
 
-            <div className="flex items-center gap-2">
-              <MapPin className="text-blue-900" aria-hidden="true" />
-              <span className="text-gray-700">Serving all of USA</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Clock className="text-blue-900" aria-hidden="true" />
-              <span className="text-gray-700">Mon–Fri: 9AM–6PM USA</span>
-            </div>
-          </div>
+    {/* Email */}
+    <a
+      href="https://mail.google.com/mail/?view=cm&fs=1&to=info@topdoglead.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-5 min-h-[40px]"
+    >
+      <FaEnvelope size={24} className="text-blue-900 shrink-0" />
+      <span className="text-[18px]">info@topdoglead.com</span>
+    </a>
+
+    {/* Location */}
+    <div className="flex items-center gap-5 min-h-[40px]">
+      <MapPin size={24} className="text-blue-900 shrink-0" />
+      <span className="text-[18px]">Serving all of USA</span>
+    </div>
+
+    {/* Time */}
+    <div className="flex items-center gap-5 min-h-[40px]">
+      <Clock size={24} className="text-blue-900 shrink-0" />
+      <span className="text-[18px]">Mon–Fri: 9AM–6PM US</span>
+    </div>
+
+  </address>
+</div>
+
         </div>
       </div>
     </section>

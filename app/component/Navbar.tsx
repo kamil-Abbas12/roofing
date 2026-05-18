@@ -234,14 +234,15 @@ const Navbar = () => {
             <Phone size={16} className="mr-2" aria-hidden="true" />
             Call Now
           </a>
-          <a
-            href="mailto:info@topdoglead.com"
-            className={`px-5 py-2 rounded-lg flex items-center cursor-pointer transition font-medium text-sm ${primaryBtn}`}
-            aria-label="Send TopDog Roofing an email"
-          >
-            <FaEnvelope size={15} className="mr-2" aria-hidden="true" />
-            Contact Us
-          </a>
+    <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=info@topdoglead.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className={`px-5 py-2 rounded-lg flex items-center cursor-pointer transition font-medium text-sm ${primaryBtn}`}
+>
+  <FaEnvelope size={15} className="mr-2" />
+  Contact Us
+</a>
         </div>
 
         {/* MOBILE MENU BUTTON */}

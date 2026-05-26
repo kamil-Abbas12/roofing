@@ -34,7 +34,7 @@ export const BLOGS: BlogPost[] = [
 
     category: "Roof Repair",
     readTime: "5 min read",
-    image: "/blog1.webp",
+    image: "/roof-moss-and-algae-damage.webp",
 
     content: [
       {
@@ -121,7 +121,7 @@ export const BLOGS: BlogPost[] = [
 
     category: "Roof Maintenance",
     readTime: "6 min read",
-    image: "/blog2.webp",
+    image: "/attic-insulation-roof-maintenance.webp",
 
     content: [
       {
@@ -292,8 +292,162 @@ export const BLOGS: BlogPost[] = [
       },
     ],
   },
+{
+    slug: "why-are-my-shingles-curling",
+    title: "Why Are My Shingles Curling? (And How to Fix It)",
+    date: "27 May 2026",
+ 
+    caption:
+      "Seeing your roof shingles starting to curl can be a stressful sight. Your roof is your home's primary defense against the elements, and when shingles begin to lift, cup, or claw, it's a clear warning sign that something is wrong underneath. If you've noticed the edges of your shingles turning upward or buckling in the middle, you're likely wondering what's causing it and, more importantly, how much it's going to cost to fix.",
+ 
+    excerpt:
+      "Learn exactly why roof shingles curl — from poor ventilation to aging — and the best ways to fix it before it turns into a costly leak.",
+ 
+    category: "Roof Repair",
+    readTime: "5 min read",
+    image: "/curling-roof-shingles-repair.webp",
+ 
+    content: [
+      {
+        type: "paragraph",
+        text: "Here is a straightforward look at exactly why roof shingles curl and the best ways to address the issue before it turns into a costly leak.",
+      },
+      {
+        type: "heading",
+        text: "What Does Curling Look Like? (The Two Types)",
+      },
+      {
+        type: "paragraph",
+        text: "Shingle curling generally presents itself in one of two ways, and identifying the shape can sometimes give you a hint as to the underlying cause:",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Cupping:",
+            text: " This happens when the edges of the shingle turn upward, creating a concave center. It looks like the shingle is trying to form a small cup.",
+          },
+          {
+            bold: "Clawing:",
+            text: " This is the opposite. The center of the shingle bulges upward while the edges curl downward, digging into the roof like a claw.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Regardless of whether your shingles are cupping or clawing, both mean the shingle is losing its structural integrity and its ability to shed water properly.",
+      },
+      {
+        type: "heading",
+        text: "The Root Causes: Why Shingles Curl",
+      },
+      {
+        type: "paragraph",
+        text: "Shingles don't just curl out of nowhere. Usually, it's a symptom of one of four common roofing issues.",
+      },
+      {
+        type: "heading",
+        text: "1. Poor Attic Ventilation (The #1 Culprit)",
+      },
+      {
+        type: "paragraph",
+        text: "If your attic doesn't have adequate airflow, heat and moisture get trapped directly under your roof decking. During hot months, your attic becomes a literal oven, baking the shingles from the inside out. In the winter, trapped moisture can cause the roof decking to swell and warp, forcing the shingles attached to it to buckle and curl.",
+      },
+      {
+        type: "heading",
+        text: "2. High Trapped Moisture",
+      },
+      {
+        type: "paragraph",
+        text: "If a roof was installed over an old, damp roof layer, or if moisture was trapped in the decking during installation, that trapped water will eventually try to escape. As it evaporates upward, it pushes against the underside of the shingles, causing them to warp.",
+      },
+      {
+        type: "heading",
+        text: "3. Aging and Natural Wear",
+      },
+      {
+        type: "paragraph",
+        text: "As asphalt shingles age, they naturally lose their volatile oils and defensive granules due to constant UV exposure. Over 15 to 20 years, the shingles become dry, brittle, and prone to shrinking. When they shrink, the edges inevitably begin to curl.",
+      },
+      {
+        type: "heading",
+        text: "4. Faulty Installation",
+      },
+      {
+        type: "paragraph",
+        text: "Sometimes, the issue goes back to day one. If the roofing crew didn't use enough nails per shingle, or if the nails were placed too high up on the shingle strip, the shingles won't stay flat. Additionally, if the manufacturer's sealant strip failed to activate properly during a cold-weather installation, high winds can easily lift and curl the edges.",
+      },
+      {
+        type: "heading",
+        text: "How to Fix Curling Shingles",
+      },
+      {
+        type: "paragraph",
+        text: "The right fix depends entirely on how widespread the problem is and how old the roof is.",
+      },
+      {
+        type: "heading",
+        text: "Spot Repairs (For Isolated Issues)",
+      },
+      {
+        type: "paragraph",
+        text: "If your roof is relatively new and only a few shingles are curling — perhaps due to localized wind damage or a couple of loose nails — a roofer can often perform a targeted repair.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "The Fix:",
+            text: " The damaged shingles are carefully removed, and new shingles are woven in, nailed down securely, and sealed with roofing cement.",
+          },
+        ],
+      },
+      {
+        type: "heading",
+        text: "Improving Attic Ventilation (For Systemic Issues)",
+      },
+      {
+        type: "paragraph",
+        text: "If the curling is widespread but the shingles themselves aren't expired yet, fixing the underlying cause is priority number one.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "The Fix:",
+            text: " A roofing professional can assess your intake (soffit) vents and exhaust (ridge/gable) vents to ensure proper airflow. Adding a ridge vent or attic fan can dramatically lower attic temperatures and stop further curling in its tracks.",
+          },
+        ],
+      },
+      {
+        type: "heading",
+        text: "Full Roof Replacement (For Aging Roofs)",
+      },
+      {
+        type: "paragraph",
+        text: "If your roof is over 15–20 years old and shingles are curling across multiple slopes, repairs are simply a temporary band-aid. The shingles have reached the end of their lifespan.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "The Fix:",
+            text: " A full tear-off and replacement ensures you get a dry, sturdy new deck, proper modern underlayment, and a fresh layer of shingles that will protect your home for decades to come.",
+          },
+        ],
+      },
+      {
+        type: "pro_tip",
+        text: "It can be tempting to climb up a ladder with a tube of roofing caulk and try to glue curling shingles back down. However, brittle shingles will often crack or break entirely if you try to bend them back into place. Furthermore, walking on a compromised roof can be dangerous and may void any remaining manufacturer warranties.",
+      },
+      {
+        type: "closing",
+        text: "If you spot curling shingles, don't wait for the next heavy rainstorm to see if they leak. Catching the issue early usually means more affordable repair options are still on the table. Have a trusted local roofing professional inspect the roof to determine whether a quick ventilation upgrade or a targeted repair can save you thousands.",
+      },
+    ],
+  },
 ];
-
+ 
 export const CATEGORIES = [
   "Roof Repair",
   "Roof Installation",

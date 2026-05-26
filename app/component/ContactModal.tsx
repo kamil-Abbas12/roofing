@@ -62,24 +62,30 @@ const handleChange = (
 
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
-
   const formEl = e.currentTarget as HTMLFormElement;
 
-  // ✅ Force browser to show validation UI if invalid
-  if (!formEl.checkValidity()) {
-    formEl.reportValidity();
-    return;
-  }
-
-  // ✅ Extra guarantee for TCPA (even if browser quirks)
-  if (!form.tcpaConsent) {
-    alert("Please agree to the TCPA consent before submitting.");
-    return;
-  }
+  if (!formEl.checkValidity()) { formEl.reportValidity(); return; }
+  if (!form.tcpaConsent) { alert("Please agree to the TCPA consent."); return; }
 
   setLoading(true);
-
-  // ... keep the rest as-is
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+    const data = await res.json();
+    if (data.success) {
+      alert("Thank you! We'll be in touch soon.");
+      onClose();
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  } catch {
+    alert("Network error. Please try again.");
+  } finally {
+    setLoading(false);
+  }
 };
 
   return (

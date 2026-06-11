@@ -293,161 +293,116 @@ export const BLOGS: BlogPost[] = [
     ],
   },
 {
-    slug: "why-are-my-shingles-curling",
-    title: "Why Are My Shingles Curling? (And How to Fix It)",
-    date: "27 May 2026",
+    slug: "signs-your-roof-is-about-to-leak",
+    title: "7 Warning Signs Your Roof Is About to Leak",
+    date: "12 June 2026",
  
     caption:
-      "Seeing your roof shingles starting to curl can be a stressful sight. Your roof is your home's primary defense against the elements, and when shingles begin to lift, cup, or claw, it's a clear warning sign that something is wrong underneath. If you've noticed the edges of your shingles turning upward or buckling in the middle, you're likely wondering what's causing it and, more importantly, how much it's going to cost to fix.",
+      "Nobody wakes up in the morning hoping to deal with a roof leak. Most of the time, we don't even think about our roofs until water is actively dripping into a plastic bucket in the middle of the living room. But here's the thing: roofs rarely fail out of nowhere. Long before that first drop of water ruins your drywall, your roof is sending out warning signs.",
  
     excerpt:
-      "Learn exactly why roof shingles curl — from poor ventilation to aging — and the best ways to fix it before it turns into a costly leak.",
+      "Learn the seven early warning signs of a failing roof — from curling shingles to spongy decking — before they turn into a costly leak.",
  
     category: "Roof Repair",
-    readTime: "5 min read",
-    image: "/curling-roof-shingles-repair.webp",
+    readTime: "6 min read",
+    image: "/can-one-missing-shingle-cause-roof-leak.webp",
  
     content: [
       {
         type: "paragraph",
-        text: "Here is a straightforward look at exactly why roof shingles curl and the best ways to address the issue before it turns into a costly leak.",
+        text: "Catching these early red flags can mean the difference between a quick, inexpensive patch job and a massive insurance claim for structural water damage. If you want to catch a leak before it starts, keep an eye out for these seven warning signs.",
       },
       {
         type: "heading",
-        text: "What Does Curling Look Like? (The Two Types)",
+        text: "1. Shingles That Are Curling or Cupping",
       },
       {
         type: "paragraph",
-        text: "Shingle curling generally presents itself in one of two ways, and identifying the shape can sometimes give you a hint as to the underlying cause:",
-      },
-      {
-        type: "bullets",
-        items: [
-          {
-            bold: "Cupping:",
-            text: " This happens when the edges of the shingle turn upward, creating a concave center. It looks like the shingle is trying to form a small cup.",
-          },
-          {
-            bold: "Clawing:",
-            text: " This is the opposite. The center of the shingle bulges upward while the edges curl downward, digging into the roof like a claw.",
-          },
-        ],
+        text: 'When asphalt shingles reach the end of their lifespan, the heat from the sun and general weathering causes them to lose flexibility. They\'ll either start "cupping" (where the edges curl upward) or "clawing" (where the middle buckles up and the edges stay flat).',
       },
       {
         type: "paragraph",
-        text: "Regardless of whether your shingles are cupping or clawing, both mean the shingle is losing its structural integrity and its ability to shed water properly.",
+        text: "Once a shingle starts to warp like this, it loses its grip. Wind can easily catch it, and rain can blow right underneath it, leaving the underlayment underneath totally exposed.",
       },
       {
         type: "heading",
-        text: "The Root Causes: Why Shingles Curl",
+        text: "2. Dark \"Water Spots\" on Your Ceilings or Walls",
       },
       {
         type: "paragraph",
-        text: "Shingles don't just curl out of nowhere. Usually, it's a symptom of one of four common roofing issues.",
+        text: "This is the classic precursor to a full-blown drip. If you notice faint, brownish rings or yellowish stains on your upper ceilings or stretching down the top of your interior walls, you already have an active problem.",
+      },
+      {
+        type: "paragraph",
+        text: "Water is incredibly patient. It will slowly seep through a weak spot in the roof, pool on top of your attic insulation, and eventually soak through your drywall. If you see these spots after a heavy storm, it's time to call a pro immediately.",
       },
       {
         type: "heading",
-        text: "1. Poor Attic Ventilation (The #1 Culprit)",
+        text: "3. Granules Packing the Gutters",
       },
       {
         type: "paragraph",
-        text: "If your attic doesn't have adequate airflow, heat and moisture get trapped directly under your roof decking. During hot months, your attic becomes a literal oven, baking the shingles from the inside out. In the winter, trapped moisture can cause the roof decking to swell and warp, forcing the shingles attached to it to buckle and curl.",
+        text: "Take a look inside your gutters next time you clear out the leaves. Do you see what looks like heavy, dark sand piling up in the corners? Those are asphalt granules.",
+      },
+      {
+        type: "paragraph",
+        text: "Granules protect your shingles from harsh UV rays. As a roof ages, these granules bake off and wash down the downspouts. If your gutters are loaded with them, your shingles are essentially balding, making them brittle and highly vulnerable to cracking during the next big downpour.",
       },
       {
         type: "heading",
-        text: "2. High Trapped Moisture",
+        text: "4. Cracked, Damaged, or Missing Flashing",
       },
       {
         type: "paragraph",
-        text: "If a roof was installed over an old, damp roof layer, or if moisture was trapped in the decking during installation, that trapped water will eventually try to escape. As it evaporates upward, it pushes against the underside of the shingles, causing them to warp.",
+        text: "Flashing consists of those thin metal strips installed around the most vulnerable spots of your roof, like around the chimney, skylights, and the valleys where two roof slopes meet.",
+      },
+      {
+        type: "paragraph",
+        text: "Because these areas see the highest volume of rushing water, damaged flashing is a leading cause of sudden interior leaks. If the tar or caulking sealing the flashing has dried out and cracked, or if the metal itself is rusting and lifting away, water has a direct doorway into your home.",
       },
       {
         type: "heading",
-        text: "3. Aging and Natural Wear",
+        text: "5. Sudden Algae, Moss, or Mold Growth",
       },
       {
         type: "paragraph",
-        text: "As asphalt shingles age, they naturally lose their volatile oils and defensive granules due to constant UV exposure. Over 15 to 20 years, the shingles become dry, brittle, and prone to shrinking. When they shrink, the edges inevitably begin to curl.",
+        text: "Seeing a little bit of green on your roof might look rustic, but it's actually a ticking time bomb. Moss acts like a sponge, holding moisture directly against the shingles for days or weeks at a time.",
+      },
+      {
+        type: "paragraph",
+        text: "In freezing climates, that trapped water freezes and expands, physically prying the shingles apart. Even in warmer areas, constant dampness rots the organic matting inside the shingles, letting water seep right through.",
       },
       {
         type: "heading",
-        text: "4. Faulty Installation",
+        text: "6. Cracked or Missing Shingles",
       },
       {
         type: "paragraph",
-        text: "Sometimes, the issue goes back to day one. If the roofing crew didn't use enough nails per shingle, or if the nails were placed too high up on the shingle strip, the shingles won't stay flat. Additionally, if the manufacturer's sealant strip failed to activate properly during a cold-weather installation, high winds can easily lift and curl the edges.",
+        text: "This one might seem obvious, but it's easy to miss if you aren't looking closely. Heavy winds can rip shingles entirely off, while hail can slam into them and leave deep fractures.",
+      },
+      {
+        type: "paragraph",
+        text: "If a single shingle is missing or split down the middle, the water-resistant barrier below it is directly exposed to the elements. It won't take more than one or two good rainstorms for water to find a way past that underlayment and into your rafters.",
       },
       {
         type: "heading",
-        text: "How to Fix Curling Shingles",
+        text: '7. The Roof Deck Feels "Spongy"',
       },
       {
         type: "paragraph",
-        text: "The right fix depends entirely on how widespread the problem is and how old the roof is.",
-      },
-      {
-        type: "heading",
-        text: "Spot Repairs (For Isolated Issues)",
-      },
-      {
-        type: "paragraph",
-        text: "If your roof is relatively new and only a few shingles are curling — perhaps due to localized wind damage or a couple of loose nails — a roofer can often perform a targeted repair.",
-      },
-      {
-        type: "bullets",
-        items: [
-          {
-            bold: "The Fix:",
-            text: " The damaged shingles are carefully removed, and new shingles are woven in, nailed down securely, and sealed with roofing cement.",
-          },
-        ],
-      },
-      {
-        type: "heading",
-        text: "Improving Attic Ventilation (For Systemic Issues)",
-      },
-      {
-        type: "paragraph",
-        text: "If the curling is widespread but the shingles themselves aren't expired yet, fixing the underlying cause is priority number one.",
-      },
-      {
-        type: "bullets",
-        items: [
-          {
-            bold: "The Fix:",
-            text: " A roofing professional can assess your intake (soffit) vents and exhaust (ridge/gable) vents to ensure proper airflow. Adding a ridge vent or attic fan can dramatically lower attic temperatures and stop further curling in its tracks.",
-          },
-        ],
-      },
-      {
-        type: "heading",
-        text: "Full Roof Replacement (For Aging Roofs)",
-      },
-      {
-        type: "paragraph",
-        text: "If your roof is over 15–20 years old and shingles are curling across multiple slopes, repairs are simply a temporary band-aid. The shingles have reached the end of their lifespan.",
-      },
-      {
-        type: "bullets",
-        items: [
-          {
-            bold: "The Fix:",
-            text: " A full tear-off and replacement ensures you get a dry, sturdy new deck, proper modern underlayment, and a fresh layer of shingles that will protect your home for decades to come.",
-          },
-        ],
+        text: "If you are brave enough to walk your roof (or if you hire a professional to inspect it), pay attention to how it feels underfoot. A healthy roof should feel solid and completely unyielding.",
       },
       {
         type: "pro_tip",
-        text: "It can be tempting to climb up a ladder with a tube of roofing caulk and try to glue curling shingles back down. However, brittle shingles will often crack or break entirely if you try to bend them back into place. Furthermore, walking on a compromised roof can be dangerous and may void any remaining manufacturer warranties.",
+        text: 'If you step on a section and it feels soft, bouncy, or "spongy," that is a massive red flag. It means the plywood decking beneath the shingles has already been absorbing water and is beginning to rot away.',
       },
       {
         type: "closing",
-        text: "If you spot curling shingles, don't wait for the next heavy rainstorm to see if they leak. Catching the issue early usually means more affordable repair options are still on the table. Have a trusted local roofing professional inspect the roof to determine whether a quick ventilation upgrade or a targeted repair can save you thousands.",
+        text: "If you catch a problem while it's still on the outside of your roof, it's a repair. If you wait until it reaches the inside of your home, it becomes a major project. Take a few minutes every spring and fall to look up and check for these warning signs. Your wallet will thank you later.",
       },
     ],
   },
 ];
- 
 export const CATEGORIES = [
   "Roof Repair",
   "Roof Installation",

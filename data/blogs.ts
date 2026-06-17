@@ -402,6 +402,140 @@ export const BLOGS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "roof-repair-vs-roof-replacement",
+    title:
+      "Roof Repair vs. Roof Replacement: How to Choose the Right Path for Your Home",
+    date: "17 June 2026",
+
+    caption:
+      "Few things strike fear into a homeowner's heart quite like a puddle on the living room floor or a rogue shingle lying in the front yard. Your roof is your home's main line of defense against the elements, so when something goes wrong, it's easy to panic.",
+
+    excerpt:
+      "Not sure if your roof needs a quick patch or a full tear-off? Learn the key signs — from shingle age to structural sagging — that determine which path is right for your home.",
+
+    category: "Roof Repair",
+    readTime: "6 min read",
+    image: "/roof-repair-vs-roof-replacement.webp",
+
+    content: [
+      {
+        type: "paragraph",
+        text: "Almost immediately, the big question pops up: Can I get away with a quick repair, or am I looking at a total roof replacement?",
+      },
+      {
+        type: "paragraph",
+        text: "It's a massive financial distinction. A repair might cost a few hundred dollars, while a brand-new roof is a major investment. To help you make an informed decision without the sales pitch, let's break down exactly how to tell the difference between a patch-up job and a full tear-off.",
+      },
+      {
+        type: "heading",
+        text: "The Scope: Spot Treatment vs. a Clean Slate",
+      },
+      {
+        type: "paragraph",
+        text: "The most obvious difference between the two is how much of the roof is actually being touched.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Roof Repair:",
+            text: " Think of this as targeted first aid. A roofer identifies a specific failure point like a cracked pipe boot, some wind-damaged shingles, or a small leak over the garage and fixes just that area. The rest of the roof is left completely intact.",
+          },
+          {
+            bold: "Roof Replacement:",
+            text: " This is a major construction project. The roofing crew strips away all the old shingles down to the bare wooden decking. They inspect the wood for rot, replace any damaged boards, install brand-new underlayment, and lay down entirely new shingles.",
+          },
+        ],
+      },
+      {
+        type: "heading",
+        text: "Signs You Only Need a Repair",
+      },
+      {
+        type: "paragraph",
+        text: "If your roof is relatively young and generally healthy, a repair is usually the way to go. You're likely a candidate for a repair if you notice:",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Isolated Damage:",
+            text: " A recent storm caught the edge of a few shingles and ripped them off, but the surrounding shingles look perfect.",
+          },
+          {
+            bold: "Flashing Issues:",
+            text: " The metal pieces around your chimney, dormers, or valleys have rusted or pulled away, causing a localized leak.",
+          },
+          {
+            bold: "Minor Leaks:",
+            text: " You noticed a small water spot on your ceiling right after a heavy downpour, and it's traceable to a single, easily accessible spot on the roof.",
+          },
+        ],
+      },
+      {
+        type: "pro_tip",
+        text: "The Golden Rule of Repairs: If the roof has plenty of life left in it and the damage is confined to less than 10-15% of the total surface area, repairing it is almost always the smartest, most cost-effective move.",
+      },
+      {
+        type: "heading",
+        text: "Signs It's Time for a Full Replacement",
+      },
+      {
+        type: "paragraph",
+        text: "Sometimes, patching a roof is like putting a band-aid on a dam that's about to burst. It might buy you a few weeks, but it won't save you. You should seriously consider a replacement if you see these red flags:",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Age:",
+            text: " This is the ultimate decider. Standard asphalt shingle roofs are built to last roughly 20 to 25 years. If your roof is hitting its late teens or early twenties, the materials are simply degrading. Even if it looks okay today, it's on borrowed time.",
+          },
+          {
+            bold: "Widespread Shingle Decay:",
+            text: " Look closely at your shingles. Are the edges curling or cupping upward? Are they bald and losing their gritty granules? If the shingles are brittle and breaking, they can no longer shed water.",
+          },
+          {
+            bold: 'The "Whack-A-Mole" Effect:',
+            text: " If you paid for a repair last year, have a new leak this year, and your roofer points out three more problem areas, you're throwing good money after bad.",
+          },
+          {
+            bold: "Sagging Decking:",
+            text: " If your roofline looks wavy or has noticeable dips, it's a sign of trapped moisture and rotting wood underneath. A repair cannot fix structural sagging.",
+          },
+        ],
+      },
+      {
+        type: "heading",
+        text: "The Hidden Factor: Architectural Harmony",
+      },
+      {
+        type: "paragraph",
+        text: "There is one practical issue with repairs that caught many homeowners off guard: Aesthetics.",
+      },
+      {
+        type: "paragraph",
+        text: "Sunlight, rain, and snow fade shingles over time. If your roof is ten years old, a brand-new bundle of the exact same shingle brand and color will not match. It will look like a bright, dark patch on a faded jacket. If the repair is on the back of your house, you might not care. But if it's right over your front porch, a massive patchwork look can seriously hurt your home's curb appeal.",
+      },
+      {
+        type: "heading",
+        text: "The Verdict: How to Decide",
+      },
+      {
+        type: "paragraph",
+        text: "Before you call a contractor, take a look at your home's file. How old is the roof? If it's under 12 years old and the problem is a single leak, push hard for a repair.",
+      },
+      {
+        type: "paragraph",
+        text: "If the roof is over 20 years old, saving up for a replacement is the safest logistical and financial choice for your home's future.",
+      },
+      {
+        type: "closing",
+        text: "Always get at least two or three opinions from local, highly-rated roofing companies. A trustworthy roofer will never push you into a replacement if a simple repair will safely buy you another five years.",
+      },
+    ],
+  },
 ];
 export const CATEGORIES = [
   "Roof Repair",

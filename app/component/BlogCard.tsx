@@ -40,7 +40,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
             {post.excerpt}
           </p>
 
-          <div className="mt-3 text-xs font-semibold text-gray-500 mt-auto">
+<div className="mt-auto pt-3 text-xs font-semibold text-gray-500">
             {/* ✅ Separate spans so screen readers don't mash "Roofing•5 min read" together */}
             <span>{post.category}</span>
             <span aria-hidden="true"> • </span>

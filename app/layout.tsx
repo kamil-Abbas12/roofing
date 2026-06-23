@@ -145,6 +145,7 @@ export default function RootLayout({
         <DiscountPopup />
         {children}
         <Footer />
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="JkhARxLMNh+CptEmB0KYzw" async></script>
       </body>
     </html>
   );

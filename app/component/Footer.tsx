@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Phone } from "lucide-react";
 
-const scrollSections = ["Results", "Contact"];
+const scrollSections = [ "Contact"];
 
 const serviceLinks = [
   { label: "Roof Repair", href: "/services/roof-repair" },

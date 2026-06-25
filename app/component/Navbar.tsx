@@ -7,7 +7,7 @@ import Link from "next/link";
 import { FaEnvelope } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 
-const scrollSections = ["Services", "Results", "Contact"];
+const scrollSections = ["Services", "Contact"];
 
 const serviceLinks = [
   { label: "Roof Repair", href: "/services/roof-repair", desc: "Leaks, shingles & flashing" },
@@ -168,8 +168,8 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* SCROLL SECTIONS (Results, Contact) */}
-          {["Results", "Contact"].map((sec) => (
+          {/* SCROLL SECTIONS ( Contact) */}
+          {[ "Contact"].map((sec) => (
             <button
               key={sec}
               onClick={() => {
@@ -299,7 +299,7 @@ const Navbar = () => {
             )}
           </div>
 
-          {["Results", "Contact"].map((sec) => (
+          {["Contact"].map((sec) => (
             <button
               key={sec}
               onClick={() => {

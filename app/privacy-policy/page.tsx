@@ -5,7 +5,7 @@ const SITE_URL = "https://roofing.topdoglead.com";
 
 export const metadata: Metadata = {
   title: "Privacy Policy ",
-  description: "Learn how TopDog Roofing collects, uses, and protects your personal information.",
+  description: "Learn how TopDog Roofing collects, uses, shares, and protects your personal information when you request quotes, schedule inspections, or use our roofing services.",
   alternates: { canonical: `${SITE_URL}/privacy-policy` },
   robots: { index: true, follow: true },
 };

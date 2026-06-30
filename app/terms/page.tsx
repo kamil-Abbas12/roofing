@@ -5,7 +5,7 @@ const SITE_URL = "https://roofing.topdoglead.com";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "Terms of Service and conditions for using TopDog Roofing's services.",
+  description: "Read TopDog Roofing's Terms of Service covering payments, warranties, liability, licensing, and policies for our roof repair and replacement services.",
   alternates: { canonical: `${SITE_URL}/terms` },
   robots: { index: true, follow: true },
 };

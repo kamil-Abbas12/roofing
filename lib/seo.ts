@@ -1,5 +1,8 @@
 // lib/seo.ts — Centralized SEO metadata for all service pages
 // Used by every page's generateMetadata() export
+//
+// NOTE: Root layout.tsx applies title template "%s | TopDog Roofing" automatically.
+// Do NOT include "| TopDog Roofing" in metaTitle below — it will be duplicated.
 
 export const SITE_URL = "https://roofing.topdoglead.com";
 export const SITE_NAME = "TopDog Roofing";
@@ -27,7 +30,7 @@ export const SERVICE_SEO: Record<
   "roof-repair": {
     slug: "roof-repair",
     title: "Roof Repair",
-    metaTitle: "Roof Repair Services | Fast & Affordable | TopDog Roofing",
+    metaTitle: "Roof Repair Services | Fast & Affordable",
     metaDescription:
       "Professional roof repair services for leaks, damaged shingles, flashing, and more. Same-day inspections available. Trusted by 1,000+ homeowners. Call now!",
     keywords: [
@@ -65,7 +68,7 @@ export const SERVICE_SEO: Record<
   "roof-replacement": {
     slug: "roof-replacement",
     title: "Roof Replacement",
-    metaTitle: "Full Roof Replacement | Licensed Roofers | TopDog Roofing",
+    metaTitle: "Full Roof Replacement | Licensed Roofers",
     metaDescription:
       "Complete roof replacement with premium materials. Asphalt, metal, tile & more. Free estimates, fast installation, backed by warranty. Get a quote today!",
     keywords: [
@@ -101,7 +104,7 @@ export const SERVICE_SEO: Record<
   "storm-damage": {
     slug: "storm-damage",
     title: "Storm Damage & Insurance Claims",
-    metaTitle: "Storm Damage Roof Repair & Insurance Claims | TopDog Roofing",
+    metaTitle: "Storm Damage Roof Repair & Insurance Claims",
     metaDescription:
       "Storm-damaged roof? We handle the entire insurance claims process for you. Hail, wind & water damage experts. Fast response, maximum claim approval. Call now!",
     keywords: [
@@ -137,7 +140,7 @@ export const SERVICE_SEO: Record<
   "commercial-roofing": {
     slug: "commercial-roofing",
     title: "Commercial Roofing",
-    metaTitle: "Commercial Roofing Services | Flat & Low Slope | TopDog Roofing",
+    metaTitle: "Commercial Roofing | Flat & Low Slope",
     metaDescription:
       "Commercial roofing for offices, warehouses & retail. TPO, EPDM, modified bitumen & metal roofing systems. Minimal downtime, maximum durability. Free estimate!",
     keywords: [
@@ -174,11 +177,10 @@ export const SERVICE_SEO: Record<
   "roof-inspection": {
     slug: "roof-inspection",
     title: "Roof Inspection",
-    metaTitle: "Professional Roof Inspection | 24-Hour Response | TopDog Roofing",
+    metaTitle: "Roof Inspection | 24-Hour Response",
     metaDescription:
       "Certified roof inspection services with same-day response. Detailed reports, drone inspections, pre-purchase & post-storm inspections available. Book online!",
     keywords: [
-      
       "roof inspection",
       "roof inspection near me",
       "free roof inspection",
@@ -211,7 +213,7 @@ export const SERVICE_SEO: Record<
   "new-construction": {
     slug: "new-construction",
     title: "New Construction Roofing",
-    metaTitle: "New Construction Roofing | Custom Install | TopDog Roofing",
+    metaTitle: "New Construction Roofing | Custom Install",
     metaDescription:
       "New construction roofing for builders & homeowners. All materials available. On-time installation, code compliant, warranty backed. Get your free quote today!",
     keywords: [

@@ -25,6 +25,20 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/services`,
     siteName: "TopDog Roofing",
     type: "website",
+    images: [
+      {
+        url: `${SITE_URL}/roof2.webp`,
+        width: 1200,
+        height: 630,
+        alt: "TopDog Roofing services — repair, replacement & inspections",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Roofing Services | TopDog Roofing",
+    description: "Complete roofing services — repair, replacement, storm damage, inspections & more.",
+    images: [`${SITE_URL}/roof2.webp`],
   },
 };
 

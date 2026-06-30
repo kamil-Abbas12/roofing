@@ -16,6 +16,21 @@ export const metadata: Metadata = {
     url: `${BASE_URL}/blog`,
     siteName: "Top Dog Roofing",
     type: "website",
+    images: [
+      {
+        url: `${BASE_URL}/roof2.webp`,
+        width: 1200,
+        height: 630,
+        alt: "Top Dog Roofing Blog — expert roofing tips and guides",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Roofing Blog | Tips, Repairs & Expert Guides",
+    description:
+      "Expert roofing tips, storm damage guides, and repair advice from Top Dog Roofing.",
+    images: [`${BASE_URL}/roof2.webp`],
   },
 };
 

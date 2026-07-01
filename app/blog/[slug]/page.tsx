@@ -18,139 +18,106 @@ export async function generateMetadata({ params }: any) {
 
 function RenderBlock({ block, index }: { block: ContentBlock; index: number }) {
   switch (block.type) {
-    case "heading":
-      return (
-        <h2
-          key={index}
-          className="mt-8 mb-3 inline-block bg-yellow-300 px-2 py-1 text-xl font-extrabold text-black"
-        >
-          {block.text}
-        </h2>
-      );
+   case "heading":
+  return (
+    <h2
+      key={index}
+      className="mt-8 mb-4 text-3xl font-bold text-black"
+    >
+      {block.text}
+    </h2>
+  );
 
-    case "subheading":
-      return (
-        <h3
-          key={index}
-          className="mt-6 mb-3 text-lg font-extrabold text-[#0b2b55]"
-        >
-          {block.text}
-        </h3>
-      );
+   case "subheading":
+  return (
+    <h3
+      key={index}
+      className="mt-6 mb-3 text-2xl font-bold text-black"
+    >
+      {block.text}
+    </h3>
+  );
 
-    case "paragraph":
-      return (
-        <p key={index} className="mb-4 leading-relaxed text-[#0b2b55]/90">
-          {block.text}
-        </p>
-      );
+   case "paragraph":
+  return (
+    <p key={index} className="mb-5 leading-8 text-black">
+      {block.text}
+    </p>
+  );
 
     case "bullets":
-      return (
-        <ul key={index} className="mb-4 ml-5 list-disc space-y-1">
-          {block.items.map((item, j) => (
-            <li key={j} className="leading-relaxed text-[#0b2b55]/90">
-              {item.bold && (
-                <span className="font-bold text-[#0b2b55]">{item.bold}</span>
-              )}
-              {item.text}
-            </li>
-          ))}
-        </ul>
-      );
+  return (
+    <ul key={index} className="mb-5 ml-6 list-disc space-y-2">
+      {block.items.map((item, j) => (
+        <li key={j} className="leading-8 text-black">
+          {item.bold && (
+            <span className="font-bold text-black">
+              {item.bold}
+            </span>
+          )}
+          {item.text}
+        </li>
+      ))}
+    </ul>
+  );
 
-    case "table":
-      return (
-        <div key={index} className="mb-6">
-          {/* Desktop table */}
-          <div className="hidden overflow-x-auto sm:block">
-            <table className="w-full border-collapse text-left text-sm">
-              <thead>
-                <tr>
-                  {block.headers.map((header, j) => (
-                    <th
-                      key={j}
-                      className="border border-emerald-100 bg-emerald-600 px-4 py-3 font-bold text-white"
-                    >
-                      {header}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {block.rows.map((row, rowIndex) => (
-                  <tr
-                    key={rowIndex}
-                    className={rowIndex % 2 === 0 ? "bg-emerald-50" : "bg-white"}
-                  >
-                    {row.map((cell, cellIndex) => (
-                      <td
-                        key={cellIndex}
-                        className={`border border-emerald-100 px-4 py-3 align-top text-[#0b2b55]/90 ${
-                          cellIndex === 0 ? "font-bold text-[#0b2b55]" : ""
-                        }`}
-                      >
-                        {cell}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+case "table":
+  // narrow to table shape to satisfy TypeScript and avoid unreachable duplicate code
+  if (!("headers" in block) || !("rows" in block)) return null;
 
-          {/* Mobile stacked cards */}
-          <div className="space-y-4 sm:hidden">
-            {block.rows.map((row, rowIndex) => (
-              <div
-                key={rowIndex}
-                className="overflow-hidden rounded-xl border border-emerald-100 bg-white shadow-sm"
+  const tableBlock = block as any;
+
+  return (
+    <div key={index} className="mb-8 w-full overflow-x-auto">
+      <table className="min-w-[700px] w-full border-collapse border border-black text-left">
+        <thead>
+          <tr>
+            {tableBlock.headers.map((header: string, j: number) => (
+              <th
+                key={j}
+                className="border border-black bg-white px-4 py-3 text-left font-bold text-black whitespace-nowrap"
               >
-                <div className="bg-emerald-600 px-4 py-3 text-sm font-bold text-white">
-                  {row[0]}
-                </div>
-
-                <div className="border-t border-emerald-100 px-4 py-3">
-                  <div className="mb-1 text-[11px] font-bold uppercase tracking-[0.08em] text-emerald-600">
-                    {block.mobileLabels?.[0] || block.headers[1]}
-                  </div>
-                  <div className="text-sm leading-relaxed text-[#0b2b55]/90">
-                    {row[1]}
-                  </div>
-                </div>
-
-                <div className="border-t border-emerald-100 px-4 py-3">
-                  <div className="mb-1 text-[11px] font-bold uppercase tracking-[0.08em] text-emerald-600">
-                    {block.mobileLabels?.[1] || block.headers[2]}
-                  </div>
-                  <div className="text-sm leading-relaxed text-[#0b2b55]/90">
-                    {row[2]}
-                  </div>
-                </div>
-              </div>
+                {header}
+              </th>
             ))}
-          </div>
-        </div>
-      );
+          </tr>
+        </thead>
 
-    case "pro_tip":
-      return (
-        <p key={index} className="mb-4 leading-relaxed text-[#0b2b55]/90">
-          <span className="font-bold text-[#0b2b55]">Pro Tip:</span>{" "}
-          {block.text}
-        </p>
-      );
+        <tbody>
+          {tableBlock.rows.map((row: any[], rowIndex: number) => (
+            <tr key={rowIndex}>
+              {row.map((cell: any, cellIndex: number) => (
+                <td
+                  key={cellIndex}
+                  className={`border border-black px-4 py-3 text-black align-top ${
+                    cellIndex === 0 ? "font-bold" : ""
+                  }`}
+                >
+                  {cell}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
 
-    case "closing":
-      return (
-        <p
-          key={index}
-          className="mt-8 text-base font-bold italic leading-relaxed text-[#0b2b55]"
-        >
-          {block.text}
-        </p>
-      );
-
+  case "pro_tip":
+  return (
+    <p key={index} className="mb-5 leading-8 text-black">
+      <span className="font-bold">Pro Tip:</span> {block.text}
+    </p>
+  );
+   case "closing":
+  return (
+    <p
+      key={index}
+      className="mt-8 text-lg font-bold italic leading-8 text-black"
+    >
+      {block.text}
+    </p>
+  );
     default:
       return null;
   }
@@ -169,8 +136,7 @@ export default async function BlogDetailPage({
     return (
       <main className="min-h-screen bg-[#f7efe6] mt-20" role="main">
         <div className="mx-auto max-w-3xl px-4 py-40 text-center">
-          <h1 className="text-2xl font-extrabold text-[#0b2b55]">
-            Post not found
+<h1 className="mt-4 text-4xl font-bold leading-tight text-black">            Post not found
           </h1>
           <Link
             href="/blog"
@@ -208,8 +174,8 @@ export default async function BlogDetailPage({
         </header>
 
         {/* Caption */}
-        <p className="mt-6 text-center text-base italic leading-relaxed text-[#0b2b55]/90">
-          {post.caption}
+<p className="mt-6 text-center text-base italic leading-8 text-black">
+            {post.caption}
         </p>
 
         {/* Image */}

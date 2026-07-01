@@ -22,10 +22,20 @@ function RenderBlock({ block, index }: { block: ContentBlock; index: number }) {
       return (
         <h2
           key={index}
-          className="mt-8 mb-3 inline-block  px-1 text-xl font-extrabold text-black"
+          className="mt-8 mb-3 inline-block bg-yellow-300 px-2 py-1 text-xl font-extrabold text-black"
         >
           {block.text}
         </h2>
+      );
+
+    case "subheading":
+      return (
+        <h3
+          key={index}
+          className="mt-6 mb-3 text-lg font-extrabold text-[#0b2b55]"
+        >
+          {block.text}
+        </h3>
       );
 
     case "paragraph":
@@ -47,6 +57,80 @@ function RenderBlock({ block, index }: { block: ContentBlock; index: number }) {
             </li>
           ))}
         </ul>
+      );
+
+    case "table":
+      return (
+        <div key={index} className="mb-6">
+          {/* Desktop table */}
+          <div className="hidden overflow-x-auto sm:block">
+            <table className="w-full border-collapse text-left text-sm">
+              <thead>
+                <tr>
+                  {block.headers.map((header, j) => (
+                    <th
+                      key={j}
+                      className="border border-emerald-100 bg-emerald-600 px-4 py-3 font-bold text-white"
+                    >
+                      {header}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {block.rows.map((row, rowIndex) => (
+                  <tr
+                    key={rowIndex}
+                    className={rowIndex % 2 === 0 ? "bg-emerald-50" : "bg-white"}
+                  >
+                    {row.map((cell, cellIndex) => (
+                      <td
+                        key={cellIndex}
+                        className={`border border-emerald-100 px-4 py-3 align-top text-[#0b2b55]/90 ${
+                          cellIndex === 0 ? "font-bold text-[#0b2b55]" : ""
+                        }`}
+                      >
+                        {cell}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Mobile stacked cards */}
+          <div className="space-y-4 sm:hidden">
+            {block.rows.map((row, rowIndex) => (
+              <div
+                key={rowIndex}
+                className="overflow-hidden rounded-xl border border-emerald-100 bg-white shadow-sm"
+              >
+                <div className="bg-emerald-600 px-4 py-3 text-sm font-bold text-white">
+                  {row[0]}
+                </div>
+
+                <div className="border-t border-emerald-100 px-4 py-3">
+                  <div className="mb-1 text-[11px] font-bold uppercase tracking-[0.08em] text-emerald-600">
+                    {block.mobileLabels?.[0] || block.headers[1]}
+                  </div>
+                  <div className="text-sm leading-relaxed text-[#0b2b55]/90">
+                    {row[1]}
+                  </div>
+                </div>
+
+                <div className="border-t border-emerald-100 px-4 py-3">
+                  <div className="mb-1 text-[11px] font-bold uppercase tracking-[0.08em] text-emerald-600">
+                    {block.mobileLabels?.[1] || block.headers[2]}
+                  </div>
+                  <div className="text-sm leading-relaxed text-[#0b2b55]/90">
+                    {row[2]}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       );
 
     case "pro_tip":
@@ -71,6 +155,7 @@ function RenderBlock({ block, index }: { block: ContentBlock; index: number }) {
       return null;
   }
 }
+
 
 export default async function BlogDetailPage({
   params,

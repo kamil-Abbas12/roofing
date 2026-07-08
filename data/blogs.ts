@@ -35,7 +35,178 @@ export type BlogPost = {
 
 export const BLOGS: BlogPost[] = [
 
+{
+  slug: "24-hour-storm-checklist-after-hail-storm",
+  title: "The 24-Hour Storm Checklist: What to Do Immediately After a Hail Storm",
+  date: "9 July 2026",
 
+  caption:
+    "The sirens have stopped, the sky is clearing, and the hail has finally stopped pelting your windows. If the storm was severe, the next 24 hours are critical for protecting both your home and your bank account.",
+
+  excerpt:
+    "A step-by-step 24-hour checklist covering safety, documentation, damage mitigation, and insurance claims to help you protect your home after a severe hailstorm.",
+
+  category: "Roof Repair",
+  readTime: "6 min read",
+  image: "/hail-storm-roof-damage-checklist.webp",
+
+  metaTitle:
+    "24-Hour Storm Checklist: What to Do After a Hail Storm Hits Your Roof",
+
+  metaDescription:
+    "Don't risk a denied insurance claim. Follow this step-by-step 24-hour checklist for documenting hail damage, mitigating further loss, and filing your roof claim correctly.",
+
+  content: [
+    {
+      type: "paragraph",
+      text: "The sirens have stopped, the sky is clearing, and the hail has finally stopped pelting your windows. Your first instinct might be to breathe a sigh of relief, but if the storm was severe, the clock is officially ticking.",
+    },
+    {
+      type: "paragraph",
+      text: "When a major hailstorm rolls through, the next 24 hours are critical for protecting both your home and your bank account. Waiting too long to check for damage or handling the situation the wrong way can lead to denied insurance claims and massive out-of-pocket repair bills down the road.",
+    },
+    {
+      type: "paragraph",
+      text: "To make things easy, we've broken down exactly what you need to do over the next 24 hours into a simple, step-by-step checklist.",
+    },
+
+    {
+      type: "heading",
+      text: "Step 1: Prioritize Safety First (Hour 1)",
+    },
+    {
+      type: "paragraph",
+      text: "Before you even think about looking at your roof, make sure it is safe to step outside.",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Check for downed power lines:",
+          text: " If you see any sagging or snapped lines near your property, stay inside and call your utility company immediately.",
+        },
+        {
+          bold: "Watch for hazards:",
+          text: " Look out for broken glass, fallen tree branches, or standing water that could be hiding debris.",
+        },
+        {
+          bold: "Keep your feet on the ground:",
+          text: " Do not get on a ladder or climb onto your roof. Shingles covered in loose hail granules are incredibly slick, and structural damage might make the roof unstable. Leave the high-climbing to the pros.",
+        },
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "Step 2: Document the Details (Hours 2–4)",
+    },
+    {
+      type: "paragraph",
+      text: "Insurance companies love data. The more clear, timestamped evidence you gather right after the storm, the smoother your claim process will be.",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Take a photo of the hail:",
+          text: " If there is still hail on the ground, grab a few stones and photograph them next to a standard object for scale (like a quarter, a golf ball, or your car key). This proves the size of the hail that hit your specific neighborhood.",
+        },
+        {
+          bold: "Walk the property with your phone:",
+          text: " Document everything from ground level, including dented garage doors, gutters, or downspouts; cracked windows or damaged window screens; shingle granules piling up at the bottom of your gutter downspouts (it looks like dark, coarse sand); and shredded landscaping or fallen tree limbs.",
+        },
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "Step 3: Mitigate Further Damage (Hours 4–6)",
+    },
+    {
+      type: "paragraph",
+      text: 'As a homeowner, your insurance policy requires you to take "reasonable steps" to prevent further damage to your home once a storm passes.',
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Check the attic and ceilings:",
+          text: " Walk through your house and look for active leaks, dark water spots on the drywall, or bubbling paint.",
+        },
+        {
+          bold: "Contain active leaks:",
+          text: " If water is actively dripping, place buckets underneath and move valuables out of the way.",
+        },
+        {
+          bold: "Cover broken windows:",
+          text: " If a window or skylight was smashed by hail, safely cover it with a tarp or plastic sheeting to keep the elements out.",
+        },
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "Step 4: Call a Trusted Local Roofer (Hours 6–12)",
+    },
+    {
+      type: "paragraph",
+      text: "Here is a major insider secret: Call a roofing contractor before you call your insurance company.",
+    },
+    {
+      type: "paragraph",
+      text: "Why? Because insurance adjusters are incredibly busy after a storm, and they occasionally miss things. You want an experienced local roofer to conduct a comprehensive, professional inspection first so you know exactly how much damage you're dealing with.",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: 'Beware of "Storm Chasers":',
+          text: ' Within hours of a storm, out-of-state roofing companies will likely start knocking on your door offering "free roofs." Be careful. Stick with an established, local company that has a physical office in your community and a proven track record.',
+        },
+        {
+          bold: "Schedule a digital inspection:",
+          text: " Ask for a contractor who will provide a full photo report of the roof damage so you have hard proof to hand over to your adjuster.",
+        },
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "Step 5: File Your Insurance Claim (Hours 12–24)",
+    },
+    {
+      type: "paragraph",
+      text: "Once your roofing contractor confirms that you have legitimate storm damage, it's time to officially notify your insurance provider.",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Don't drag your feet:",
+          text: " While many policies give you up to a year to file a claim, insurance companies prioritize claims filed immediately after a verifiable weather event.",
+        },
+        {
+          bold: "Provide your documentation:",
+          text: " Give them the storm date, the photos you took, and the initial findings from your roofer.",
+        },
+        {
+          bold: "Coordinate the adjuster meeting:",
+          text: " When the insurance adjuster schedules their visit to look at your roof, let your roofing contractor know. Having your roofer present during the adjuster's inspection ensures that all damage is properly identified and covered on the first try.",
+        },
+      ],
+    },
+
+    {
+      type: "pro_tip",
+      text: "Need a Fast, Honest Post-Storm Assessment? If a recent storm hit your area and you aren't sure if your roof sustained damage, don't guess. Our team is local, fully licensed, and ready to help you navigate the entire process from inspection to insurance approval.",
+    },
+
+    {
+      type: "closing",
+      text: "Acting fast and documenting everything in the first 24 hours after a hailstorm is the single best thing you can do to protect your home and your claim. Don't wait for a small problem to become a major, expensive one.",
+    },
+  ],
+},
 
 {
   slug: "are-solar-shingles-worth-the-investment",

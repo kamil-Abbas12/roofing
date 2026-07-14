@@ -34,7 +34,163 @@ export type BlogPost = {
 
 
 export const BLOGS: BlogPost[] = [
+{
+  slug: "tree-branches-overhanging-roof-can-cost-you-thousands",
+  title: "How Tree Branches Overhanging Your Roof Can Cost You Thousands",
+  date: "14 July 2026",
 
+  caption:
+    "It's easy to look at a mature, leafy tree draping over your home and think of it as a beautiful natural canopy. But that close relationship between your trees and your roof is a ticking financial time bomb.",
+
+  excerpt:
+    "Overhanging tree branches quietly damage your shingles, gutters, and structure over time. Learn the five ways they cost you thousands, and the 6-foot rule that protects your roof.",
+
+  category: "Roof Maintenance",
+  readTime: "6 min read",
+  image: "/tree-branches-overhanging-roof-damage.webp",
+
+  metaTitle:
+    "How Overhanging Tree Branches Damage Your Roof (And Cost You Thousands)",
+
+  metaDescription:
+    "Overhanging tree limbs cause granule loss, clogged gutters, pest access, and falling-branch damage. Learn the 6-foot rule to protect your roof and avoid a costly replacement.",
+
+  content: [
+    {
+      type: "paragraph",
+      text: "It is easy to look at a mature, leafy oak or maple draping over your home and think of it as a beautiful, natural canopy. It provides great shade, lowers your summer cooling bills, and gives the property some undeniable curb appeal.",
+    },
+    {
+      type: "paragraph",
+      text: "But as a homeowner, that close relationship between your trees and your roof is a ticking financial time bomb.",
+    },
+    {
+      type: "paragraph",
+      text: "If tree limbs are hanging directly over your roof line, they are doing quiet, cumulative damage to your shingles, your gutters, and your home's structure. What looks like a peaceful garden feature can easily turn into a bill for thousands of dollars in premature roof replacement.",
+    },
+    {
+      type: "paragraph",
+      text: "Here is exactly how overhanging branches threaten your roof, and what you need to do about it before a minor breeze turns into a major disaster.",
+    },
+
+    {
+      type: "heading",
+      text: '1. The "Brushing" Effect: Sandpaper on Shingles',
+    },
+    {
+      type: "paragraph",
+      text: "Even on a relatively calm day, there is always a slight breeze. When tree limbs touch your roof, they do not just sit there — they sway. As a branch sways back and forth across your shingles, it acts like giant, coarse sandpaper.",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Granule Loss:",
+          text: " Asphalt shingles are coated with hard mineral granules that protect the underlying waterproof asphalt layer from the sun's harsh UV rays.",
+        },
+        {
+          bold: "The Damage:",
+          text: " Consistent rubbing scrapes these protective granules clean off.",
+        },
+        {
+          bold: "The Result:",
+          text: " Once those granules are gone, the asphalt underneath is exposed. It dries out, cracks, leaks, and fails years ahead of its expected lifespan.",
+        },
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "2. The Leaf and Debris Trap",
+    },
+    {
+      type: "paragraph",
+      text: 'Leaves, pine needles, twigs, and seed pods have to go somewhere when they fall. If a branch hangs directly over your roof, that "somewhere" is your roof valleys and gutters.',
+    },
+    {
+      type: "paragraph",
+      text: "When debris piles up in the valleys (the V-shaped intersections where two roof slopes meet), it traps moisture. Instead of shedding rainwater down to the gutters, the wet leaves act like a sponge, holding water directly against your shingles. Over time, this constant moisture rots the organic materials in the shingles and begins to decay the wooden roof decking underneath.",
+    },
+
+    {
+      type: "heading",
+      text: "3. Clogged Gutters and Water Backups",
+    },
+    {
+      type: "paragraph",
+      text: "Your gutters are your home's primary defense against water damage. When overhanging branches dump leaves and twigs directly into them, they clog instantly.",
+    },
+    {
+      type: "pro_tip",
+      text: "Clogged Gutters → Water Backs Up → Rotting Fascia Boards & Interior Leaks. When rainwater has nowhere to go, it overflows, backs up under your roof's edge, rots the fascia boards, soaks your soffits, and eventually seeps into your ceilings and walls. A simple clogged gutter can easily result in a mold remediation bill that runs into five figures.",
+    },
+
+    {
+      type: "heading",
+      text: "4. The Perfect Highway for Pests",
+    },
+    {
+      type: "paragraph",
+      text: "You might love watching squirrels dart across your yard, but you do not want them in your attic.",
+    },
+    {
+      type: "paragraph",
+      text: "Overhanging branches act as a literal bridge for pests. Squirrels, raccoons, rats, and mice use these limbs to gain easy access to your roof. Once there, they can easily chew through rotted fascia, soft roof vents, or weak shingles to find a warm, dry place to nest inside your attic.",
+    },
+    {
+      type: "paragraph",
+      text: "Furthermore, branches touching your roof give wood-destroying insects like carpenter ants and termites a direct path into your home's wooden structure without ever having to touch the treated soil around your foundation.",
+    },
+
+    {
+      type: "heading",
+      text: "5. The Nightmare Scenario: Falling Limbs",
+    },
+    {
+      type: "paragraph",
+      text: "This is the most obvious threat, but it is often the most underestimated. A branch does not have to be dead to break. A sudden summer thunderstorm, a heavy winter snow, or a sudden gust of wind can snap a seemingly healthy limb.",
+    },
+    {
+      type: "paragraph",
+      text: "If a heavy branch drops from fifteen feet above your roof, it can punch directly through your shingles, plywood decking, and right into your living space.",
+    },
+    {
+      type: "paragraph",
+      text: "While home insurance usually covers sudden storm damage, dealing with the aftermath — tarping the roof, fighting with adjusters, and living with a gaping hole in your ceiling — is a massive, stressful headache that is easily avoided with basic maintenance.",
+    },
+
+    {
+      type: "heading",
+      text: "What Should You Do Now? The 6-Foot Rule",
+    },
+    {
+      type: "paragraph",
+      text: "You do not need to cut down your beautiful mature trees to save your roof. You just need to establish healthy boundaries.",
+    },
+    {
+      type: "pro_tip",
+      text: "The Golden Rule of Roof Clearance: Keep all tree limbs trimmed back at least 6 feet away from your roof line in all directions. This gap is wide enough to prevent branches from brushing against the roof during high winds, stops pests from easily leaping onto your shingles, and dramatically reduces the volume of leaves falling directly into your gutters.",
+    },
+
+    {
+      type: "heading",
+      text: "A Quick Word on Safety",
+    },
+    {
+      type: "paragraph",
+      text: "If you have low-hanging, thin branches that you can safely reach from the ground or a small stepladder with a pole saw, trimming them back is a reasonable weekend DIY project.",
+    },
+    {
+      type: "paragraph",
+      text: "However, if you have large, heavy limbs, or branches that require you to climb onto your roof or use a tall ladder, call a certified arborist. Cutting heavy limbs at heights is incredibly dangerous for both you and your home. One wrong cut can send a 200-pound branch crashing directly through the very roof you are trying to protect.",
+    },
+
+    {
+      type: "closing",
+      text: "Spend a few hundred dollars on professional tree trimming today. It is a drop in the bucket compared to the cost of a brand-new roof tomorrow.",
+    },
+  ],
+},
 {
   slug: "24-hour-storm-checklist-after-hail-storm",
   title: "The 24-Hour Storm Checklist: What to Do Immediately After a Hail Storm",

@@ -132,6 +132,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${poppins.className} ${geistSans.variable} ${geistMono.variable}`}>
+        <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-TZS991KG23"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-TZS991KG23'); </script>
+
         <Script
           id="topdog-structured-data"
           type="application/ld+json"

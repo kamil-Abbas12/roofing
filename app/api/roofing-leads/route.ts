@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getDb } from "@/lib/mongodb";
+import { dbConnect } from "@/lib/dbConnect";
+import RoofingLead from "@/lib/models/RoofingLead";
 
 type CampaignId = "contractors" | "general";
 type LeadSource = "popup" | "consult_button" | "contact_form";
@@ -66,9 +67,9 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const db = await getDb();
+    await dbConnect();
 
-    const doc = {
+    const lead = await RoofingLead.create({
       campaign,
       source,
       phone,
@@ -81,12 +82,9 @@ export async function POST(req: NextRequest) {
       rtb: body.rtb || { pinged: false, accepted: null, bid: null, trackingNumber: null },
       userAgent: req.headers.get("user-agent") || null,
       ip: req.headers.get("x-forwarded-for") || req.headers.get("x-real-ip") || null,
-      createdAt: new Date(),
-    };
+    });
 
-    const result = await db.collection("roofing_leads").insertOne(doc);
-
-    return NextResponse.json({ success: true, id: result.insertedId });
+    return NextResponse.json({ success: true, id: lead._id });
   } catch (err) {
     console.error("Failed to store roofing lead", err);
     return NextResponse.json({ success: false, error: "Failed to store lead" }, { status: 500 });

@@ -35,6 +35,160 @@ export type BlogPost = {
 
 export const BLOGS: BlogPost[] = [
 {
+  slug: "roof-ventilation-attic-insulation-basics",
+  title: "Roof Ventilation & Attic Insulation Basics: Must-Know Tips for Beginners",
+  date: "20 July 2026",
+
+  caption:
+    "Having the right insulation in your attic without proper ventilation is like wearing a heavy winter parka inside a sealed plastic bag. You might stay warm for a bit, but trapped heat and moisture will quickly turn things into a messy, uncomfortable situation.",
+
+  excerpt:
+    "Proper roof ventilation and attic insulation work as a team to protect your roof, stabilize your energy bills, and prevent ice dams and mold. Here's what every beginner needs to know.",
+
+  category: "Roof Maintenance",
+  readTime: "6 min read",
+  image: "/roof-ventilation-attic-insulation-basics.webp",
+
+  metaTitle:
+    "Roof Ventilation & Attic Insulation Basics: Must-Know Tips for Beginners",
+
+  metaDescription:
+    "Learn how roof ventilation and attic insulation work together, the right R-value for your climate, and the warning signs your attic needs attention.",
+
+  content: [
+    {
+      type: "paragraph",
+      text: "Having the right insulation in your attic without proper ventilation is like wearing a heavy winter parka inside a sealed plastic bag. You might stay warm for a bit, but trapped heat and moisture will quickly turn things into a messy, uncomfortable situation.",
+    },
+    {
+      type: "paragraph",
+      text: "Proper roof ventilation and attic insulation are two sides of the same coin. When they work together, they keep your home comfortable, protect your roof's structural integrity, and prevent your energy bills from spiking.",
+    },
+
+    {
+      type: "heading",
+      text: "Why Attic Airflow Matters More Than You Think",
+    },
+    {
+      type: "paragraph",
+      text: 'It is easy to assume the goal of an attic is simply to seal warm air inside your house. In reality, your attic needs to "breathe."',
+    },
+    {
+      type: "paragraph",
+      text: "A healthy roofing system relies on continuous airflow. Cool, fresh air enters through intake vents (usually located under the eaves or soffits), travels up along the underside of the roof deck, and escapes through exhaust vents near the peak of the roof.",
+    },
+    {
+      type: "paragraph",
+      text: "Without this steady circulation, two major issues arise:",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "In the Summer:",
+          text: " Heat builds up under your shingles, reaching temperatures well over 150°F. That heat radiates down into your living space, forcing your air conditioner to work overtime.",
+        },
+        {
+          bold: "In the Winter:",
+          text: " Warm air from your living space rises into the attic. If it can't escape, it condenses against the underside of the cold roof deck, creating a prime environment for wood rot and mold growth.",
+        },
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "The Role of Attic Insulation",
+    },
+    {
+      type: "paragraph",
+      text: "While ventilation manages airflow, insulation acts as a barrier to heat transfer. Its job is straightforward: keep heat inside your living spaces during the winter and keep outdoor heat from seeping down during the summer.",
+    },
+    {
+      type: "paragraph",
+      text: "There are two primary types of attic insulation used in most homes:",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Blown-In Insulation (Loose-Fill):",
+          text: " Fiberglass or cellulose blown directly onto the attic floor. It excels at filling tiny gaps and hard-to-reach corners.",
+        },
+        {
+          bold: "Batt Insulation:",
+          text: " Flexible rolls of fiberglass pre-cut to fit between standard ceiling joists.",
+        },
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "The Key: R-Value",
+    },
+    {
+      type: "paragraph",
+      text: "Insulation effectiveness is measured in R-Value. The higher the number, the greater the resistance to heat flow. The ideal R-value for your attic depends on where you live:",
+    },
+    {
+      type: "table",
+      headers: ["Region / Climate Zone", "Recommended Attic R-Value", "Approximate Thickness"],
+      rows: [
+        ["Warm / Southern", "R-30 to R-38", "~10 to 14 inches"],
+        ["Moderate / Central", "R-38 to R-49", "~12 to 17 inches"],
+        ["Cold / Northern", "R-49 to R-60", "~16 to 20 inches"],
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "How Ventilation and Insulation Work Together",
+    },
+    {
+      type: "paragraph",
+      text: "Problems occur when insulation interferes with airflow. A common mistake during DIY upgrades or fast installations is pushing insulation all the way into the corners of the attic, inadvertently blocking the soffit vents.",
+    },
+    {
+      type: "pro_tip",
+      text: "Crucial Rule: Never block your intake vents with insulation. Use baffles (plastic or foam channels installed between roof rafters) to keep the path clear for incoming air before laying down insulation.",
+    },
+
+    {
+      type: "heading",
+      text: "Simple Signs Your Attic Needs Attention",
+    },
+    {
+      type: "paragraph",
+      text: "You don't need to be a roofing expert to spot a breakdown in your system. Keep an eye out for these red flags:",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Ice Dams in Winter:",
+          text: " Ridges of ice forming at the edge of your roof indicate heat escaping into the attic, melting snow on the roof, which then refreezes at the cold eaves.",
+        },
+        {
+          bold: "Uneven Indoor Temperatures:",
+          text: " Rooms directly below the attic feeling noticeably hotter in summer or colder in winter.",
+        },
+        {
+          bold: "A Sudden Spike in Energy Bills:",
+          text: " Your HVAC system running continuously to compensate for heat transfer.",
+        },
+        {
+          bold: "Musty Odors or Dampness:",
+          text: " Excessive moisture buildup on attic rafters or joists.",
+        },
+      ],
+    },
+
+    {
+      type: "closing",
+      text: "A well-balanced attic setup pays off quietly in the background, extending the lifespan of your shingles, keeping your indoor temperatures steady, and protecting your budget year-round.",
+    },
+  ],
+},
+{
   slug: "tree-branches-overhanging-roof-can-cost-you-thousands",
   title: "How Tree Branches Overhanging Your Roof Can Cost You Thousands",
   date: "14 July 2026",

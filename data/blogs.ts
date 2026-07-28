@@ -37,7 +37,7 @@ export const BLOGS: BlogPost[] = [
   {
   slug: "spot-roof-damage-from-ground-no-ladder",
   title: "How to Spot Roof Damage from the Ground (No Ladder Required)",
-  date: "27 July 2026",
+  date: "28 July 2026",
 
   caption:
     "After a nasty storm rolls through, your first instinct might be to pull the ladder out of the garage and climb up to take a look. Don't do it — here's everything you can spot without ever leaving your yard.",

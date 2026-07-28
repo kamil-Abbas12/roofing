@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 const blogListSchema = {
   "@context": "https://schema.org",
   "@type": "Blog",
-  name: "Top Dog Roofing Blog",
+  name: "TopDog Roofing Blog",
   url: `${BASE_URL}/blog`,
   description:
     "Expert roofing tips, storm damage repair guides, inspection advice, and cost breakdowns.",

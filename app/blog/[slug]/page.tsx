@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: any) {
   }
 
   return {
-    title: `${post.title} | Top Dog Roofing`,
+    title: post.title,
     description: post.excerpt || post.caption || "Roofing tips and insights",
   };
 }
@@ -123,6 +123,13 @@ case "table":
   }
 }
 
+function getRelatedPosts(currentSlug: string, category: string, count = 3) {
+  // Prefer same-category posts first, then fill with the rest, excluding the current post
+  const others = BLOGS.filter((p) => p.slug !== currentSlug);
+  const sameCategory = others.filter((p) => p.category === category);
+  const rest = others.filter((p) => p.category !== category);
+  return [...sameCategory, ...rest].slice(0, count);
+}
 
 export default async function BlogDetailPage({
   params,
@@ -149,6 +156,8 @@ export default async function BlogDetailPage({
       </main>
     );
   }
+
+  const relatedPosts = getRelatedPosts(post.slug, post.category);
 
   return (
     <main className="min-h-screen bg-[#f7efe6]" role="main">
@@ -196,6 +205,42 @@ export default async function BlogDetailPage({
           ))}
         </section>
 
+        {/* Related Articles */}
+        {relatedPosts.length > 0 && (
+          <section className="mt-14 border-t border-black/10 pt-10">
+            <h2 className="mb-6 text-2xl font-bold text-[#0b2b55]">
+              Related Articles
+            </h2>
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
+              {relatedPosts.map((related) => (
+                <Link
+                  key={related.slug}
+                  href={`/blog/${related.slug}`}
+                  aria-label={`Read more: ${related.title}`}
+                  className="group block overflow-hidden rounded-2xl bg-white ring-1 ring-black/5 transition hover:ring-black/15"
+                >
+                  <div className="relative aspect-[16/10] w-full overflow-hidden">
+                    <Image
+                      src={related.image}
+                      alt={`Image for ${related.title}`}
+                      fill
+                      className="object-cover transition duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-blue-600">
+                      {related.category}
+                    </p>
+                    <h3 className="mt-1 text-sm font-bold leading-snug text-[#0b2b55]">
+                      {related.title}
+                    </h3>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* Navigation */}
         <nav className="mt-10 flex flex-wrap gap-3">
           <Link
@@ -204,14 +249,6 @@ export default async function BlogDetailPage({
             className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#0b2b55] ring-1 ring-black/5"
           >
             View Blog Grid
-          </Link>
-
-          <Link
-            href="/blog/sidebar"
-            aria-label="Go to blog sidebar page"
-            className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#0b2b55] ring-1 ring-black/5"
-          >
-            View Blog Sidebar
           </Link>
         </nav>
 

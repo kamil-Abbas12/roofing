@@ -19,8 +19,7 @@ const serviceLinks = [
 ];
 
 const blogLinks = [
-  { label: "Blog Grid", href: "/blog" },
-  { label: "Blog Sidebar", href: "/blog/sidebar" },
+  { label: "Blog ", href: "/blog" },
 ];
 
 const Navbar = () => {

@@ -132,21 +132,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${poppins.className} ${geistSans.variable} ${geistMono.variable}`}>
-     {/* Google tag (gtag.js) */}
-<Script async src="https://www.googletagmanager.com/gtag/js?id=G-TZS991KG23" />
-<Script id="google-analytics">
-  {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-TZS991KG23');
-  `}
-</Script>
-        <Script
+        {/*
+          Structured data: rendered as a plain <script> tag (not next/script).
+          It's inert JSON, so it costs nothing to execute, and this guarantees
+          it's present in the initial server-rendered HTML for crawlers —
+          no need for a loading "strategy" since nothing here runs.
+        */}
+        <script
           id="topdog-structured-data"
           type="application/ld+json"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{ 
+          dangerouslySetInnerHTML={{
             __html: JSON.stringify(structuredData),
           }}
         />
@@ -155,7 +150,30 @@ export default function RootLayout({
         <DiscountPopup />
         {children}
         <Footer />
-        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="JkhARxLMNh+CptEmB0KYzw" strategy="afterInteractive" />
+
+        {/*
+          Google tag (gtag.js): deferred to lazyOnload so it downloads and
+          executes during browser idle time, after the page has finished
+          rendering and hydrating. Analytics doesn't need to fire in the
+          critical first render path.
+        */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-TZS991KG23"
+          strategy="lazyOnload"
+        />
+        <Script id="google-analytics" strategy="lazyOnload">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-TZS991KG23');
+          `}
+        </Script>
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="JkhARxLMNh+CptEmB0KYzw"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );

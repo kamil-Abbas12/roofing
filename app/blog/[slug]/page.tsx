@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BLOGS, ContentBlock } from "@/data/blogs";
+import { SITE_URL } from "@/lib/seo";
 
 export async function generateMetadata({ params }: any) {
   const { slug } = await params;
@@ -10,9 +11,29 @@ export async function generateMetadata({ params }: any) {
     return { title: "Blog | Top Dog Roofing" };
   }
 
+  const canonicalUrl = `${SITE_URL}/blog/${post.slug}`;
+  const title = post.metaTitle || post.title;
+  const description =
+    post.metaDescription || post.excerpt || post.caption || "Roofing tips and insights";
+
   return {
-    title: post.title,
-    description: post.excerpt || post.caption || "Roofing tips and insights",
+    title,
+    description,
+    alternates: { canonical: canonicalUrl },
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      siteName: "TopDog Roofing",
+      images: [{ url: `${SITE_URL}${post.image}`, width: 1200, height: 630, alt: post.title }],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [`${SITE_URL}${post.image}`],
+    },
   };
 }
 
@@ -187,7 +208,7 @@ export default async function BlogDetailPage({
             {post.caption}
         </p>
 
-        {/* Image */}
+        {/* Image — this is the LCP element, so it must load first with no lazy-loading */}
         <div className="relative mt-6 aspect-[16/10] w-full overflow-hidden rounded-2xl ring-1 ring-black/5">
           <Image
             src={post.image}
@@ -195,6 +216,8 @@ export default async function BlogDetailPage({
             fill
             className="object-cover"
             priority
+            fetchPriority="high"
+            sizes="(max-width: 768px) 100vw, 768px"
           />
         </div>
 
@@ -224,7 +247,9 @@ export default async function BlogDetailPage({
                       src={related.image}
                       alt={`Image for ${related.title}`}
                       fill
+                      loading="lazy"
                       className="object-cover transition duration-300 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 300px"
                     />
                   </div>
                   <div className="p-4">

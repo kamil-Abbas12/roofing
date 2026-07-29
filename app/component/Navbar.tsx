@@ -18,16 +18,11 @@ const serviceLinks = [
   { label: "New Construction", href: "/services/new-construction", desc: "Built from the ground up" },
 ];
 
-const blogLinks = [
-  { label: "Blog ", href: "/blog" },
-];
-
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [blogOpen, setBlogOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   const pathname = usePathname();
@@ -36,13 +31,11 @@ const Navbar = () => {
   const isDarkNav = scrolled || isBlogPage || isServicePage;
 
   const servicesWrapRef = useRef<HTMLDivElement | null>(null);
-  const blogWrapRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
       setServicesOpen(false);
-      setBlogOpen(false);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -67,7 +60,6 @@ const Navbar = () => {
   useEffect(() => {
     const onDown = (e: MouseEvent) => {
       if (servicesWrapRef.current && !servicesWrapRef.current.contains(e.target as Node)) setServicesOpen(false);
-      if (blogWrapRef.current && !blogWrapRef.current.contains(e.target as Node)) setBlogOpen(false);
     };
     window.addEventListener("mousedown", onDown);
     return () => window.removeEventListener("mousedown", onDown);
@@ -113,7 +105,7 @@ const Navbar = () => {
             <button
               onClick={() => setServicesOpen(!servicesOpen)}
               onMouseEnter={() => setServicesOpen(true)}
-              className={`flex items-center gap-1.5 transition cursor-pointer py-2 ${linkStyle}`}
+              className={`inline-flex h-10 items-center gap-1.5 transition cursor-pointer ${linkStyle}`}
               aria-expanded={servicesOpen}
               aria-haspopup="true"
               aria-label="Services — open submenu"
@@ -175,7 +167,7 @@ const Navbar = () => {
                 const el = document.getElementById(sec);
                 if (el) el.scrollIntoView({ behavior: "smooth" });
               }}
-              className={`relative transition cursor-pointer ${linkStyle}`}
+              className={`relative inline-flex h-10 items-center transition cursor-pointer ${linkStyle}`}
               aria-label={`Go to ${sec} section`}
             >
               {sec}
@@ -185,42 +177,14 @@ const Navbar = () => {
             </button>
           ))}
 
-          {/* BLOG DROPDOWN */}
-          <div className="relative" ref={blogWrapRef}>
-            <button
-              onClick={() => setBlogOpen(!blogOpen)}
-              className={`flex items-center gap-1.5 transition cursor-pointer ${linkStyle}`}
-              aria-expanded={blogOpen}
-              aria-haspopup="true"
-              aria-label="Blog — open submenu"
-            >
-              Blog
-              <ChevronDown
-                size={16}
-                aria-hidden="true"
-                className={`transition-transform duration-200 ${blogOpen ? "rotate-180" : ""}`}
-              />
-            </button>
-
-            {blogOpen && (
-              <div
-                className="absolute left-0 mt-3 w-48 rounded-xl bg-white shadow-lg ring-1 ring-black/5 overflow-hidden"
-                role="menu"
-              >
-                {blogLinks.map((b) => (
-                  <Link
-                    key={b.href}
-                    href={b.href}
-                    className="block px-4 py-3 text-sm text-slate-800 hover:bg-slate-50 cursor-pointer"
-                    onClick={() => setBlogOpen(false)}
-                    role="menuitem"
-                  >
-                    {b.label}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
+          {/* BLOG — direct link, no dropdown. Styled identically to Contact. */}
+          <Link
+            href="/blog"
+            className={`relative inline-flex h-10 items-center no-underline transition cursor-pointer ${linkStyle}`}
+            aria-label="Go to Blog page"
+          >
+            Blog
+          </Link>
         </div>
 
         {/* RIGHT BUTTONS */}

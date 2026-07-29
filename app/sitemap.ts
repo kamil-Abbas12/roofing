@@ -36,11 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       priority: 0.9,
     },
-    {
-      url: `${baseUrl}/blog/sidebar`,
-      lastModified: new Date(),
-      priority: 0.8,
-    },
+  
     {
       url: `${baseUrl}/services`,
       lastModified: new Date(),

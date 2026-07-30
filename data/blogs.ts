@@ -23,7 +23,8 @@ export type BlogPost = {
   title: string;
   excerpt: string;
   caption: string;
-  date: string;
+  date: string;      // display format, e.g. "28 July 2026" — keep as-is, used in UI
+  isoDate: string;   // NEW — machine-readable format for schema.org, e.g. "2026-07-28"
   category: string;
   readTime: string;
   image: string;
@@ -38,7 +39,7 @@ export const BLOGS: BlogPost[] = [
   slug: "spot-roof-damage-from-ground-no-ladder",
   title: "How to Spot Roof Damage from the Ground (No Ladder Required)",
   date: "28 July 2026",
-
+isoDate:"2026-07-28",
   caption:
     "After a nasty storm rolls through, your first instinct might be to pull the ladder out of the garage and climb up to take a look. Don't do it — here's everything you can spot without ever leaving your yard.",
 
@@ -201,7 +202,7 @@ export const BLOGS: BlogPost[] = [
   slug: "roof-ventilation-attic-insulation-basics",
   title: "Roof Ventilation & Attic Insulation Basics: Must-Know Tips for Beginners",
   date: "20 July 2026",
-
+isoDate: "2026-07-20",
   caption:
     "Having the right insulation in your attic without proper ventilation is like wearing a heavy winter parka inside a sealed plastic bag. You might stay warm for a bit, but trapped heat and moisture will quickly turn things into a messy, uncomfortable situation.",
 
@@ -355,7 +356,7 @@ export const BLOGS: BlogPost[] = [
   slug: "tree-branches-overhanging-roof-can-cost-you-thousands",
   title: "How Tree Branches Overhanging Your Roof Can Cost You Thousands",
   date: "14 July 2026",
-
+isoDate: "2026-07-14",
   caption:
     "It's easy to look at a mature, leafy tree draping over your home and think of it as a beautiful natural canopy. But that close relationship between your trees and your roof is a ticking financial time bomb.",
 
@@ -512,7 +513,7 @@ export const BLOGS: BlogPost[] = [
   slug: "24-hour-storm-checklist-after-hail-storm",
   title: "The 24-Hour Storm Checklist: What to Do Immediately After a Hail Storm",
   date: "9 July 2026",
-
+isoDate: "2026-07-09",
   caption:
     "The sirens have stopped, the sky is clearing, and the hail has finally stopped pelting your windows. If the storm was severe, the next 24 hours are critical for protecting both your home and your bank account.",
 
@@ -685,7 +686,7 @@ export const BLOGS: BlogPost[] = [
   slug: "are-solar-shingles-worth-the-investment",
   title: "Are Solar Shingles Worth the Investment?",
   date: "1 July 2026",
-
+isoDate: "2026-07-01",
   caption:
     "Solar shingles promise sleek aesthetics and clean energy, but do they justify their premium price? Here's a practical comparison of solar shingles versus traditional solar panels.",
 
@@ -887,7 +888,7 @@ export const BLOGS: BlogPost[] = [
     slug: "prepare-roof-for-freezing-winter-temperatures",
     title: "How to Prepare Your Roof for Freezing Winter Temperatures",
     date: "24 June 2026",
- 
+ isoDate: "2026-06-24",
     caption:
       "When winter drops temperatures below freezing, your roof takes the biggest beating. Snow, ice dams, and constant thawing and freezing can turn a tiny, overlooked roof issue into an expensive indoor waterfall.",
  
@@ -1014,7 +1015,7 @@ export const BLOGS: BlogPost[] = [
     title:
       "Roof Repair vs. Roof Replacement: How to Choose the Right Path for Your Home",
     date: "17 June 2026",
-
+isoDate: "2026-06-17",
     caption:
       "Few things strike fear into a homeowner's heart quite like a puddle on the living room floor or a rogue shingle lying in the front yard. Your roof is your home's main line of defense against the elements, so when something goes wrong, it's easy to panic.",
 
@@ -1147,7 +1148,7 @@ export const BLOGS: BlogPost[] = [
     slug: "signs-your-roof-is-about-to-leak",
     title: "7 Warning Signs Your Roof Is About to Leak",
     date: "12 June 2026",
- 
+ isoDate: "2026-06-12",
     caption:
       "Nobody wakes up in the morning hoping to deal with a roof leak. Most of the time, we don't even think about our roofs until water is actively dripping into a plastic bucket in the middle of the living room. But here's the thing: roofs rarely fail out of nowhere. Long before that first drop of water ruins your drywall, your roof is sending out warning signs.",
  
@@ -1257,7 +1258,7 @@ export const BLOGS: BlogPost[] = [
     slug: "choosing-the-right-roof",
     title: "Why Spring is the Best Time to Schedule a Roof Inspection",
     date: "8 May 2026",
-
+	isoDate: "2026-05-08",
     caption:
       "Spring is the perfect season to inspect your roof after months of winter stress and prevent costly repairs before storm season arrives.",
 
@@ -1344,7 +1345,7 @@ export const BLOGS: BlogPost[] = [
     slug: "attic-insulation-roof-lifespan",
     title: "Why Your Attic Insulation Affects Your Roof's Lifespan",
     date: "10 April 2026",
-
+isoDate: "2026-04-10",
     caption:
       "When most homeowners think about roof maintenance, they picture clearing out gutters or checking for missing shingles. But one of the most critical factors for a long-lasting roof isn't actually on the outside. It's hidden in your attic. Proper insulation does more than just lower your energy bills; it acts as a protective barrier that preserves the structural integrity of your entire roofing system. Here is why your attic insulation is the unsung hero of your roof's lifespan.",
 
@@ -1442,7 +1443,7 @@ export const BLOGS: BlogPost[] = [
     title:
       "The Silent Sabotage: Why Roof Moss and Algae Are Costing You Thousands",
     date: "10 March 2025",
-
+isoDate: "2025-03-10",
     caption:
       'Most homeowners see a bit of green on their roof and think, "I\'ll get to that next summer." The problem? Moss and algae don\'t wait for your schedule. By the time you can see them clearly from the driveway, the damage is already happening under the surface. They aren\'t just sitting on your roof; they are eating it.',
 

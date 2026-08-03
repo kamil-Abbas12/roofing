@@ -36,6 +36,174 @@ export type BlogPost = {
 
 export const BLOGS: BlogPost[] = [
   {
+    slug: "safely-clean-leaves-and-debris-off-roof",
+    title: "How to Safely Clean Leaves and Debris Off Your Roof",
+    date: "5 August 2026",
+    isoDate: "2026-08-05",
+    caption:
+      "It's easy to ignore what's happening on top of your house until a heavy rainstorm hits and water starts backing up under your shingles. Here's how to clear roof debris safely without destroying your shingles or falling off a ladder.",
+
+    excerpt:
+      "Every autumn, leaves, twigs, and pine needles pile up on residential rooflines, trapping moisture and rotting shingles. Learn the safe way to clear debris without risking a fall or damaging your roof.",
+
+    category: "Roof Maintenance",
+    readTime: "6 min read",
+    image: "/safely-clean-leaves-and-debris-off-roof.webp",
+
+    metaTitle: "How to Safely Clean Leaves and Debris Off Your Roof",
+
+    metaDescription:
+      "Learn how to safely clear leaves, twigs, and pine needles off your roof without falling or damaging your shingles. Tools, techniques, and when to call a pro.",
+
+    content: [
+      {
+        type: "paragraph",
+        text: "It's easy to ignore what's happening on top of your house until a heavy rainstorm hits and water starts backing up under your shingles.",
+      },
+      {
+        type: "paragraph",
+        text: "Every autumn, oak, pine, and maple trees dump pounds of leaves, twigs, and pine needles directly onto residential rooflines. Left sitting, that pile of organic matter traps moisture, acts like a sponge, and slowly rots away your shingles.",
+      },
+      {
+        type: "paragraph",
+        text: "Clearing debris prevents moisture buildup and severe structural roof leaks.",
+      },
+      {
+        type: "paragraph",
+        text: "Clearing away roof debris isn't complicated, but doing it safely without destroying your shingles or falling off a ladder requires the right approach. Here is how to handle the job without risking a trip to the emergency room.",
+      },
+
+      {
+        type: "heading",
+        text: "Gather the Right Tools First",
+      },
+      {
+        type: "paragraph",
+        text: "Before leaning a ladder against your gutters, get your gear together. Scrambling up and down mid-job is how accidents happen.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Extension Ladder:",
+            text: " Make sure it extends at least 3 feet above the roof edge for safe stepping.",
+          },
+          {
+            bold: "Safety Harness / Roof Anchor:",
+            text: " If you plan on stepping onto the pitch, never skip tie-off points.",
+          },
+          {
+            bold: "Blower or Telescoping Roof Rake:",
+            text: " A roof rake lets you clear low-pitch sections right from the ground.",
+          },
+          {
+            bold: "Soft-Bristled Broom:",
+            text: " Avoid wire brushes or stiff metal rakes that strip off asphalt granules.",
+          },
+          {
+            bold: "Heavy Duty Work Gloves & Non-Slip Shoes:",
+            text: " Rubber-soled boots (like skate shoes or dedicated work boots) offer the best traction on pitched surfaces.",
+          },
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "Work From the Ground When You Can",
+      },
+      {
+        type: "paragraph",
+        text: "The safest way to clean a roof is by not climbing onto it at all.",
+      },
+      {
+        type: "paragraph",
+        text: "If you have a single-story home or a relatively low pitch, purchase a telescoping roof rake with a soft rake head or rubber squeegee. Standing firmly on the ground, extend the pole to the ridge and gently pull the leaves down toward the gutters.",
+      },
+      {
+        type: "pro_tip",
+        text: "Crucial Tip: Always pull downward along the pitch. Scraping sideways or pushing debris up under the shingle laps can lift the protective seal and cause leaks during the next storm.",
+      },
+
+      {
+        type: "heading",
+        text: "The Right Way to Ladder Up",
+      },
+      {
+        type: "paragraph",
+        text: "If you must climb up to reach higher valleys or steep hips, ladder setup is critical:",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Find Level Ground:",
+            text: " Place the ladder base on solid, flat dirt or concrete. If on grass, dig slight footings to prevent slipping.",
+          },
+          {
+            bold: "Follow the 4-to-1 Rule:",
+            text: " For every 4 feet of height to the eaves, set the ladder base 1 foot out from the wall.",
+          },
+          {
+            bold: "Secure the Top:",
+            text: " Use ladder standoff brackets (gutter guards) so you don't crush your aluminum gutters, and tie off the top of the ladder to an anchor point if possible.",
+          },
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "Cleaning Methods: Leaf Blower vs. Broom",
+      },
+      {
+        type: "paragraph",
+        text: "Once you're positioned safely near the roof edge, pick your method based on how dry the debris is:",
+      },
+      {
+        type: "subheading",
+        text: "Option A: The Leaf Blower (Best for Dry Leaves)",
+      },
+      {
+        type: "paragraph",
+        text: "Blowers are quick, but direction matters. Always stand above the debris and blow down toward the gutters. Blowing air upward forces dust, pine needles, and fine grit directly under the shingles. Keep the nozzle angled flat to avoid blasting away asphalt granules.",
+      },
+      {
+        type: "subheading",
+        text: "Option B: Soft Brooming (Best for Wet, Stuck Debris)",
+      },
+      {
+        type: "paragraph",
+        text: "If rain has turned the leaves into a soggy mat, a leaf blower won't budge them. Use a soft-bristled push broom. Gently sweep in short, downward strokes. Resist the urge to use a pressure washer — high-pressure water strips away the protective granule layer instantly, cutting years off your roof's lifespan.",
+      },
+
+      {
+        type: "heading",
+        text: "Clear the Valleys and Gutters",
+      },
+      {
+        type: "paragraph",
+        text: "Roof valleys (where two roof slopes meet) collect the highest concentration of pine needles and damp twigs. Pay extra attention here, as valley blockage is the #1 cause of roof leaks near the center of a home.",
+      },
+      {
+        type: "paragraph",
+        text: "Once the roof surface is clear, scoop out the gutters. If you leave all that swept debris sitting in the gutter channels, the first rainfall will clog your downspouts and cause water to overflow straight into your fascia boards.",
+      },
+
+      {
+        type: "heading",
+        text: "Know When to Call a Pro",
+      },
+      {
+        type: "paragraph",
+        text: "If your roof pitch is steep (greater than 6/12 slope), two stories high, or covered in wet moss, don't risk a fall. Professional roofing contractors carry specialized rigging, safety harnesses, and insurance to handle high-pitch cleanups safely.",
+      },
+
+      {
+        type: "closing",
+        text: "Regularly clearing leaves every fall keeps your warranty intact and prevents costly interior water damage down the line.",
+      },
+    ],
+  },
+  {
   slug: "spot-roof-damage-from-ground-no-ladder",
   title: "How to Spot Roof Damage from the Ground (No Ladder Required)",
   date: "28 July 2026",

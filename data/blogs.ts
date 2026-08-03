@@ -38,8 +38,8 @@ export const BLOGS: BlogPost[] = [
   {
     slug: "safely-clean-leaves-and-debris-off-roof",
     title: "How to Safely Clean Leaves and Debris Off Your Roof",
-    date: "5 August 2026",
-    isoDate: "2026-08-05",
+    date: "4 August 2026",
+    isoDate: "2026-08-04",
     caption:
       "It's easy to ignore what's happening on top of your house until a heavy rainstorm hits and water starts backing up under your shingles. Here's how to clear roof debris safely without destroying your shingles or falling off a ladder.",
 

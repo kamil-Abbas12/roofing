@@ -5,9 +5,16 @@ const SITE_URL = "https://roofing.topdoglead.com";
 
 export const metadata: Metadata = {
   title: "Privacy Policy ",
-  description: "Learn how TopDog Roofing collects, uses, shares, and protects your personal information when you request quotes, schedule inspections, or use our roofing services.",
+  description: "Learn how TopDog Roofing collects, uses, shares, and protects your personal information when you request our services.",
   alternates: { canonical: `${SITE_URL}/privacy-policy` },
   robots: { index: true, follow: true },
+  openGraph: {
+    title: "Privacy Policy | TopDog Roofing",
+    description: "Learn how TopDog Roofing collects, uses, shares, and protects your personal information.",
+    url: `${SITE_URL}/privacy-policy`,
+    siteName: "TopDog Roofing",
+    type: "website",
+  },
 };
 
 const sections = [
@@ -94,22 +101,22 @@ export default function PrivacyPolicy() {
 
         <div className="prose prose-sm max-w-none mb-12 text-gray-700 leading-relaxed">
           <p>
-            TopDog Roofing ("we," "us," or "our") is committed to protecting your privacy.
-            This Privacy Policy explains how we collect, use, share, and protect information
-            when you visit <strong>roofing.topdoglead.com</strong> or use our roofing services.
+            TopDog Roofing ("we," "us," or "our") is committed to protecting
+            your privacy. This Privacy Policy explains how we collect, use,
+            share, and protect information when you visit{" "}
+            <strong>roofing.topdoglead.com</strong> or use our roofing services.
           </p>
         </div>
 
         {/* TABLE OF CONTENTS */}
         <nav className="mb-12 rounded-lg border border-gray-200 bg-gray-50 p-6">
-          <h2 className="text-sm font-bold text-gray-900 mb-3">Table of Contents</h2>
+          <h2 className="text-sm font-bold text-gray-900 mb-3">
+            Table of Contents
+          </h2>
           <ol className="space-y-2 text-sm">
             {sections.map((s) => (
               <li key={s.id}>
-                <a
-                  href={`#${s.id}`}
-                  className="text-blue-600 hover:underline"
-                >
+                <a href={`#${s.id}`} className="text-blue-600 hover:underline">
                   {s.title}
                 </a>
               </li>
@@ -121,7 +128,9 @@ export default function PrivacyPolicy() {
         <div className="space-y-8">
           {sections.map((s) => (
             <div key={s.id} id={s.id}>
-              <h2 className="text-xl font-bold text-gray-900 mb-4">{s.title}</h2>
+              <h2 className="text-xl font-bold text-gray-900 mb-4">
+                {s.title}
+              </h2>
               <div className="space-y-3">
                 {s.body.map((p, i) => (
                   <p key={i} className="text-gray-700 text-sm leading-relaxed">
@@ -134,7 +143,10 @@ export default function PrivacyPolicy() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-gray-200">
-          <Link href="/" className="text-blue-600 hover:underline font-medium text-sm">
+          <Link
+            href="/"
+            className="text-blue-600 hover:underline font-medium text-sm"
+          >
             ← Back to Home
           </Link>
         </div>

@@ -3,9 +3,12 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./component/Navbar";
 import Footer from "./component/Footer";
-import DiscountPopup from "./component/DiscountPopup";
 import { Poppins } from "next/font/google";
 import Script from "next/script";
+import DiscountPopup from "./component/DiscountPopupLoader";
+// ssr:false dynamic imports aren't allowed directly inside a Server
+// Component, so the dynamic() call lives in this small Client Component
+// wrapper instead — layout.tsx just imports it like any other component.
 
 const poppins = Poppins({
   weight: ["400", "600", "700"],

@@ -219,10 +219,10 @@ isoDate:"2026-07-28",
   image: "/spot-roof-damage-from-ground-no-ladder.webp",
 
   metaTitle:
-    "How to Spot Roof Damage from the Ground (No Ladder Required)",
+    "How to Spot Roof Damage From the Ground",
 
   metaDescription:
-    "Learn how to inspect your roof for storm damage safely from the ground — no ladder needed. Spot curling shingles, granule loss, and hidden leaks before they get worse.",
+  "Learn how to inspect your roof for storm damage safely from the ground — no ladder needed. Spot curling shingles and hidden leaks early.",
 
   content: [
     {
@@ -382,7 +382,7 @@ isoDate: "2026-07-20",
   image: "/roof-ventilation-attic-insulation-basics.webp",
 
   metaTitle:
-    "Roof Ventilation & Attic Insulation Basics: Must-Know Tips for Beginners",
+    "Roof Ventilation & Attic Insulation Basics",
 
   metaDescription:
     "Learn how roof ventilation and attic insulation work together, the right R-value for your climate, and the warning signs your attic needs attention.",
@@ -536,10 +536,10 @@ isoDate: "2026-07-14",
   image: "/tree-branches-overhanging-roof-damage.webp",
 
   metaTitle:
-    "How Overhanging Tree Branches Damage Your Roof (And Cost You Thousands)",
+    "How Overhanging Tree Branches Damage Your Roof",
 
   metaDescription:
-    "Overhanging tree limbs cause granule loss, clogged gutters, pest access, and falling-branch damage. Learn the 6-foot rule to protect your roof and avoid a costly replacement.",
+  "Overhanging tree limbs cause granule loss, clogged gutters, and falling-branch damage. Learn the 6-foot rule to protect your roof.",
 
   content: [
     {
@@ -693,10 +693,10 @@ isoDate: "2026-07-09",
   image: "/hail-storm-roof-damage-checklist.webp",
 
   metaTitle:
-    "24-Hour Storm Checklist: What to Do After a Hail Storm Hits Your Roof",
+    "24-Hour Storm Checklist After a Hail Storm",
 
   metaDescription:
-    "Don't risk a denied insurance claim. Follow this step-by-step 24-hour checklist for documenting hail damage, mitigating further loss, and filing your roof claim correctly.",
+  "Don't risk a denied insurance claim. Follow this step-by-step 24-hour checklist for documenting hail damage and filing your claim correctly.",
 
   content: [
     {
@@ -866,7 +866,7 @@ isoDate: "2026-07-01",
   image: "/are-solar-shingles-worth-the-investment.webp",
 
   metaTitle:
-    "Are Solar Shingles Worth the Investment? Complete Comparison Guide",
+    "Are Solar Shingles Worth the Investment?",
 
   metaDescription:
     "Compare solar shingles vs traditional solar panels including costs, efficiency, installation time, aesthetics, and ROI to decide which is right for your home.",
@@ -1066,6 +1066,11 @@ isoDate: "2026-07-01",
     category: "Roof Maintenance",
     readTime: "6 min read",
     image: "/prepare-roof-for-freezing-winter-temperatures.webp",
+
+    metaTitle: "Prepare Your Roof for Freezing Winter Temps",
+
+    metaDescription:
+  "A step-by-step winter roof prep checklist covering gutters, shingles, and insulation to help you avoid ice dams and costly leaks.",
  
     content: [
       {
@@ -1193,6 +1198,11 @@ isoDate: "2026-06-17",
     category: "Roof Repair",
     readTime: "6 min read",
     image: "/roof-repair-vs-roof-replacement.webp",
+
+    metaTitle: "Roof Repair vs. Replacement: How to Choose",
+
+    metaDescription:
+  "Not sure if your roof needs a patch or a full tear-off? Learn the key signs that determine which path is right for your home.",
 
     content: [
       {
@@ -1437,6 +1447,11 @@ isoDate: "2026-06-17",
     readTime: "6 min read",
     image: "/SpringRoofCheck.webp",
 
+    metaTitle: "Best Time to Schedule a Roof Inspection",
+
+    metaDescription:
+      "Discover why spring roof inspections help prevent leaks, extend roof lifespan, and prepare your home for severe weather.",
+
     content: [
       {
         type: "paragraph",
@@ -1523,6 +1538,11 @@ isoDate: "2026-04-10",
     category: "Roof Maintenance",
     readTime: "6 min read",
     image: "/attic-insulation-roof-maintenance.webp",
+
+    metaTitle: "How Attic Insulation Affects Roof Lifespan",
+
+    metaDescription:
+  "Discover how proper attic insulation protects your roof from heat, moisture, ice dams, and structural damage — and why it matters for your roof's lifespan.",
 
     content: [
       {
@@ -1621,6 +1641,11 @@ isoDate: "2025-03-10",
     category: "Roof Repair",
     readTime: "5 min read",
     image: "/roof-moss-and-algae-damage.webp",
+
+    metaTitle: "Why Roof Moss and Algae Cost You Thousands",
+
+    metaDescription:
+      "Learn why moss and algae growth on roofs can cause serious structural damage and expensive repairs if ignored.",
 
     content: [
       {

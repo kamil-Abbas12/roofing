@@ -7,7 +7,7 @@ import { SITE_URL, PHONE, PHONE_DISPLAY } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Roofing Services | Repair, Replacement & More | TopDog Roofing",
   description:
-    "Professional roofing services for homeowners and businesses. Roof repair, replacement, storm damage, commercial roofing, inspections & new construction. Licensed & insured. Call now!",
+  "Professional roofing services: repair, replacement, storm damage, commercial roofing & inspections. Licensed & insured. Call now!",
   keywords: [
     "roofing services",
     "roof repair",

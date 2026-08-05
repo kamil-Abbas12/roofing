@@ -1,17 +1,87 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { X, Gift, ChevronLeft } from "lucide-react";
-import CampaignCallFlow from "./CampaignCallFlow";
+import dynamic from "next/dynamic";
+
+const CampaignCallFlow = dynamic(() => import("./CampaignCallFlow"), {
+  loading: () => <p className="text-center text-sm text-gray-500">Loading…</p>,
+});
+
+// How far down a non-homepage the visitor must scroll before we consider
+// showing the popup (as a fraction of total scrollable height).
+const SCROLL_TRIGGER_THRESHOLD = 0.5;
+
+// On non-homepage routes, don't allow exit-intent or scroll triggers to fire
+// in the first few seconds — someone bouncing immediately isn't "exit intent",
+// they just haven't started reading yet.
+const MIN_DWELL_MS = 4000;
 
 const DiscountPopup = () => {
+  const pathname = usePathname();
+  const isHomepage = pathname === "/";
+
   const [isOpen, setIsOpen] = useState(false);
   const [showFlow, setShowFlow] = useState(false);
+  const hasShownRef = useRef(false);
 
+  const openOnce = () => {
+    if (hasShownRef.current) return;
+    hasShownRef.current = true;
+    setIsOpen(true);
+  };
+
+  // --- Homepage: original simple timer trigger ---
   useEffect(() => {
-    const timer = setTimeout(() => setIsOpen(true), 1500);
+    if (!isHomepage) return;
+    const timer = setTimeout(openOnce, 1500);
     return () => clearTimeout(timer);
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isHomepage]);
+
+  // --- Other pages: scroll-depth OR exit-intent, whichever comes first ---
+  useEffect(() => {
+    if (isHomepage) return;
+
+    let dwellTimer: ReturnType<typeof setTimeout>;
+    let dwellElapsed = false;
+
+    dwellTimer = setTimeout(() => {
+      dwellElapsed = true;
+    }, MIN_DWELL_MS);
+
+    const handleScroll = () => {
+      if (!dwellElapsed) return;
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight <= 0) return;
+      const scrollFraction = scrollTop / docHeight;
+      if (scrollFraction >= SCROLL_TRIGGER_THRESHOLD) {
+        openOnce();
+      }
+    };
+
+    // Exit intent: cursor moves up toward the browser chrome (tab/back/close).
+    // Desktop-only signal — mobile has no mouse, which is fine since scroll
+    // depth covers that case.
+    const handleMouseLeave = (e: MouseEvent) => {
+      if (!dwellElapsed) return;
+      if (e.clientY <= 0) {
+        openOnce();
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    document.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      clearTimeout(dwellTimer);
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mouseleave", handleMouseLeave);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isHomepage]);
 
   // Trap focus & close on Escape
   useEffect(() => {

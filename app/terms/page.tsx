@@ -8,6 +8,13 @@ export const metadata: Metadata = {
   description: "Read TopDog Roofing's Terms of Service covering payments, warranties, liability, licensing, and policies for our roof repair and replacement services.",
   alternates: { canonical: `${SITE_URL}/terms` },
   robots: { index: true, follow: true },
+  openGraph: {
+    title: "Terms of Service | TopDog Roofing",
+    description: "Read TopDog Roofing's Terms of Service covering payments, warranties, liability, and policies for our roofing services.",
+    url: `${SITE_URL}/terms`,
+    siteName: "TopDog Roofing",
+    type: "website",
+  },
 };
 
 const sections = [

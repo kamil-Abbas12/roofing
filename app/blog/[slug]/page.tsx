@@ -163,7 +163,7 @@ export default async function BlogDetailPage({
   if (!post) {
     return (
       <main className="min-h-screen bg-[#f7efe6] mt-20" role="main">
-        <div className="mx-auto max-w-3xl px-4 py-40 text-center">
+        <div className="mx-auto max-w-4xl px-4 py-40 text-center">
 <h1 className="mt-4 text-4xl font-bold leading-tight text-black">            Post not found
           </h1>
           <Link

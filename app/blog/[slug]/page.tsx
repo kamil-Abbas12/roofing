@@ -82,48 +82,76 @@ function RenderBlock({ block, index }: { block: ContentBlock; index: number }) {
     </ul>
   );
 
-case "table":
-  // narrow to table shape to satisfy TypeScript and avoid unreachable duplicate code
-  if (!("headers" in block) || !("rows" in block)) return null;
+case "table": {
+      // narrow to table shape to satisfy TypeScript
+      if (!("headers" in block) || !("rows" in block)) return null;
 
-  const tableBlock = block as any;
+      const tableBlock = block as any;
+      const headers: string[] = tableBlock.headers;
+      const rows: any[][] = tableBlock.rows;
 
-  return (
-    <div key={index} className="mb-8 w-full overflow-x-auto">
-      <table className="min-w-[700px] w-full border-collapse border border-black text-left">
-        <thead>
-          <tr>
-            {tableBlock.headers.map((header: string, j: number) => (
-              <th
-                key={j}
-                className="border border-black bg-white px-4 py-3 text-left font-bold text-black whitespace-nowrap"
+      return (
+        <div key={index} className="mb-8 w-full">
+          {/* Desktop / tablet: real <table> for accessibility + SEO */}
+          <div className="hidden overflow-x-auto rounded-lg sm:block">
+            <table className="w-full table-fixed border-collapse border border-black text-left">
+              <thead>
+                <tr>
+                  {headers.map((header, j) => (
+                    <th
+                      key={j}
+                      className="border border-black bg-white px-4 py-3 text-left font-bold text-black"
+                    >
+                      {header}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {rows.map((row, rowIndex) => (
+                  <tr key={rowIndex}>
+                    {row.map((cell, cellIndex) => (
+                      <td
+                        key={cellIndex}
+                        className={`border border-black px-4 py-3 align-top text-black ${
+                          cellIndex === 0 ? "font-bold" : ""
+                        }`}
+                      >
+                        {cell}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Mobile: stacked cards, no horizontal scrolling */}
+          <div className="flex flex-col gap-4 sm:hidden">
+            {rows.map((row, rowIndex) => (
+              <div
+                key={rowIndex}
+                className="rounded-xl border border-black/10 bg-white p-4 shadow-sm"
               >
-                {header}
-              </th>
+                <p className="mb-2 text-base font-bold text-black">
+                  {row[0]}
+                </p>
+                <dl className="space-y-2">
+                  {row.slice(1).map((cell, cellIndex) => (
+                    <div key={cellIndex} className="flex flex-col">
+                      <dt className="text-xs font-semibold uppercase tracking-wide text-black/60">
+                        {headers[cellIndex + 1]}
+                      </dt>
+                      <dd className="text-sm leading-6 text-black">{cell}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
             ))}
-          </tr>
-        </thead>
-
-        <tbody>
-          {tableBlock.rows.map((row: any[], rowIndex: number) => (
-            <tr key={rowIndex}>
-              {row.map((cell: any, cellIndex: number) => (
-                <td
-                  key={cellIndex}
-                  className={`border border-black px-4 py-3 text-black align-top ${
-                    cellIndex === 0 ? "font-bold" : ""
-                  }`}
-                >
-                  {cell}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-
+          </div>
+        </div>
+      );
+    }
   case "pro_tip":
   return (
     <p key={index} className="mb-5 leading-8 text-black">

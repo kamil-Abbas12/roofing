@@ -35,6 +35,165 @@ export type BlogPost = {
 
 
 export const BLOGS: BlogPost[] = [
+
+{
+  slug: "how-roof-color-affects-energy-bills-home-cooling",
+  title: "How Roof Color Affects Energy Bills and Home Cooling",
+  date: "11 August 2026",
+  isoDate: "2026-08-11",
+  caption:
+    "When picking out a new roof, most homeowners focus on material, warranty, and curb appeal. The color of your shingles usually gets treated as a purely aesthetic decision — but it plays a direct role in your energy bill.",
+
+  excerpt:
+    "The shade of your shingles does more than match your siding — it determines how hot your attic gets, how hard your AC has to work, and what your electric bill looks like in July.",
+
+  category: "Roof Installation",
+  readTime: "6 min read",
+  image: "/roof-color-energy-bills-home-cooling.webp",
+
+  metaTitle: "How Roof Color Affects Energy Bills and Cooling",
+
+  metaDescription:
+    "Learn how dark vs. light roof colors affect attic temperature, AC costs, and energy bills — plus which shade makes sense for your climate.",
+
+  content: [
+    {
+      type: "paragraph",
+      text: "When picking out a new roof, most homeowners focus on material, warranty, and curb appeal. The color of your shingles usually gets treated as a purely aesthetic decision — something to match your siding or shutter trim.",
+    },
+    {
+      type: "paragraph",
+      text: "In reality, the shade you choose plays a direct role in how hot your attic gets, how hard your air conditioner works, and what your electric bill looks like at the end of July.",
+    },
+
+    {
+      type: "heading",
+      text: "The Physics: Albedo and Heat Absorption",
+    },
+    {
+      type: "paragraph",
+      text: "The basic principle comes down to solar reflectance, often referred to as albedo. Darker materials absorb light energy and convert it into heat. Lighter materials reflect light back into the atmosphere before it ever converts to heat.",
+    },
+    {
+      type: "paragraph",
+      text: "On a sunny 90°F day:",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Traditional dark gray or black asphalt roofs:",
+          text: " can reach surface temperatures of 150°F to 160°F.",
+        },
+        {
+          bold: "White or light gray roofs:",
+          text: " under the exact same conditions typically top out around 100°F to 110°F.",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "That 50-degree surface gap matters because heat doesn't stay on the outside of your shingles. It radiates straight down through your roof deck, bakes your attic insulation, and eventually seeps into your upstairs bedrooms.",
+    },
+
+    {
+      type: "heading",
+      text: "What That Temperature Gap Means for Your AC",
+    },
+    {
+      type: "paragraph",
+      text: "When an attic hits 140°F or higher, your home's HVAC system faces two distinct challenges:",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Conductive Heat Transfer:",
+          text: " Heat moves toward cold. The hotter your attic is, the faster thermal energy forces its way through your ceiling drywall into your living space.",
+        },
+        {
+          bold: "Ductline Heating:",
+          text: " In most homes, air conditioning ducts run straight through the attic. If those ducts sit in superheated air, the cold air coming out of your vents loses a few degrees before it ever reaches your rooms.",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Your AC unit has to run longer cycles to reach the set temperature on your thermostat. According to data from the U.S. Department of Energy, swapping a heat-absorbing dark roof for a high-reflectance light roof can reduce cooling energy use by 10% to 15% in warmer climates.",
+    },
+
+    {
+      type: "heading",
+      text: "Dark vs. Light Roofs: Side-by-Side",
+    },
+    {
+      type: "table",
+      headers: ["Feature", "Dark Roofs (Black, Charcoal, Dark Brown)", "Light Roofs (White, Slate Light Gray, Tan)"],
+      rows: [
+        ["Solar Reflectance", "Reflects 5% – 20% of sun rays", "Reflects 50% – 80%+ of sun rays"],
+        ["Summer Attic Temps", "Often exceeds 140°F – 150°F", "Typically stays around 105°F – 115°F"],
+        ["Best Climate", "Cold northern climates (helps melt snow)", "Sunbelt & southern climates (cuts AC load)"],
+        ["HVAC Wear & Tear", "Higher strain during peak summer heat", "Lower strain, shorter run cycles"],
+      ],
+    },
+
+    {
+      type: "heading",
+      text: 'Color Isn\'t the Whole Story: "Cool Shingles"',
+    },
+    {
+      type: "paragraph",
+      text: "If you love the classic look of a dark charcoal or slate roof, you aren't automatically locked into skyrocketing power bills. Modern manufacturing offers cool roofing technology.",
+    },
+    {
+      type: "paragraph",
+      text: '"Cool shingles" look visually dark to the human eye, but they are engineered with specialized granules that reflect invisible infrared radiation. While a standard black shingle reflects only about 10% of solar energy, a cool-rated dark shingle can reflect up to 25% or 30%.',
+    },
+    {
+      type: "pro_tip",
+      text: "Cool shingles aren't quite as reflective as stark white roofs, but they bridge the gap between aesthetics and thermal performance — worth asking about if you don't want to give up a darker look.",
+    },
+
+    {
+      type: "heading",
+      text: "Which Climate Region Are You In?",
+    },
+    {
+      type: "paragraph",
+      text: "Your geographic location dictates whether a light roof makes financial sense:",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Southern / Warm Climates:",
+          text: " If your home runs the air conditioning six or more months out of the year, light-colored or cool-rated roofing delivers immediate payback in energy savings.",
+        },
+        {
+          bold: "Northern / Cold Climates:",
+          text: " In areas with long winters, a dark roof can offer a minor benefit by absorbing winter sunlight to help heat the house slightly and melt snow build-up faster.",
+        },
+        {
+          bold: "Mixed Climates:",
+          text: " In regions with roughly equal summers and winters, focus on high-quality attic insulation and proper ridge ventilation first — shingle color becomes secondary.",
+        },
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "Insulation and Ventilation Still Rule",
+    },
+    {
+      type: "paragraph",
+      text: "Shingle color is a passive tool, not a substitute for proper attic design. A light-colored roof above a poorly ventilated attic with R-11 insulation will still yield a hot home. Conversely, a dark black roof built over an attic with R-49 to R-60 insulation and balanced soffit-to-ridge airflow will perform exceptionally well.",
+    },
+    {
+      type: "closing",
+      text: "Think of roof color as the outer layer of defense: light colors keep heat off the house entirely, while insulation and airflow handle whatever heat manages to sneak past.",
+    },
+  ],
+},
   {
     slug: "safely-clean-leaves-and-debris-off-roof",
     title: "How to Safely Clean Leaves and Debris Off Your Roof",

@@ -35,6 +35,152 @@ export type BlogPost = {
 
 
 export const BLOGS: BlogPost[] = [
+  {
+  slug: "how-ice-dams-form-and-how-to-prevent-them",
+  title: "How Ice Dams Form (And How to Prevent Them from Wreaking Havoc)",
+  date: "18 August 2026",
+  isoDate: "2026-08-18",
+  caption:
+    "Winter wonderlands look great on postcards, but for homeowners, a heavy snow layer can quickly turn into an expensive mess. If you've ever noticed thick icicles hanging off your gutters alongside a heavy buildup of ice along the roofline, you're looking at an ice dam.",
+
+  excerpt:
+    "Left unchecked, ice dams force water under your shingles, leading to ruined insulation, sagging drywall, mold, and thousands of dollars in structural repairs. Here's the science behind them and how to stop them for good.",
+
+  category: "Roof Maintenance",
+  readTime: "6 min read",
+  image: "/how-ice-dams-form-and-how-to-prevent-them.webp",
+
+  metaTitle: "How Ice Dams Form and How to Prevent Them",
+
+  metaDescription:
+    "Learn why ice dams form on your roof, how to safely deal with one right now, and the long-term fixes that stop them from coming back.",
+
+  content: [
+    {
+      type: "paragraph",
+      text: "Winter wonderlands look great on postcards, but for homeowners, a heavy snow layer can quickly turn into an expensive mess. If you've ever noticed thick icicles hanging off your gutters alongside a heavy buildup of ice along the roofline, you're looking at an ice dam.",
+    },
+    {
+      type: "paragraph",
+      text: "Left unchecked, ice dams force water under your shingles, leading to ruined insulation, sagging drywall, mold, and thousands of dollars in structural repairs. Here is a straightforward breakdown of why ice dams happen and how to stop them before they ruin your home.",
+    },
+
+    {
+      type: "heading",
+      text: "How Ice Dams Form (The Science Behind the Ice)",
+    },
+    {
+      type: "paragraph",
+      text: "An ice dam isn't caused by cold weather alone. It's caused by unequal temperatures across your roof deck. The process happens in a predictable chain reaction:",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Heat Escapes the Living Area:",
+          text: " Warm air from your heated home rises into the attic space due to poor insulation or unsealed bypasses (like recessed lights or attic hatches).",
+        },
+        {
+          bold: "Snow Melts High on the Roof:",
+          text: " That escaping heat warms the upper sections of the roof deck, melting the bottom layer of snow directly above it.",
+        },
+        {
+          bold: "Meltwater Runs Downward:",
+          text: " Water trickles down the pitch under the blanket of snow toward the roof edge.",
+        },
+        {
+          bold: "Water Refreezes at the Eaves:",
+          text: " The overhang (eave) extends past the exterior walls of the house, meaning no home heat reaches it. Once the meltwater hits this freezing cold section, it solidifies into ice.",
+        },
+        {
+          bold: "The Dam Backs Up Water:",
+          text: " As more meltwater flows down, it pools behind the growing ice ridge. Trapped water eventually works its way under asphalt shingles, soaking your roof decking and leaking into interior ceilings and walls.",
+        },
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "Short-Term Fixes: What to Do If You Already Have an Ice Dam",
+    },
+    {
+      type: "paragraph",
+      text: "If you're currently facing a frozen wall on your gutters, avoid taking a hammer or hatchet to your roof. You will likely damage fragile cold shingles and make leaks worse.",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Use a Roof Rake Immediately:",
+          text: " Stand safely on the ground and use an extendable roof rake to clear snow 3 to 5 feet back from your gutters. Without snow to feed it, the melting process stops.",
+        },
+        {
+          bold: "Calcium Chloride Socks:",
+          text: " Fill a leg of old pantyhose with calcium chloride ice melt (never rock salt, which corrodes metal gutters and ruins shingles). Lay it vertically across the ice dam so it slowly melts a channel for trapped water to drain off safely.",
+        },
+        {
+          bold: "Call a Professional Steamer:",
+          text: " For severe accumulations, hire a roofing company that uses low-pressure steam to melt channels through the ice without tearing up your roofing materials.",
+        },
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "Long-Term Prevention: How to Stop Ice Dams Permanently",
+    },
+    {
+      type: "paragraph",
+      text: "Quick fixes handle emergencies, but fixing the underlying thermal issues ensures ice dams don't return next winter.",
+    },
+
+    {
+      type: "subheading",
+      text: "1. Upgrade Attic Insulation",
+    },
+    {
+      type: "paragraph",
+      text: "Keep heat inside your living spaces where it belongs. Adding blown-in cellulose or fiberglass insulation to reach recommended R-values (typically R-49 to R-60 in cold climates) keeps the roof deck cold and prevents snow melt.",
+    },
+
+    {
+      type: "subheading",
+      text: "2. Seal Attic Air Leaks",
+    },
+    {
+      type: "paragraph",
+      text: "Insulation isn't enough if warm air leaks directly through gaps. Use expanding foam and caulk to seal around chimney flues, plumbing stacks, attic access doors, and recessed ceiling lights.",
+    },
+
+    {
+      type: "subheading",
+      text: "3. Ensure Balanced Ventilation",
+    },
+    {
+      type: "paragraph",
+      text: "Your attic needs continuous airflow to match outdoor temperatures. Ensure soffit vents remain unobstructed by insulation and pair them with ridge or gable vents to flush out trapped warm air.",
+    },
+
+    {
+      type: "subheading",
+      text: "4. Install a Self-Adhering Underlayment (Ice & Water Shield)",
+    },
+    {
+      type: "paragraph",
+      text: "When replacing your roof, make sure your contractor installs a waterproof ice and water membrane at least 3 to 6 feet up from the roof edges and around all valleys. While it won't stop ice from forming, it creates a watertight seal that keeps backed-up water out of your house.",
+    },
+
+    {
+      type: "pro_tip",
+      text: "Attacking an ice dam with a hammer or ice pick can crack cold, brittle shingles and create new leak points. Stick to roof rakes, calcium chloride, or low-pressure steam.",
+    },
+
+    {
+      type: "closing",
+      text: "Ice dams are a symptom of heat escaping where it shouldn't. Treat the surface problem in the moment, but fix the insulation, ventilation, and sealing issues underneath, and you won't have to deal with icicles and ceiling stains every winter.",
+    },
+  ],
+},
 
 {
   slug: "how-roof-color-affects-energy-bills-home-cooling",

@@ -45,7 +45,7 @@ export default function Footer() {
               alt="Top Dog Roofing logo"
               className="mb-4"
             />
-            <p className="text-sm text-slate-200/75 leading-6 max-w-xs">
+            <p className="text-sm text-slate-200/90 leading-6 max-w-xs">
               TopDog Roofing connects homeowners with certified roofing professionals
               for repairs, replacements, and storm restoration across the USA.
             </p>
@@ -78,7 +78,7 @@ export default function Footer() {
                 <li key={s.href}>
                   <Link
                     href={s.href}
-                    className="text-sm text-slate-200/75 hover:text-white transition"
+                    className="text-sm text-slate-200/90 hover:text-white transition"
                   >
                     {s.label}
                   </Link>
@@ -97,7 +97,7 @@ export default function Footer() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-sm text-slate-200/75 hover:text-white transition"
+                    className="text-sm text-slate-200/90 hover:text-white transition"
                   >
                     {l.label}
                   </Link>
@@ -107,7 +107,7 @@ export default function Footer() {
                 <li key={sec}>
                   <button
                     onClick={() => scrollToSection(sec)}
-                    className="text-sm text-slate-200/75 hover:text-white transition text-left"
+                    className="text-sm text-slate-200/90 hover:text-white transition text-left"
                     aria-label={`Go to ${sec} section`}
                   >
                     {sec}
@@ -186,7 +186,7 @@ export default function Footer() {
         />
 
         {/* BOTTOM */}
-        <div className="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-slate-200/50">
+        <div className="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-slate-200/90">
           <span>© {new Date().getFullYear()} Top Dog Roofing. All rights reserved.</span>
           <div className="flex gap-4">
             <Link href="/privacy-policy" className="hover:text-white transition">Privacy Policy</Link>

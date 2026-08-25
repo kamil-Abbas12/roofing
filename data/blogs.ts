@@ -36,6 +36,225 @@ export type BlogPost = {
 
 export const BLOGS: BlogPost[] = [
   {
+  slug: "how-to-identify-and-prevent-roof-leaks-after-heavy-rain",
+  title: "How to Identify and Prevent Roof Leaks After Heavy Rain",
+  date: "25 August 2026",
+  isoDate: "2026-08-25",
+  caption:
+    "Heavy rain has a way of exposing every small flaw in a roof. One day everything seems fine, and the next you are listening to the rhythmic drip, drip, drip into a plastic bucket in the middle of your living room.",
+
+  excerpt:
+    "Catching a leak early or preventing it altogether can save you thousands of dollars in structural repairs, ruined insulation, and mold remediation. Here's a practical guide to spotting roof leaks after a major storm and stopping them before the next downpour.",
+
+  category: "Roof Repair",
+  readTime: "6 min read",
+  image: "/how-to-identify-and-prevent-roof-leaks-after-heavy-rain.webp",
+
+  metaTitle: "How to Identify and Prevent Roof Leaks After Heavy Rain",
+
+  metaDescription:
+    "Learn how to spot roof leaks after heavy rain, trace them to their source, apply emergency fixes, and prevent future leaks with a simple maintenance schedule.",
+
+  content: [
+    {
+      type: "paragraph",
+      text: "Heavy rain has a way of exposing every small flaw in a roof. One day everything seems fine, and the next you are listening to the rhythmic drip, drip, drip into a plastic bucket in the middle of your living room.",
+    },
+    {
+      type: "paragraph",
+      text: "Catching a leak early or preventing it altogether can save you thousands of dollars in structural repairs, ruined insulation, and mold remediation. Here is a practical, down-to-earth guide on how to spot roof leaks after a major storm and how to stop them before the next downpour hits.",
+    },
+
+    {
+      type: "heading",
+      text: "Step 1: How to Spot the Signs of a Leak",
+    },
+    {
+      type: "paragraph",
+      text: "Roof leaks rarely start as a rushing stream; they usually begin with subtle clues that are easy to miss if you aren't looking for them.",
+    },
+
+    {
+      type: "subheading",
+      text: "Interior Signs (Inside the House)",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Water Stains:",
+          text: " Look for yellowish-brown \"halo\" stains on your ceilings or along interior walls.",
+        },
+        {
+          bold: "Peeling Paint or Wallpaper:",
+          text: " Moisture trapped behind drywall causes paint to bubble or strip away.",
+        },
+        {
+          bold: "Musty Odors:",
+          text: " If a room or closet smells damp after rain, water might be pooling in the framing or insulation above.",
+        },
+        {
+          bold: "Dripping Along Trim:",
+          text: " Water often travels along roof rafters and drips down door frames or window casings rather than the middle of the ceiling.",
+        },
+      ],
+    },
+
+    {
+      type: "subheading",
+      text: "Exterior Signs (Outside on the Roof & Gutters)",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Damaged Shingles:",
+          text: " Look for shingles that are cracked, curled at the edges, or missing entirely.",
+        },
+        {
+          bold: "Granules in the Gutters:",
+          text: " Sand-like texture washing into your gutters means your asphalt shingles are wearing thin and losing their waterproof barrier.",
+        },
+        {
+          bold: "Damaged Flashing:",
+          text: " Flashing is the thin metal strip placed around chimneys, skylights, and vent pipes. If it's rusted, bent, or pulling away, water will get in.",
+        },
+        {
+          bold: "Sagging Gutter Lines:",
+          text: " Clogged or heavy gutters pull away from the roofline, allowing water to back up directly under the lower edge of your roof (the eaves).",
+        },
+      ],
+    },
+
+    {
+      type: "heading",
+      text: 'Step 2: Tracking Down the Source (The "Water Travel" Rule)',
+    },
+    {
+      type: "paragraph",
+      text: "Finding where water is dripping inside doesn't always mean the hole in your roof is directly above it. Water takes the path of least resistance. It can run down a sloped rafter or beam for 10 feet before finally dropping through your ceiling drywall.",
+    },
+    {
+      type: "paragraph",
+      text: "Here is how to find the actual entry point:",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Wait for a Dry Day:",
+          text: " Grab a flashlight and head up to your attic once the storm has fully passed.",
+        },
+        {
+          bold: "Look for Water Marks:",
+          text: " Scan for wet spots, dark wood stains, or mold along the underside of the roof decking.",
+        },
+        {
+          bold: "Trace Upward:",
+          text: " Follow the water marks upward toward the highest point to find the true leak location.",
+        },
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "Step 3: Immediate Emergency Fixes",
+    },
+    {
+      type: "paragraph",
+      text: "If rain is actively falling and water is coming in, taking quick action prevents major drywall damage.",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Puncture the Bulge:",
+          text: " If water is pooling behind the ceiling paint and forming a sagging bubble, place a bucket underneath and poke a small hole in the center with a screwdriver. This controls the drain point and stops the entire ceiling panel from collapsing.",
+        },
+        {
+          bold: "Tarp the Roof (From the Outside):",
+          text: " Once the storm passes and conditions are safe, stretch a heavy-duty plastic tarp over the damaged area on the roof. Secure the edges with 2x4 wooden boards nailed into the tarp so the wind won't catch it.",
+        },
+        {
+          bold: "Never Go on a Wet Roof:",
+          text: " Slipping off a wet roof is extremely dangerous. Keep safety first, and wait until the surface is completely dry before stepping outside.",
+        },
+      ],
+    },
+
+    {
+      type: "pro_tip",
+      text: "Puncturing a sagging ceiling bubble feels counterintuitive, but it's the safer move. Controlling the drain point with a bucket beats letting an entire soaked ceiling panel collapse on its own.",
+    },
+
+    {
+      type: "heading",
+      text: "Step 4: Long-Term Leak Prevention Maintenance",
+    },
+    {
+      type: "paragraph",
+      text: "Preventing a leak is far easier (and cheaper) than fixing water damage after the fact. Make these simple checks part of your seasonal routine:",
+    },
+    {
+      type: "table",
+      headers: ["Maintenance Task", "Frequency", "What to Do"],
+      rows: [
+        [
+          "Gutter Cleaning",
+          "2x per year (Spring/Fall)",
+          "Clear out leaves, pine needles, and mud so water drains freely.",
+        ],
+        [
+          "Tree Trimming",
+          "Annually",
+          "Cut back branches within 6 feet of your roof to prevent scraping and leaf buildup.",
+        ],
+        [
+          "Inspect Roof Flashing",
+          "After major storms",
+          "Check the seals around chimneys, skylights, and roof vents for gaps or broken caulk.",
+        ],
+        [
+          "Attic Ventilation Check",
+          "Once a year",
+          "Ensure soffit and ridge vents are open to prevent heat/ice dams from forming in winter.",
+        ],
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "When to Call a Professional",
+    },
+    {
+      type: "paragraph",
+      text: "While applying roofing cement to a cracked shingle or recaulking flashing are easy DIY fixes, don't hesitate to hire a licensed roofing contractor if:",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Steep or Tall Roofs:",
+          text: " The roof is steep or more than two stories high.",
+        },
+        {
+          bold: "Spongy Decking:",
+          text: " The structural decking under the shingles feels spongy or soft to walk on.",
+        },
+        {
+          bold: "Hidden Leaks:",
+          text: " You can't locate the source of the leak despite searching the attic.",
+        },
+      ],
+    },
+
+    {
+      type: "closing",
+      text: "Taking an hour twice a year to inspect your roof and clean your gutters is the best insurance policy you can have against rainy season headaches. Catch the small drips early, and your roof will protect your home for decades.",
+    },
+  ],
+},
+  {
   slug: "how-ice-dams-form-and-how-to-prevent-them",
   title: "How Ice Dams Form (And How to Prevent Them from Wreaking Havoc)",
   date: "18 August 2026",

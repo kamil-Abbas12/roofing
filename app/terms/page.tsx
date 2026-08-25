@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 const SITE_URL = "https://roofing.topdoglead.com";
+const LAST_UPDATED = "August 26, 2026";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -14,6 +15,20 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/terms`,
     siteName: "TopDog Roofing",
     type: "website",
+    images: [
+      {
+        url: `${SITE_URL}/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "TopDog Roofing",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms of Service | TopDog Roofing",
+    description: "Read TopDog Roofing's Terms of Service covering payments, warranties, liability, and policies for our roofing services.",
+    images: [`${SITE_URL}/og-image.jpg`],
   },
 };
 
@@ -113,9 +128,9 @@ export default function TermsOfService() {
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             Terms of Service
           </h1>
-          <p className="text-sm text-gray-600">
-            Last updated: {new Date().toLocaleDateString()}
-          </p>
+         <p className="text-sm text-gray-600">
+  Last updated: {LAST_UPDATED}
+</p>
         </div>
 
         <div className="prose prose-sm max-w-none mb-12 text-gray-700 leading-relaxed">

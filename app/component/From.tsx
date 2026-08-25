@@ -59,9 +59,9 @@ const From = () => {
             heading.inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900">
 Roofing Experts Homeowners Trust
-          </h1>
+</h2>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-blue-900/80">
 Homeowners trust TopDog Roofing to connect 
 them with experienced roofing professionals who deliver reliable service, fast response times, and high quality workmanship.

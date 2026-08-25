@@ -129,6 +129,62 @@ export default function RootLayout({
         description:
           "Roof repair, roof replacement, roof inspection, and professional roofing solutions.",
       },
+      {
+        "@type": "RoofingContractor",
+        "@id": "https://roofing.topdoglead.com/#roofingcontractor",
+        name: "TopDog Roofing",
+        url: "https://roofing.topdoglead.com/",
+        logo: "https://roofing.topdoglead.com/logo1.webp",
+        email: "info@topdoglead.com",
+        telephone: "+18669644568",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "454 S Cypress Rd",
+          addressLocality: "Pompano Beach",
+          addressRegion: "FL",
+          postalCode: "33060",
+          addressCountry: "US",
+        },
+        areaServed: {
+          "@type": "Country",
+          name: "United States",
+        },
+        sameAs: [
+          "https://facebook.com",
+          "https://instagram.com",
+          "https://linkedin.com",
+        ],
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Roofing Services",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Roof Repair",
+                url: "https://roofing.topdoglead.com/",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Roof Replacement",
+                url: "https://roofing.topdoglead.com/",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Roof Inspection",
+                url: "https://roofing.topdoglead.com/",
+              },
+            },
+          ],
+        },
+      },
     ],
   };
 

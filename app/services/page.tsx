@@ -5,7 +5,7 @@ import { ArrowRight, Phone, Star } from "lucide-react";
 import { SITE_URL, PHONE, PHONE_DISPLAY } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Roofing Services | Repair, Replacement & More | TopDog Roofing",
+  title: "Roofing Services | Repair, Replacement & More ",
   description:
   "Professional roofing services: repair, replacement, storm damage, commercial roofing & inspections. Licensed & insured. Call now!",
   keywords: [

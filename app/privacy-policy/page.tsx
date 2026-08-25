@@ -2,9 +2,10 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 const SITE_URL = "https://roofing.topdoglead.com";
+const LAST_UPDATED = "August 26, 2026";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy ",
+  title: "Privacy Policy",
   description: "Learn how TopDog Roofing collects, uses, shares, and protects your personal information when you request our services.",
   alternates: { canonical: `${SITE_URL}/privacy-policy` },
   robots: { index: true, follow: true },
@@ -14,6 +15,20 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/privacy-policy`,
     siteName: "TopDog Roofing",
     type: "website",
+    images: [
+      {
+        url: `${SITE_URL}/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "TopDog Roofing",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | TopDog Roofing",
+    description: "Learn how TopDog Roofing collects, uses, shares, and protects your personal information.",
+    images: [`${SITE_URL}/og-image.jpg`],
   },
 };
 

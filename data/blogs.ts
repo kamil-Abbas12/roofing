@@ -36,6 +36,141 @@ export type BlogPost = {
 
 export const BLOGS: BlogPost[] = [
   {
+    slug: "5-warning-signs-your-roof-needs-immediate-attention",
+    title: "5 Warning Signs Your Roof Needs Immediate Attention",
+    date: "1 September 2026",
+    isoDate: "2026-09-01",
+    caption:
+      "Your roof is easy to ignore until water starts dripping onto your dining table. By the time a leak makes a dramatic appearance indoors, the damage underneath has usually been building up for months.",
+
+    excerpt:
+      "Catching roof issues early is the difference between a quick, affordable repair and an expensive total replacement. Here are five clear warning signs that your roof needs immediate professional attention.",
+
+    category: "Roof Repair",
+    readTime: "5 min read",
+    image: "/5-warning-signs-your-roof-needs-immediate-attention.webp",
+
+    metaTitle: "5 Warning Signs Your Roof Needs Immediate Attention",
+
+    metaDescription:
+      "Discover 5 clear warning signs your roof needs immediate attention — from water stains to a sagging roofline — before small issues become major disasters.",
+
+    content: [
+      {
+        type: "paragraph",
+        text: "Your roof is easy to ignore until water starts dripping onto your dining table. By the time a leak makes a dramatic appearance indoors, the damage underneath has usually been building up for months.",
+      },
+      {
+        type: "paragraph",
+        text: "Catching roof issues early is the difference between a quick, affordable repair and an expensive total replacement. Here are five clear warning signs that your roof needs immediate professional attention before a small headache turns into a major disaster.",
+      },
+
+      {
+        type: "heading",
+        text: "1. Water Stains on Ceilings or Upper Walls",
+      },
+      {
+        type: "paragraph",
+        text: "If you notice brown, yellow, or grey rings spreading across your ceiling or creeping down the walls in your upper floor, you have an active leak. Water rarely travels straight down; it often enters through a breach in the outer shingles, runs along roof rafters or insulation, and finally pools above your drywall.",
+      },
+      {
+        type: "pro_tip",
+        text: "What to look for: Discolored patches, peeling paint near the ceiling line, or drywall that feels soft or damp to the touch.",
+      },
+
+      {
+        type: "heading",
+        text: "2. Missing, Cracked, or Curling Shingles",
+      },
+      {
+        type: "paragraph",
+        text: "Shingles are your home's primary shield against rain, wind, and UV rays. When they age or take a beating from severe weather, they lose their structural integrity.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Curling edges:",
+            text: " Shingles that cup upward at the edges or curl in the center have reached the end of their lifespan and can easily blow off in high winds.",
+          },
+          {
+            bold: "Cracks:",
+            text: " Thermal expansion and contraction cause brittle shingles to split, allowing water to seep directly onto the underlayment.",
+          },
+          {
+            bold: "Missing pieces:",
+            text: " Exposed gaps leave your roof deck completely vulnerable to rot.",
+          },
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "3. Granules Accumulating in Your Gutters",
+      },
+      {
+        type: "paragraph",
+        text: "Asphalt shingles are coated with hard mineral granules that shield the asphalt from sun damage. As shingles age, these granules loosen and wash down into your rain gutters. A few stray granules after a severe storm are normal, but finding piles that look like coarse black sand means your shingles are bare and degrading fast.",
+      },
+
+      {
+        type: "heading",
+        text: "4. A Sagging Roofline",
+      },
+      {
+        type: "paragraph",
+        text: "A sagging roof is an emergency. It signals structural damage in the decking or the underlying rafters, often caused by long-term moisture trapped inside the roof assembly.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            text: "Look at your roofline from across the street. It should follow a straight, sharp line along the ridge.",
+          },
+          {
+            text: 'If you notice dips, curves, or a visible "swag" along the top edge or between peaks, the support structure is failing under the weight of the roof.',
+          },
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "5. Sunlight or Moisture in the Attic",
+      },
+      {
+        type: "paragraph",
+        text: "Your attic is the best place to perform an internal roof inspection. Step into the attic during daylight hours, turn off the light, and look up toward the roof deck.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Light rays:",
+            text: " If you see pinpricks of daylight shining through the boards, water can and will get through those exact spots.",
+          },
+          {
+            bold: "Musty smells or dark streaks:",
+            text: " Persistent damp smells, visible mold, or dark streaks on the wooden framing indicate hidden moisture intrusion.",
+          },
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "What to Do Next",
+      },
+      {
+        type: "paragraph",
+        text: "If you spot any of these warning signs, don't wait for the next heavy rainstorm to take action. Contact a licensed local roofing contractor to perform a thorough inspection, identify the source of the damage, and provide a clear repair plan before structural damage spreads.",
+      },
+
+      {
+        type: "closing",
+        text: "A roof issue caught early is a simple repair. Left unchecked, it becomes a structural emergency. Keep an eye out for these five signs, and don't hesitate to call in a professional the moment something looks off.",
+      },
+    ],
+  },
+  {
   slug: "how-to-identify-and-prevent-roof-leaks-after-heavy-rain",
   title: "How to Identify and Prevent Roof Leaks After Heavy Rain",
   date: "25 August 2026",

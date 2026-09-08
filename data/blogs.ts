@@ -173,6 +173,7 @@ export const BLOGS: BlogPost[] = [
   {
   slug: "how-to-identify-and-prevent-roof-leaks-after-heavy-rain",
   title: "How to Identify and Prevent Roof Leaks After Heavy Rain",
+
   date: "25 August 2026",
   isoDate: "2026-08-25",
   caption:
@@ -185,8 +186,7 @@ export const BLOGS: BlogPost[] = [
   readTime: "6 min read",
   image: "/how-to-identify-and-prevent-roof-leaks-after-heavy-rain.webp",
 
-  metaTitle: "How to Identify and Prevent Roof Leaks After Heavy Rain",
-
+metaTitle: "How to Identify and Prevent Roof Leaks After Heavy Rain",
   metaDescription:
     "Learn how to spot roof leaks after heavy rain, trace them to their source, apply emergency fixes, and prevent future leaks with a simple maintenance schedule.",
 

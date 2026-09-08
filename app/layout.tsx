@@ -134,6 +134,7 @@ export default function RootLayout({
         "@id": "https://roofing.topdoglead.com/#roofingcontractor",
         name: "TopDog Roofing",
         url: "https://roofing.topdoglead.com/",
+        image: "https://roofing.topdoglead.com/roof2.webp",
         logo: "https://roofing.topdoglead.com/logo1.webp",
         email: "info@topdoglead.com",
         telephone: "+18669644568",

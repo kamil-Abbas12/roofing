@@ -35,6 +35,277 @@ export type BlogPost = {
 
 
 export const BLOGS: BlogPost[] = [
+    {
+    slug: "how-long-does-a-roof-last-lifespan-by-material",
+    title: "How Long Does a Roof Last? Lifespans by Material Type",
+    date: "8 September 2026",
+    isoDate: "2026-09-08",
+    caption:
+      "When most homeowners ask how long a roof lasts, they are usually trying to figure out two things: Is my current roof on its last legs? And if I replace it, what material should I actually buy?",
+
+    excerpt:
+      "A standard roof lasts anywhere from 15 to 50+ years — but that range is huge. Here's a realistic, material-by-material breakdown of how long roofs actually last, what shortens their life, and what to expect.",
+
+    category: "Roof Installation",
+    readTime: "7 min read",
+    image: "/how-long-does-a-roof-last-lifespan-by-material.webp",
+
+    metaTitle: "How Long Does a Roof Last? Lifespan by Material Type",
+
+    metaDescription:
+      "See realistic roof lifespans by material — asphalt, metal, tile, slate, wood, and more — plus the 4 factors that actually determine how long your roof lasts.",
+
+    content: [
+      {
+        type: "paragraph",
+        text: "When most homeowners ask how long a roof lasts, they are usually trying to figure out two things: Is my current roof on its last legs? And if I replace it, what material should I actually buy?",
+      },
+      {
+        type: "paragraph",
+        text: "The short answer is that a standard roof lasts anywhere from 15 to 50+ years. But that range is huge because \"roofing material\" covers everything from budget-friendly paper-backed shingles to natural slate stone that can outlive the house itself.",
+      },
+      {
+        type: "paragraph",
+        text: "Here is a realistic look at how long different roofing materials actually last, what shortens their life, and what you can expect when making a decision.",
+      },
+
+      {
+        type: "table",
+        headers: ["Material", "Typical Lifespan"],
+        rows: [
+          ["Asphalt Shingles", "15 – 30 years"],
+          ["Metal Roofing", "40 – 70 years"],
+          ["Tile (Clay & Concrete)", "40 – 100 years"],
+          ["Wood Shingles & Shakes", "20 – 35 years"],
+          ["Natural Slate", "75 – 150+ years"],
+          ["Synthetic / Composite Shingles", "30 – 50 years"],
+          ["Flat Roof Membranes", "15 – 30 years"],
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "Asphalt Shingles (15 – 30 Years)",
+      },
+      {
+        type: "paragraph",
+        text: "Asphalt is the most popular residential material in North America for a reason: it's affordable and easy to install. However, not all asphalt shingles are created equal.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "3-Tab Shingles (15 – 20 years):",
+            text: " These are the flat, single-layer shingles you see on older homes or budget builds. They are lightweight and prone to catching high winds or shedding granules as they age.",
+          },
+          {
+            bold: "Architectural Shingles (22 – 30 years):",
+            text: " Thicker, layered, and built with a dimensional look. They handle wind uplift much better and are currently the industry standard.",
+          },
+          {
+            bold: "Luxury / Impact-Resistant Shingles (25 – 35 years):",
+            text: " Heavy-duty shingles engineered to resist severe hail and extreme heat.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "What shortens their life: Direct UV exposure dries out the asphalt binder over time, making shingles brittle. Poor attic ventilation that bakes the underside of the roof deck will also destroy asphalt shingles years ahead of schedule.",
+      },
+
+      {
+        type: "heading",
+        text: "Metal Roofing (40 – 70 Years)",
+      },
+      {
+        type: "paragraph",
+        text: "Metal has seen a massive surge in popularity because it bridges the gap between price and long-term durability.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Exposed-Fastener Steel (25 – 40 years):",
+            text: " Panels are screwed down directly through the face. The metal itself lasts longer, but the rubber washer gaskets on the screws dry out and need maintenance every 10–15 years to prevent leaks.",
+          },
+          {
+            bold: "Standing Seam Metal (40 – 70 years):",
+            text: " Interlocking panels where the screws are hidden beneath the metal. There are no exposed screw holes for water to penetrate, making this one of the most reliable systems on the market.",
+          },
+          {
+            bold: "Copper or Zinc (70 – 100+ years):",
+            text: " High-end materials that form a protective patina over time. They are nearly immune to rust and atmospheric breakdown.",
+          },
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "Tile: Clay & Concrete (40 – 100 Years)",
+      },
+      {
+        type: "paragraph",
+        text: "Tile roofs are built to endure harsh sun, heat, and heavy rain.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Concrete Tile (40 – 50 years):",
+            text: " Durable and heavy, though the color can fade over time.",
+          },
+          {
+            bold: "Clay Tile (50 – 100 years):",
+            text: " Naturally fire-resistant and highly durable. Clay holds its color indefinitely and does not rot.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The catch with tile: While the hard outer tiles can last a century, the underlayment (the waterproof felt layer beneath the tiles) breaks down after 20 to 30 years. Homeowners often have to pay for a \"lift and relay,\" where the tiles are carefully removed, new underlayment is installed, and the original tiles are put back on.",
+      },
+
+      {
+        type: "heading",
+        text: "Wood Shingles & Shakes (20 – 35 Years)",
+      },
+      {
+        type: "paragraph",
+        text: "Wood offers a rustic, high-end look, usually made from cedar or redwood.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Wood Shingles (20 – 25 years):",
+            text: " Machine-cut and thin.",
+          },
+          {
+            bold: "Wood Shakes (25 – 35 years):",
+            text: " Thicker, hand-split wood that handles weathering better.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "What shortens their life: Shade, moisture, and debris. If pine needles or leaves sit on a wood roof, they hold moisture and cause moss, mold, or rot to take hold quickly. They require significantly more upkeep than synthetic options.",
+      },
+
+      {
+        type: "heading",
+        text: "Natural Slate (75 – 150+ Years)",
+      },
+      {
+        type: "paragraph",
+        text: "Slate is widely considered the \"forever roof.\" Quarried directly from natural stone, slate tiles don't absorb water, won't burn, and don't rot.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Expected Lifespan:",
+            text: " 75 to 150+ years.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The catch with slate: Weight and cost. Slate is extremely heavy, meaning many homes need structural reinforcement before it can be installed. Furthermore, slate tiles can crack under foot traffic, requiring specialized labor to repair.",
+      },
+
+      {
+        type: "heading",
+        text: "Synthetic / Composite Shingles (30 – 50 Years)",
+      },
+      {
+        type: "paragraph",
+        text: "Made from recycled polymers, rubber, or engineered resins, synthetic roofing is designed to mimic the look of natural slate or cedar shakes without the weight or maintenance issues.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Expected Lifespan:",
+            text: " 30 to 50 years.",
+          },
+          {
+            bold: "Key Benefit:",
+            text: " They offer high impact ratings against hail and UV resistance while being light enough for standard roof framing.",
+          },
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "Flat Roof Membranes (15 – 30 Years)",
+      },
+      {
+        type: "paragraph",
+        text: "Low-slope or flat roof sections on residential homes use flexible membrane systems rather than overlapping shingles.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Modified Bitumen (15 – 20 years):",
+            text: " A torch-down or self-adhered asphalt roll system.",
+          },
+          {
+            bold: "TPO / PVC (15 – 25 years):",
+            text: " Single-ply white membranes that reflect heat well.",
+          },
+          {
+            bold: "EPDM Rubber (20 – 30 years):",
+            text: " A durable black synthetic rubber membrane that handles temperature swings without cracking.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "What shortens their life: Standing water (ponding). If water sits on a flat roof for more than 48 hours without draining or evaporating, it eventually breaks down the seams and leads to leaks.",
+      },
+
+      {
+        type: "heading",
+        text: "What Actually Dictates How Long Your Roof Lasts?",
+      },
+      {
+        type: "paragraph",
+        text: "The manufacturer's warranty number rarely tells the full story. In the real world, four factors determine when a roof will fail:",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Quality of Installation:",
+            text: " Over 50% of premature roof failures trace back to poor workmanship like improper nail placement, skipped starter strips, or poorly sealed flashing.",
+          },
+          {
+            bold: "Attic Ventilation:",
+            text: " If your attic traps hot air and moisture, it literally cooks asphalt shingles from below and causes roof decking to warp.",
+          },
+          {
+            bold: "Local Climate:",
+            text: " A roof in an area with harsh freeze-thaw cycles, frequent hail, or scorching summer UV rays will age much faster than one in a mild climate.",
+          },
+          {
+            bold: "Routine Maintenance:",
+            text: " Keeping gutters clear, removing moss, and fixing small flashing gaps early will easily add 3 to 5 years to the life of any roof material.",
+          },
+        ],
+      },
+
+      {
+        type: "pro_tip",
+        text: "If your roof is approaching the upper end of its material's expected lifespan — or you're not sure which range it falls into — a professional inspection can tell you whether you're looking at years of life left or a replacement on the near horizon.",
+      },
+
+      {
+        type: "closing",
+        text: "There's no single answer to how long a roof lasts — it depends entirely on the material, the installation quality, and how well it's maintained. Knowing where your roof falls on this spectrum is the first step to deciding whether it's time to repair, maintain, or replace.",
+      },
+    ],
+  },
   {
     slug: "5-warning-signs-your-roof-needs-immediate-attention",
     title: "5 Warning Signs Your Roof Needs Immediate Attention",

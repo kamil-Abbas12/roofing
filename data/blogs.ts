@@ -38,8 +38,8 @@ export const BLOGS: BlogPost[] = [
     {
     slug: "how-long-does-a-roof-last-lifespan-by-material",
     title: "How Long Does a Roof Last? Lifespans by Material Type",
-    date: "8 September 2026",
-    isoDate: "2026-09-08",
+    date: "10 September 2026",
+    isoDate: "2026-09-10",
     caption:
       "When most homeowners ask how long a roof lasts, they are usually trying to figure out two things: Is my current roof on its last legs? And if I replace it, what material should I actually buy?",
 

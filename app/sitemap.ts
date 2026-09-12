@@ -25,28 +25,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      priority: 0.9,
-    },
-  
-    {
-      url: `${baseUrl}/services`,
-      lastModified: new Date(),
-      priority: 0.9,
-    },
+return [
+  { url: baseUrl, lastModified: new Date(), priority: 1 },
+  { url: `${baseUrl}/blog`, lastModified: new Date(), priority: 0.9 },
+  { url: `${baseUrl}/services`, lastModified: new Date(), priority: 0.9 },
+  { url: `${baseUrl}/terms`, lastModified: new Date(), priority: 0.3 },
+  { url: `${baseUrl}/privacy-policy`, lastModified: new Date(), priority: 0.3 },
+  ...serviceUrls,
+  ...blogUrls,
+];
 
-    // ✅ service pages
-    ...serviceUrls,
-
-    // ✅ dynamic blogs
-    ...blogUrls,
-  ];
 }

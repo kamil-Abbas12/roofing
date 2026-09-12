@@ -173,11 +173,15 @@ case "table": {
 }
 
 function getRelatedPosts(currentSlug: string, category: string, count = 3) {
-  // Prefer same-category posts first, then fill with the rest, excluding the current post
+  const currentIndex = BLOGS.findIndex((p) => p.slug === currentSlug);
   const others = BLOGS.filter((p) => p.slug !== currentSlug);
   const sameCategory = others.filter((p) => p.category === category);
   const rest = others.filter((p) => p.category !== category);
-  return [...sameCategory, ...rest].slice(0, count);
+
+  const offset = rest.length ? currentIndex % rest.length : 0;
+  const rotatedRest = [...rest.slice(offset), ...rest.slice(0, offset)];
+
+  return [...sameCategory, ...rotatedRest].slice(0, count);
 }
 
 export default async function BlogDetailPage({

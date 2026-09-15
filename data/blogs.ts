@@ -35,6 +35,201 @@ export type BlogPost = {
 
 
 export const BLOGS: BlogPost[] = [
+  {
+    slug: "how-to-prepare-your-roof-for-storm-season",
+    title: "How to Prepare Your Roof for Storm Season",
+    date: "15 September 2026",
+    isoDate: "2026-09-15",
+    caption:
+      "Storm season has a way of catching homeowners off guard. One week you're enjoying warm afternoon breezes, and the next, you're listening to heavy rain pound against the ceiling while wondering if that strange spot in the hallway is actually a leak.",
+
+    excerpt:
+      "A practical, step-by-step guide to inspecting your roof, clearing gutters, trimming trees, and reviewing your insurance policy before the first major storm rolls in.",
+
+    category: "Roof Maintenance",
+    readTime: "6 min read",
+    image: "/how-to-prepare-your-roof-for-storm-season.webp",
+
+    metaTitle: "How to Prepare Your Roof for Storm Season",
+
+    metaDescription:
+      "Learn how to prepare your roof for storm season with this step-by-step checklist covering shingle inspections, gutters, tree trimming, and insurance prep.",
+
+    content: [
+      {
+        type: "paragraph",
+        text: "Storm season has a way of catching homeowners off guard. One week you're enjoying warm afternoon breezes, and the next, you're listening to heavy rain pound against the ceiling while wondering if that strange spot in the hallway is actually a leak.",
+      },
+      {
+        type: "paragraph",
+        text: "Your roof is the first line of defense against severe weather, yet it's often the most neglected part of the house until something goes wrong. Taking an afternoon to inspect and prepare your roof before bad weather hits can save you thousands of dollars in emergency repairs and water damage.",
+      },
+      {
+        type: "paragraph",
+        text: "Here is a practical, step-by-step guide to getting your roof ready before the first major storm rolls in.",
+      },
+
+      {
+        type: "heading",
+        text: "1. Do a Ground-Level Inspection First",
+      },
+      {
+        type: "paragraph",
+        text: "You don't necessarily need to climb up on a ladder to catch obvious issues. Grab a pair of binoculars and walk around the perimeter of your home.",
+      },
+      {
+        type: "paragraph",
+        text: "Look closely for:",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Missing, cracked, or curling shingles:",
+            text: " Severe wind can easily catch the edges of damaged shingles and tear them away entirely.",
+          },
+          {
+            bold: "Damaged flashing:",
+            text: " Check around chimneys, roof vents, and skylights. Flashing is the metal stripping that seals these gaps, and loose or corroded flashing is one of the most common causes of roof leaks.",
+          },
+          {
+            bold: "Sagging spots:",
+            text: " A sagging roofline usually indicates trapped moisture, structural weakening, or rot underneath the surface.",
+          },
+        ],
+      },
+      {
+        type: "pro_tip",
+        text: "If you suspect serious damage or aren't comfortable checking from the ground, schedule a professional roof inspection.",
+      },
+
+      {
+        type: "heading",
+        text: "2. Clear Your Gutters and Downspouts",
+      },
+      {
+        type: "paragraph",
+        text: "Clogged gutters are a roof's worst enemy during a heavy downpour. When leaves, twigs, and debris block the water flow, rain backs up onto the roof edge. Over time, standing water can seep under the shingles and rot the wooden decking beneath.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Clean out the debris:",
+            text: " Scoop out packed leaves and soil from the gutter channels.",
+          },
+          {
+            bold: "Flush with a hose:",
+            text: " Run water through to make sure the downspouts flow freely.",
+          },
+          {
+            bold: "Check the alignment:",
+            text: " Ensure gutters are securely fastened to the fascia board. Heavy, water-logged gutters can detach during a storm and pull the roof trim down with them.",
+          },
+          {
+            bold: "Direct water away:",
+            text: " Make sure your downspouts discharge water at least 3 to 5 feet away from your home's foundation.",
+          },
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "3. Trim Overhanging Tree Branches",
+      },
+      {
+        type: "paragraph",
+        text: "Strong storm winds can transform weak or dead tree limbs into heavy projectiles. Even living branches that sit too close to your roof pose a risk — as they sway in high winds, they scrape away the protective granules on asphalt shingles, shortening the lifespan of your roof.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Trim back branches:",
+            text: " Cut back any limbs that extend within 6 to 10 feet of your roofline.",
+          },
+          {
+            bold: "Remove deadwood:",
+            text: " Call an arborist or tree service to remove large, dying branches overhanging your property.",
+          },
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "4. Check Your Attic for Warning Signs",
+      },
+      {
+        type: "paragraph",
+        text: "Your attic often reveals roof problems long before they show up on your upstairs ceiling. Head upstairs with a flashlight during or right after a rain shower.",
+      },
+      {
+        type: "paragraph",
+        text: "What to look for:",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Water stains or streaks",
+            text: " on the underside of the roof rafters or insulation.",
+          },
+          {
+            bold: "Musty odors or mold growth,",
+            text: " which point to ongoing ventilation issues or slow leaks.",
+          },
+          {
+            bold: "Daylight coming through:",
+            text: " If you turn off your flashlight and see pinpricks of sunlight coming through the roof boards, water can enter through those exact same spots during a wind-driven rain.",
+          },
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "5. Review Your Homeowners Insurance Policy",
+      },
+      {
+        type: "paragraph",
+        text: "Before storm season arrives, take 10 minutes to review your insurance coverage. Knowing what your policy covers and what it doesn't will save you immense stress if you do suffer storm damage.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Check your deductible:",
+            text: " Ensure you know your wind/hail deductible, which is often separate from your standard property deductible.",
+          },
+          {
+            bold: "Document your roof's condition:",
+            text: " Take high-resolution photos and video of your entire roof, gutters, and siding before storm season starts. Having clear \"before\" photos makes filing a claim much smoother if a storm damages your home.",
+          },
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "Quick Pre-Storm Checklist",
+      },
+      {
+        type: "table",
+        headers: ["Task", "Priority", "Status"],
+        rows: [
+          ["Inspect shingles & flashing from the ground", "High", "[ ]"],
+          ["Clean out gutters and flush downspouts", "Critical", "[ ]"],
+          ["Trim branches within 6–10 ft of roof", "High", "[ ]"],
+          ["Inspect attic for leaks or daylight", "Medium", "[ ]"],
+          ["Take \"before\" photos for insurance", "Medium", "[ ]"],
+        ],
+        mobileLabels: ["Task", "Status"],
+      },
+
+      {
+        type: "closing",
+        text: "Preparing your roof for storm season isn't about making big, expensive upgrades. It's about basic maintenance and catching small issues before the weather turns severe. By spending a little time clearing gutters, trimming trees, and checking for wear and tear now, you can rest easy knowing your home is fully protected when the sky darkens.",
+      },
+    ],
+  },
     {
     slug: "how-long-does-a-roof-last-lifespan-by-material",
     title: "How Long Does a Roof Last? Lifespans by Material Type",

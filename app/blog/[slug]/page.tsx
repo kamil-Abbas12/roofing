@@ -178,10 +178,24 @@ function getRelatedPosts(currentSlug: string, category: string, count = 3) {
   const sameCategory = others.filter((p) => p.category === category);
   const rest = others.filter((p) => p.category !== category);
 
-  const offset = rest.length ? currentIndex % rest.length : 0;
-  const rotatedRest = [...rest.slice(offset), ...rest.slice(0, offset)];
+  // Rotate BOTH pools by currentIndex. Without this, sameCategory keeps a
+  // fixed array order on every page, so only the first `count` posts in
+  // each category ever get picked as "related" — every later post in a
+  // crowded category ends up with zero incoming related-article links
+  // and becomes an orphan page. Rotating ensures every post in a category
+  // surfaces as someone else's related pick.
+  const sameOffset = sameCategory.length
+    ? currentIndex % sameCategory.length
+    : 0;
+  const rotatedSameCategory = [
+    ...sameCategory.slice(sameOffset),
+    ...sameCategory.slice(0, sameOffset),
+  ];
 
-  return [...sameCategory, ...rotatedRest].slice(0, count);
+  const restOffset = rest.length ? currentIndex % rest.length : 0;
+  const rotatedRest = [...rest.slice(restOffset), ...rest.slice(0, restOffset)];
+
+  return [...rotatedSameCategory, ...rotatedRest].slice(0, count);
 }
 
 export default async function BlogDetailPage({
@@ -302,10 +316,10 @@ export default async function BlogDetailPage({
         <nav className="mt-10 flex flex-wrap gap-3">
           <Link
             href="/blog"
-            aria-label="Go to blog grid page"
+            aria-label="Go to blog  page"
             className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#0b2b55] ring-1 ring-black/5"
           >
-            View Blog Grid
+            View Blog 
           </Link>
         </nav>
 

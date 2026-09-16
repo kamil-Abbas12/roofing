@@ -51,11 +51,7 @@ export const SERVICE_SEO: Record<
       "@type": "Service",
       name: "Roof Repair",
       provider: {
-        "@type": "RoofingContractor",
-        name: SITE_NAME,
-        url: SITE_URL,
-        telephone: PHONE,
-        email: EMAIL,
+        "@id": `${SITE_URL}/#roofingcontractor`,
       },
       description:
         "Professional roof repair services including leak repair, shingle replacement, flashing repair, and emergency roof patching.",
@@ -88,10 +84,7 @@ export const SERVICE_SEO: Record<
       "@type": "Service",
       name: "Roof Replacement",
       provider: {
-        "@type": "RoofingContractor",
-        name: SITE_NAME,
-        url: SITE_URL,
-        telephone: PHONE,
+        "@id": `${SITE_URL}/#roofingcontractor`,
       },
       description:
         "Full roof replacement services using premium asphalt, metal, tile, and flat roofing materials with professional installation.",
@@ -124,10 +117,7 @@ export const SERVICE_SEO: Record<
       "@type": "Service",
       name: "Storm Damage Roof Repair",
       provider: {
-        "@type": "RoofingContractor",
-        name: SITE_NAME,
-        url: SITE_URL,
-        telephone: PHONE,
+        "@id": `${SITE_URL}/#roofingcontractor`,
       },
       description:
         "Expert storm damage roof repair and insurance claims assistance for hail, wind, and water damage.",
@@ -161,10 +151,7 @@ export const SERVICE_SEO: Record<
       "@type": "Service",
       name: "Commercial Roofing",
       provider: {
-        "@type": "RoofingContractor",
-        name: SITE_NAME,
-        url: SITE_URL,
-        telephone: PHONE,
+        "@id": `${SITE_URL}/#roofingcontractor`,
       },
       description:
         "Full-service commercial roofing including TPO, EPDM, metal, and modified bitumen systems for businesses of all sizes.",
@@ -197,10 +184,7 @@ export const SERVICE_SEO: Record<
       "@type": "Service",
       name: "Roof Inspection",
       provider: {
-        "@type": "RoofingContractor",
-        name: SITE_NAME,
-        url: SITE_URL,
-        telephone: PHONE,
+        "@id": `${SITE_URL}/#roofingcontractor`,
       },
       description:
         "Professional roof inspection services including drone inspections, pre-purchase inspections, and post-storm assessments.",
@@ -232,10 +216,7 @@ export const SERVICE_SEO: Record<
       "@type": "Service",
       name: "New Construction Roofing",
       provider: {
-        "@type": "RoofingContractor",
-        name: SITE_NAME,
-        url: SITE_URL,
-        telephone: PHONE,
+        "@id": `${SITE_URL}/#roofingcontractor`,
       },
       description:
         "Expert new construction roofing services for residential and commercial builds with all materials available.",

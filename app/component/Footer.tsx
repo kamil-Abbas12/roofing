@@ -151,40 +151,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* SCHEMA — Organization structured data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "RoofingContractor",
-              name: "TopDog Roofing",
-              url: "https://roofing.topdoglead.com",
-              logo: "https://roofing.topdoglead.com/logo1.webp",
-              telephone: "+18669644568",
-              email: "info@topdoglead.com",
-              areaServed: { "@type": "Country", name: "United States" },
-              sameAs: [
-                "https://facebook.com",
-                "https://instagram.com",
-                "https://linkedin.com",
-              ],
-              hasOfferCatalog: {
-                "@type": "OfferCatalog",
-                name: "Roofing Services",
-                itemListElement: [
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Roof Repair", url: "https://roofing.topdoglead.com/services/roof-repair" } },
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Roof Replacement", url: "https://roofing.topdoglead.com/services/roof-replacement" } },
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Storm Damage Repair", url: "https://roofing.topdoglead.com/services/storm-damage" } },
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Commercial Roofing", url: "https://roofing.topdoglead.com/services/commercial-roofing" } },
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Roof Inspection", url: "https://roofing.topdoglead.com/services/roof-inspection" } },
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "New Construction Roofing", url: "https://roofing.topdoglead.com/services/new-construction" } },
-                ],
-              },
-            }),
-          }}
-        />
-
         {/* BOTTOM */}
         <div className="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-slate-200/90">
           <span>© {new Date().getFullYear()} Top Dog Roofing. All rights reserved.</span>

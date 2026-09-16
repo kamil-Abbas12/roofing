@@ -164,7 +164,7 @@ export default function RootLayout({
               itemOffered: {
                 "@type": "Service",
                 name: "Roof Repair",
-                url: "https://roofing.topdoglead.com/",
+                url: "https://roofing.topdoglead.com/services/roof-repair",
               },
             },
             {
@@ -172,7 +172,23 @@ export default function RootLayout({
               itemOffered: {
                 "@type": "Service",
                 name: "Roof Replacement",
-                url: "https://roofing.topdoglead.com/",
+                url: "https://roofing.topdoglead.com/services/roof-replacement",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Storm Damage Repair",
+                url: "https://roofing.topdoglead.com/services/storm-damage",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Commercial Roofing",
+                url: "https://roofing.topdoglead.com/services/commercial-roofing",
               },
             },
             {
@@ -180,7 +196,15 @@ export default function RootLayout({
               itemOffered: {
                 "@type": "Service",
                 name: "Roof Inspection",
-                url: "https://roofing.topdoglead.com/",
+                url: "https://roofing.topdoglead.com/services/roof-inspection",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "New Construction Roofing",
+                url: "https://roofing.topdoglead.com/services/new-construction",
               },
             },
           ],

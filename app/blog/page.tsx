@@ -8,7 +8,7 @@ const BASE_URL = "https://roofing.topdoglead.com";
 const POSTS_PER_PAGE = 9;
 
 type BlogPageProps = {
-  searchParams: { page?: string };
+  searchParams: Promise<{ page?: string }>;
 };
 
 function getPageFromParams(pageParam?: string, totalPages: number = 1) {
@@ -17,9 +17,12 @@ function getPageFromParams(pageParam?: string, totalPages: number = 1) {
   return Math.min(Math.floor(parsed), totalPages);
 }
 
-export function generateMetadata({ searchParams }: BlogPageProps): Metadata {
+export async function generateMetadata({
+  searchParams,
+}: BlogPageProps): Promise<Metadata> {
+  const resolvedSearchParams = await searchParams;
   const totalPages = Math.max(1, Math.ceil(BLOGS.length / POSTS_PER_PAGE));
-  const page = getPageFromParams(searchParams?.page, totalPages);
+  const page = getPageFromParams(resolvedSearchParams?.page, totalPages);
 
   const canonical =
     page > 1 ? `${BASE_URL}/blog?page=${page}` : `${BASE_URL}/blog`;
@@ -71,9 +74,10 @@ const breadcrumbSchema = {
   ],
 };
 
-export default function BlogPage({ searchParams }: BlogPageProps) {
+export default async function BlogPage({ searchParams }: BlogPageProps) {
+  const resolvedSearchParams = await searchParams;
   const totalPages = Math.max(1, Math.ceil(BLOGS.length / POSTS_PER_PAGE));
-  const currentPage = getPageFromParams(searchParams?.page, totalPages);
+  const currentPage = getPageFromParams(resolvedSearchParams?.page, totalPages);
 
   const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
   const paginatedPosts = BLOGS.slice(startIndex, startIndex + POSTS_PER_PAGE);

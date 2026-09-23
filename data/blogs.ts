@@ -39,7 +39,7 @@ export const BLOGS: BlogPost[] = [
     slug: "how-proper-roof-ventilation-cuts-summer-energy-bills",
     title: "How Proper Roof Ventilation Cuts Your Summer Energy Bills",
     date: "24 September 2026",
-    isoDate: "2026-09-24",
+    isoDate: "2026-09-23",
     caption:
       "Summer heat has a way of creeping into your home, no matter how low you set the AC. You might notice your cooling system running non-stop, yet the second floor still feels like a sauna.",
 

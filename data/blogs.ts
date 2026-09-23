@@ -36,6 +36,179 @@ export type BlogPost = {
 
 export const BLOGS: BlogPost[] = [
   {
+    slug: "how-proper-roof-ventilation-cuts-summer-energy-bills",
+    title: "How Proper Roof Ventilation Cuts Your Summer Energy Bills",
+    date: "24 September 2026",
+    isoDate: "2026-09-24",
+    caption:
+      "Summer heat has a way of creeping into your home, no matter how low you set the AC. You might notice your cooling system running non-stop, yet the second floor still feels like a sauna.",
+
+    excerpt:
+      "Trapped attic heat can push your AC into overdrive and shorten the life of your shingles. Learn how balanced intake and exhaust ventilation lowers your summer energy bills, and how to fix common airflow problems.",
+
+    category: "Roof Maintenance",
+    readTime: "3 min read",
+    image: "/how-proper-roof-ventilation-cuts-summer-energy-bills.webp",
+
+    metaTitle: "How Proper Roof Ventilation Cuts Summer Energy Bills",
+
+    metaDescription:
+      "Learn how proper roof ventilation cuts summer energy bills, reduces AC strain, and protects shingles — plus warning signs and quick fixes.",
+
+    content: [
+      {
+        type: "paragraph",
+        text: "Summer heat has a way of creeping into your home, no matter how low you set the AC. You might notice your cooling system running non-stop, yet the second floor still feels like a sauna.",
+      },
+      {
+        type: "paragraph",
+        text: "Before assuming your air conditioner is failing or your home needs all-new insulation, look up. The root cause is often trapped heat inside your attic, a problem caused by improper roof ventilation.",
+      },
+      {
+        type: "paragraph",
+        text: "Here is how poor ventilation drives up your energy costs during the summer, and how fixing it puts money back in your pocket.",
+      },
+
+      {
+        type: "heading",
+        text: "The Oven in Your Attic",
+      },
+      {
+        type: "paragraph",
+        text: "During a hot summer day, direct sunlight cooks your roof deck. Without adequate air movement, that heat builds up inside the attic space.",
+      },
+      {
+        type: "paragraph",
+        text: "On an 85°F to 90°F day, an unventilated or poorly ventilated attic can easily reach 140°F to 150°F.",
+      },
+      {
+        type: "paragraph",
+        text: "That trapped heat has nowhere to go, so it radiates downward into your ceiling and upper living spaces. Your air conditioner ends up fighting two heat sources at once: the outdoor temperature and the massive heat reservoir sitting directly on top of your home.",
+      },
+
+      {
+        type: "heading",
+        text: "How Proper Roof Ventilation Works",
+      },
+      {
+        type: "paragraph",
+        text: "Roof ventilation isn't complicated, but it relies on a continuous balance of intake and exhaust.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "1. Intake Vents (Soffit or Eave Vents):",
+            text: " Located under the eaves, these pull cool air in from outside near the bottom of your roofline.",
+          },
+          {
+            bold: "2. Exhaust Vents (Ridge Vents, Box Vents, or Powered Fans):",
+            text: " Positioned near the peak of the roof, these let hot, buoyant air escape.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "As hot air naturally rises and escapes through the top vents, it creates a vacuum effect that draws cooler air in through the bottom. This continuous airflow prevents heat from stagnating inside your attic structure.",
+      },
+
+      {
+        type: "heading",
+        text: "3 Ways Proper Ventilation Lowers Your Electric Bill",
+      },
+      {
+        type: "subheading",
+        text: "1. Reduces AC Load and Run Time",
+      },
+      {
+        type: "paragraph",
+        text: "When your attic stays closer to the actual outdoor temperature rather than 150°F, heat stops soaking down into your living quarters. Your thermostat reaches its set temperature faster, allowing your air conditioner to cycle off instead of running constantly.",
+      },
+      {
+        type: "subheading",
+        text: "2. Lowers Peak Electricity Demand",
+      },
+      {
+        type: "paragraph",
+        text: "During the hottest hours of the afternoon, power companies often charge higher rates or experience grid stress. An efficient attic setup reduces peak cooling demand, keeping energy spikes lower when rates are highest.",
+      },
+      {
+        type: "subheading",
+        text: "3. Extends the Lifespan of Your Equipment",
+      },
+      {
+        type: "paragraph",
+        text: "An AC unit running continuously under extreme strain wears out much faster. Repair calls, premature capacitor failures, and full system replacements cost thousands. Reducing the thermal burden on your HVAC system protects your investment over time.",
+      },
+
+      {
+        type: "heading",
+        text: "Bonus: Protecting Your Roof Shingles",
+      },
+      {
+        type: "paragraph",
+        text: "Energy bills aren't the only expense impacted by attic heat.",
+      },
+      {
+        type: "paragraph",
+        text: "Extreme thermal buildup literally cooks asphalt shingles from the underside, causing them to warp, crack, lose granules, and degrade years ahead of schedule. Proper ventilation keeps the underside of the roof deck cooler, protecting your roof warranty and preventing premature replacement costs.",
+      },
+
+      {
+        type: "heading",
+        text: "Signs Your Attic Needs Better Ventilation",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Uneven Temps:",
+            text: " The upstairs rooms are noticeably hotter than the ground floor.",
+          },
+          {
+            bold: "Non-stop AC:",
+            text: " Your air conditioning runs continuously without reaching the set temperature on hot afternoons.",
+          },
+          {
+            bold: "Hot Ceiling:",
+            text: " The drywall on upper-story ceilings feels warm to the touch.",
+          },
+          {
+            bold: "Rust or Mildew:",
+            text: " Signs of moisture or rust on nail heads in the attic (a symptom of poor year-round airflow).",
+          },
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "Quick Steps to Fix It",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Check for Blocked Soffit Vents:",
+            text: " Blown-in insulation often blocks intake vents at the eaves. Installing simple attic baffles (soffit vents inserts) keeps air channels clear.",
+          },
+          {
+            bold: "Ensure Balanced Vents:",
+            text: " Make sure you have equal intake and exhaust capacity. Adding ridge vents without sufficient soffit intake won't create effective airflow.",
+          },
+          {
+            bold: "Get an Attic Inspection:",
+            text: " A quick inspection by a local roofing contractor can determine if your current square footage of vent space matches your roof size.",
+          },
+        ],
+      },
+
+      {
+        type: "closing",
+        text: "A well-ventilated roof works quietly in the background, keeping your home comfortable and taking the pressure off your monthly budget.",
+      },
+    ],
+  },
+  {
     slug: "how-to-prepare-your-roof-for-storm-season",
     title: "How to Prepare Your Roof for Storm Season",
     date: "15 September 2026",

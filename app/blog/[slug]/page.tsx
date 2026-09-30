@@ -36,7 +36,17 @@ export async function generateMetadata({ params }: any) {
     },
   };
 }
-
+function renderInline(text: string) {
+  return text.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
+    part.startsWith("**") && part.endsWith("**") ? (
+      <strong key={i} className="font-bold">
+        {part.slice(2, -2)}
+      </strong>
+    ) : (
+      <span key={i}>{part}</span>
+    )
+  );
+}
 function RenderBlock({ block, index }: { block: ContentBlock; index: number }) {
   switch (block.type) {
    case "heading":
@@ -59,10 +69,10 @@ function RenderBlock({ block, index }: { block: ContentBlock; index: number }) {
     </h3>
   );
 
-   case "paragraph":
+  case "paragraph":
   return (
     <p key={index} className="mb-5 leading-8 text-black">
-      {block.text}
+      {renderInline(block.text)}
     </p>
   );
 

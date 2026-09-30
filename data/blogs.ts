@@ -36,6 +36,205 @@ export type BlogPost = {
 
 export const BLOGS: BlogPost[] = [
   {
+    slug: "how-often-should-you-have-your-roof-inspected",
+    title: "How Often Should You Really Have Your Roof Inspected?",
+    date: "30 September 2026",
+    isoDate: "2026-09-30",
+    caption:
+      "Most homeowners don't give their roof a single thought until water starts dripping through the ceiling. By then, a quick $200 repair has turned into a multi-thousand-dollar nightmare involving soaked drywall, mold remediation, and ruined belongings.",
+
+    excerpt:
+      "The short answer is  at least once a year,  but the right schedule depends on your roof's age, recent weather, and nearby trees. Here's how to know when to inspect, what you can check yourself, and what only a professional can see.",
+
+    category: "Roof Maintenance",
+    readTime: "5 min read",
+    image: "/how-often-should-you-have-your-roof-inspected.webp",
+
+    metaTitle: "How Often Should You Have Your Roof Inspected?",
+
+    metaDescription:
+      "How often should you have your roof inspected? Learn the annual rule of thumb, how roof age and storms change the schedule, and what pros check.",
+
+    content: [
+      {
+        type: "paragraph",
+        text: "Most homeowners don't give their roof a single thought until water starts dripping through the ceiling. By then, a quick $200 repair has turned into a multi-thousand-dollar nightmare involving soaked drywall, mold remediation, and ruined belongings.",
+      },
+      {
+        type: "paragraph",
+        text: "So, how often should you actually have someone look at your roof?",
+      },
+      {
+        type: "paragraph",
+        text: "The short answer: **At least once a year.** But like most things in homeownership, the full answer depends on where you live, what kind of roof you have, and how old it is.",
+      },
+
+      {
+        type: "heading",
+        text: "The General Rule of Thumb",
+      },
+      {
+        type: "paragraph",
+        text: "For most homes, a **thorough annual inspection** is the sweet spot.",
+      },
+      {
+        type: "paragraph",
+        text: "Fall is usually the best time to schedule it. A pre-winter check ensures your roof can handle ice, heavy snow, and cold winds without letting moisture creep in. If you live in an area prone to harsh winters, doing a quick follow-up check in late spring is smart to catch any damage caused by freezing and thawing.",
+      },
+      {
+        type: "paragraph",
+        text: "However, \"once a year\" is just the baseline. Here's when you need to adjust that timeline:",
+      },
+
+      {
+        type: "heading",
+        text: "Factors That Change Your Inspection Schedule",
+      },
+      {
+        type: "subheading",
+        text: "1. The Age of Your Roof",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Under 10 Years Old:",
+            text: " Once a year from the ground (or by a pro) is plenty, plus post-storm checks.",
+          },
+          {
+            bold: "10–20 Years Old:",
+            text: " Stick strictly to annual professional inspections. Materials start wearing down faster around year 12.",
+          },
+          {
+            bold: "20+ Years Old:",
+            text: " Twice a year (spring and fall). Older roofs lose flexibility, and shingles become far more susceptible to wind lift and cracking.",
+          },
+        ],
+      },
+
+      {
+        type: "subheading",
+        text: "2. Major Weather Events",
+      },
+      {
+        type: "paragraph",
+        text: "Forget the calendar if a severe storm rolls through with high winds (50+ mph), heavy hail, or falling branches, check your roof immediately.",
+      },
+      {
+        type: "paragraph",
+        text: "Even if you don't see shingles sitting in your yard, hail can bruise asphalt shingles and compromise their waterproof coating, leading to slow leaks weeks down the road.",
+      },
+
+      {
+        type: "subheading",
+        text: "3. Overhanging Trees and Climate",
+      },
+      {
+        type: "paragraph",
+        text: "If your house sits under big oaks or pines, pine needles and leaf debris accumulate quickly in valleys and gutters. Trapped debris holds moisture against shingles, rotting them out far faster than sun exposure alone. If you have heavy shade, check your roof valleys at least twice a year.",
+      },
+
+      {
+        type: "heading",
+        text: "What You Can Check Yourself (Without Climbing on the Roof)",
+      },
+      {
+        type: "paragraph",
+        text: "You don't need to walk on your roof to spot early warning signs. In fact, climbing up on a steep roof without proper safety equipment is a quick trip to the ER.",
+      },
+      {
+        type: "paragraph",
+        text: "Grab a pair of binoculars and walk around your perimeter to look for:",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Curled, cracked, or missing shingles",
+            text: "",
+          },
+          {
+            bold: "Dark streaks or patches",
+            text: " (often indicating moss, algae, or heavy granule loss)",
+          },
+          {
+            bold: "Loose flashing",
+            text: " around chimneys, skylights, or vent pipes",
+          },
+          {
+            bold: "Sagging areas",
+            text: " anywhere along the ridgeline or gutters",
+          },
+          {
+            bold: "Granules piling up in your gutters",
+            text: " (looks like coarse black sand)",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Don't forget to check the inside, too. Head into your attic on a bright afternoon with a flashlight. Look for daylight poking through the roof boards, damp insulation, or water stains on the rafters.",
+      },
+
+      {
+        type: "heading",
+        text: "What a Professional Inspects That You Can't See",
+      },
+      {
+        type: "paragraph",
+        text: "A ground-level view won't catch everything. When a professional roofing contractor inspects your roof, they check critical high-risk areas:",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "1. Flashing and Sealants:",
+            text: " The metal stripping around your chimney, vents, and wall intersections is the #1 source of roof leaks. Sealants dry out and crack over time.",
+          },
+          {
+            bold: "2. Underlayment Health:",
+            text: " Checking whether water is penetrating beneath the top shingle layer.",
+          },
+          {
+            bold: "3. Attic Ventilation:",
+            text: " If your attic isn't venting heat and moisture properly, your shingles literally cook from the inside out in the summer, dramatically shortening their lifespan.",
+          },
+          {
+            bold: "4. Structural Integrity:",
+            text: " Spotting soft spots in the plywood decking before the roof sags visible to the naked eye.",
+          },
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "The Bottom Line",
+      },
+      {
+        type: "paragraph",
+        text: "Think of a roof inspection like an oil change for your car. Spending a little time or a couple hundred dollars on regular checkups prevents thousands of dollars in emergency repairs.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Rule of 1:",
+            text: " Inspect at least 1 time per year (ideally in the fall).",
+          },
+          {
+            bold: "Rule of 2:",
+            text: " Inspect after major 2-step triggers (severe storms or once your roof turns 15+ years old).",
+          },
+        ],
+      },
+
+      {
+        type: "closing",
+        text: "Catching a loose shingle or cracked seal early keeps your home dry, protects your warranty, and ensures your roof reaches its full lifespan.",
+      },
+    ],
+  },
+  {
     slug: "how-proper-roof-ventilation-cuts-summer-energy-bills",
     title: "How Proper Roof Ventilation Cuts Your Summer Energy Bills",
     date: "24 September 2026",
